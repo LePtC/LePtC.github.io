@@ -1,0 +1,27 @@
+/* discuss.css for LePtC [2015.0310] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+#discuss {
+	background: none;
+	margin: auto;
+	padding: 34px;
+	width: 86%;
+	max-width: 800px;
+}
+
+#discuss .fold{
+	background: rgba(25,25,25,0.9);
+	border: 1px solid #AAA;
+	border-radius: 4px;
+}
+
+#discuss .fold-head {
+	color: #FFF;
+	background: none;
+}
+
+#discuss .fold-cont {
+	border-top: 1px solid #AAA;
+}

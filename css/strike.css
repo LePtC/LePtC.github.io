@@ -1,0 +1,20 @@
+/* strike.css for LePtC [2015.0317] */
+/* 代码来自：http://stackoverflow.com/questions/2539207/how-to-change-the-strike-out-line-through-thickness-in-css */
+
+
+s{
+    text-decoration: line-through;
+    /*text-decoration: none;*/
+    background-image: linear-gradient(transparent 10px,#CC0000 10px,#CC0000 12px,transparent 12px);
+}
+/*s {
+    position: relative;
+}
+s::after {
+    border-bottom: 2px solid #C06407;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}*/

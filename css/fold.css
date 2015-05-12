@@ -1,0 +1,25 @@
+/* fold.css for LePtC [2015.0309] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+.fold {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #112851;
+  border-radius: 4px;
+}
+
+.fold-head {
+  display: block;
+  padding: 3px;
+  background: #112851;
+  color: #FFF;
+  cursor:pointer;
+}
+
+.fold-cont {
+  /*display: none;*/
+  padding: 8px;
+  border-top: 1px solid #112851;
+}

@@ -1,0 +1,29 @@
+---
+layout: default
+author: 公告
+---
+
+<h1 align="center">
+  <div class="skinimg"><a title="回到萌狸主页" href="/index.html"><img src="/css/moele.png" alt="萌狸" class="moele"></a></div>
+  {{ page.title }}
+</h1>
+
+<div id="body">
+
+{{ content }}
+
+</div>
+
+
+<div id="discuss">
+  <div class="fold">
+  <div class="fold-head" onclick="isHidden('discu')">
+    展开讨论
+  </div>
+  <div class="fold-cont" id="discu" style="display:none">
+    <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="post-{{ page.title }}" data-title="post-{{ page.title }}" data-url="{{ site.baseurl }}{{ post.url }}"></div>
+    <!-- 多说评论框 end -->
+  </div>
+  </div>
+</div>

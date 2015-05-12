@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>萌狸{{ page.author }} - {{ page.title }}</title>
+  <link rel="shortcut icon" href="/css/favicon.ico">
+  <meta content="moele,mengli,萌狸,萌狸主页,萌狸系列,不科学系列,看不懂系列,萌狸百科,萌狸wiki,狸笔记,lenote,LePtC,leptc,狸PC,{{ page.title }}" name="keywords"></meta>
+  <meta content="萌狸{{ page.author }} - {{ page.title }} {{ page.categories }} by LePtC～" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+  <link rel="stylesheet" type="text/css" href="/css/global.css">
+  <script src="/js/fold.js"></script>
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"leptc"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?741805e21dbbc9ff4f62a2c05a4a9a23";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({extensions:["tex2jax.js"],jax:["input/TeX","output/HTML-CSS"],tex2jax:{inlineMath:[['$','$'],["\\(","\\)"]],displayMath:[['$$','$$'],["\\[","\\]"]],processEscapes:true},"HTML-CSS":{availableFonts:["TeX"]},TeX:{equationNumbers:{autoNumber:"all"}}});</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=zh-hans"></script>
+</head>
+
+
+<body>
+
+<p style="display:none;">
+  $ \newcommand{\uni}[1]{\ \mathrm{#1}} \newcommand{\E}[1]{\times 10^{#1}} \newcommand{\ket}[1]{|#1\rangle} $
+</p>
+
+{{ content }}
+
+{% include footer.html %}
+
+  <script src="/js/filter.js"></script>
+  <script src="/js/myhide.js"></script>
+
+</body>
+
+</html>

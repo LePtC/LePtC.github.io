@@ -1,0 +1,33 @@
+---
+layout: default
+author: 百科
+---
+<div id="topwarning" ondblclick="myHide(this)">
+  <p>目前百科条目均处于雏形阶段，欢迎讨论，请勿转载</p>
+</div>
+
+<h1 align="center">
+  <div class="skinimg"><a title="回到萌狸百科主页" href="/wiki/index.html"><img src="/css/moele.png" alt="萌狸" class="moele"></a></div>
+  <span class="glass">百科</span>
+  {{ page.title }}
+</h1>
+
+<div id="body">
+
+  {{ content }}
+
+</div>
+
+
+<div id="discuss">
+  <div class="fold">
+  <div class="fold-head" onclick="isHidden('discu')">
+    展开讨论
+  </div>
+  <div class="fold-cont" id="discu" style="display:none">
+    <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="wiki-{{ page.title }}" data-title="wiki-{{ page.title }}" data-url="http://leptc.github.io/wiki/{{ page.categories }}/"></div>
+    <!-- 多说评论框 end -->
+  </div>
+  </div>
+</div>

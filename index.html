@@ -1,0 +1,301 @@
+---
+layout: index-s
+author: 主页
+title: LePtC
+---
+
+<link rel="stylesheet" type="text/css" href="/css/homepage.css">
+<script src="/js/jquery-1.11.2.min.js"></script>
+
+
+<div>
+  <a title="仰望星空"><img src="/img/sky.jpg" class="sky" style="z-index: -6;"></a>
+  <img src="/img/sky0.png" class="sky" style="z-index: -4;">
+  <img id="alphaimg1" src="/img/sky1.png" class="sky" style="z-index: -3;">
+  <img id="alphaimg2" src="/img/sky2.png" class="sky" style="z-index: -2;">
+</div>
+
+<div style="height:30vh;min-height:100px;"> </div>
+
+{% include songs.html %}
+
+<div style="height:50vh;min-height:200px;"> </div>
+<!-- doesn't work on android browser -->
+
+<div id="body">
+
+<div class="content">
+<a title="方块狸"><img src="/faces/square-moele.png" alt="方块狸" class="wiki" style="width:160px;float:left;margin:20px"></a>
+  <p style="font-size:1.1em;padding:20px;text-indent:40px;"><a href="/author.html">LePtC</a>，一只物理和数学没学好经常算错数的傻狐狸。唯一的特长是超大质量脑洞，大到整个宇宙都在视界之内。爱好吃饭、睡觉、卖萌，一个卖萌卖到烦人也要卖的家伙，制作了这个主页研究物<invi>(如)</invi>理<invi>(何)</invi>问<invi>(卖)</invi>题<invi>(萌)</invi>，哩哩～</p>
+  <br />
+</div>
+
+{% include header.html param="狸站动态" %}
+
+<div class="content">
+<p style="text-align: right;">最后更新时间（Jekyll 生成时间）：{{ site.time }}</p>
+
+<input name="key" type="text" id="key" onkeypress="onSearch(this,'filter0')" onpaste="onSearch(this,'filter0')" oninput="onSearch(this,'filter0')" value=""/>
+<p>（默认只列出最近动态，查看完整列表请在搜索框中输入回车）</p>
+
+<table id="filter0">
+<tr>
+  <th>日期</th>
+  <th>更新</th>
+</tr>
+
+
+<tr>
+  <td></td>
+  <td style="color:#444;line-height:40%;"><p>预计 2017 年开始制作科幻作品</p><p>（在此之前完成剧本编写）</p></td>
+</tr>
+<tr>
+  <td></td>
+  <td style="color:#444">预计 2016 年网站结束内部施工阶段</td>
+</tr>
+<tr>
+  <td></td>
+  <td style="color:#444">预计 2015 年底整理完大部分狸笔记</td>
+</tr>
+<tr>
+  <td></td>
+  <td style="color:#444">预计 2015 年秋完成主要角色人设</td>
+</tr>
+<tr>
+  <td></td>
+  <td style="color:#444">系列作品预计几个月能生产一篇</td>
+</tr>
+<tr>
+  <td>2015.05.12</td>
+  <td>由于图片过多，将 LeNote 文件搬运至单独的 repo</td>
+</tr>
+<tr>
+  <td>2015.05.09</td>
+  <td>由于冗余历史数据过多，重启了 Github 历史记录</td>
+</tr>
+<tr>
+  <td>2015.04.27</td>
+  <td>看不懂系列 <a href="/popsci/s2p2/">s2p2</a> 薛定谔的猫问题大坑已填 <a href="http://www.guokr.com/answer/551852/">↗</a></td>
+</tr>
+<tr>
+  <td>2015.04.23</td>
+  <td>不科学系列 <a href="/notsci/s2n1/">s2n1</a> 完稿发布 <a href="http://www.guokr.com/article/440131/">↗</a></td>
+</tr>
+<tr>
+  <td>2015.04.16</td>
+  <td><a href="/wiki/lecat/">狸猫</a>词条的插图发布</td>
+</tr>
+<tr>
+  <td>2015.04.15</td>
+  <td>第一张表情图「吓得我颜色都掉惹」发布</td>
+</tr>
+<tr>
+  <td>2015.04.08</td>
+  <td>不科学系列 <a href="/notsci/s2n1/">s2n1</a> 进入审稿</td>
+</tr>
+<tr>
+  <td>2015.04.05</td>
+  <td><a href="/wiki/matica/">麦酱</a>的插图发布</td>
+</tr>
+<tr>
+  <td>2015.04.04</td>
+  <td>不科学系列 <a href="/notsci/s2n1/">s2n1</a> 半初稿发布</td>
+</tr>
+<tr>
+  <td>2015.04.02</td>
+  <td>「<a href="/wiki/index.html#科幻作品">科幻作品</a>」组加入百科词条</td>
+</tr>
+<tr>
+  <td>2015.03.31</td>
+  <td>独立的<a href="/lenote/">狸笔记</a>版块上线</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.28</td>
+  <td><a href="/wiki/minko/">名柯</a>的形象插图初稿发布</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.22</td>
+  <td>萌狸主页形象插图初稿发布</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.21</td>
+  <td>萌狸百科的第一张插图在<a href="/wiki/questpig/">题猪</a>词条发布</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.20</td>
+  <td>萌狸主页星空背景特效制作完成</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.19</td>
+  <td>萌狸的三维模型制作完成</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.17</td>
+  <td>应邀写果壳文章 <a href="http://www.guokr.com/article/440051/">↗</a> 并作为 <a href="/popsci/s2p1/">s2p1</a> 在狸站发布 </td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.16</td>
+  <td>狸站框架更新</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.14</td>
+  <td>Jekyll 安装成功</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.12</td>
+  <td>狸站图标与标志设计制作完成</td>
+</tr>
+<tr style="display:none">
+  <td>2015.03.10</td>
+  <td>为测试百度统计，狸站首次上传</td>
+</tr>
+<tr style="display:none">
+  <td>2015.02.25</td>
+  <td>s2n1 插图2 初稿绘制完成</td>
+</tr>
+<tr style="display:none">
+  <td>2015.02.17</td>
+  <td>s2n1 插图1 初稿绘制完成</td>
+</tr>
+<tr style="display:none">
+  <td>2015.02.14</td>
+  <td>萌狸配色，形象设定初步完成</td>
+</tr>
+<tr style="display:none">
+  <td>2015.02.10</td>
+  <td>测试多说评论系统可行</td>
+</tr>
+<tr style="display:none">
+  <td>2015.02.07</td>
+  <td>萌狸的未配色初版形象诞生</td>
+</tr>
+<tr style="display:none">
+  <td>2015.01.11</td>
+  <td>开始构思萌狸科幻</td>
+</tr>
+<tr style="display:none">
+  <td>2015.01.06</td>
+  <td>开始在本地制作狸站</td>
+</tr>
+<tr style="display:none">
+  <td>2014.12.27</td>
+  <td>测试 MathJax 可行</td>
+</tr>
+<tr style="display:none">
+  <td>2014.11.30</td>
+  <td>回复退壳问题 <a href="http://www.guokr.com/blog/795806/">↗</a> 策划新创作方式</td>
+</tr>
+<tr style="display:none">
+  <td>2014.11.09</td>
+  <td>基于果壳问答的第一季作品完结 <a href="http://www.guokr.com/answer/758493/">↗</a></td>
+</tr>
+<tr style="display:none">
+  <td>2014.09.08</td>
+  <td>开始自制网页模版</td>
+</tr>
+<tr style="display:none">
+  <td>2014.03.22</td>
+  <td>第一个网页 <a href="http://leptc.github.io/2048physics/">2048 physics</a> 制成发布</td>
+</tr>
+<tr style="display:none">
+  <td>2014.01.11</td>
+  <td>加入 Github <a href="http://github.com/LePtC">↗</a></td>
+</tr>
+<tr style="display:none">
+  <td>2013.07.17</td>
+  <td>加入果壳问答 <a href="http://www.guokr.com/i/1585771774/">↗</a></td>
+</tr>
+
+</table>
+
+<p>另外 Github 也会保存所有的<a href="https://github.com/LePtC/LePtC.github.io/commits/master">代码提交记录</a></p>
+
+</div>
+
+
+
+{% include header.html param="狸站统计" %}
+
+<div class="content">
+<table>
+<tr>
+  <th>月份</th>
+  <th>commit</th>
+  <th>公告</th>
+  <th>百科(系列)</th>
+  <th>百科(科幻)</th>
+  <th>不科学</th>
+  <th>看不懂</th>
+  <th>狸笔记(章节)</th>
+</tr>
+
+<tr>
+  <td>三月</td>
+  <td>169</td>
+  <td>+6</td>
+  <td>+20</td>
+  <td>+17</td>
+  <td>+0</td>
+  <td>+1</td>
+  <td>+40</td>
+</tr>
+<tr>
+  <td>四月</td>
+  <td>148</td>
+  <td>+0</td>
+  <td>+13</td>
+  <td>+14</td>
+  <td>+1</td>
+  <td>+1</td>
+  <td>+3</td>
+</tr>
+<tr>
+  <th>总计</th>
+  <th></th>
+  <th>6</th>
+  <th>33</th>
+  <th>31</th>
+  <th>1</th>
+  <th>2</th>
+  <th>43</th>
+</tr>
+</table>
+</div>
+
+{% include header.html param="告示牌" %}
+
+<div class="content">
+<ul>
+{% for post in site.posts %}
+  <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+<li><b><a href="/author.html">联系作者</a></b></li>
+<li><b><a href="/copyright.html">版权声明</a></b></li>
+</ul>
+</div>
+
+
+<!-- 多说热评文章 start
+<div class="content">
+<ul>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="5"></div>
+</ul>
+</div>
+ 多说热评文章 end -->
+
+{% include header.html param="最新评论" %}
+
+<div class="content">
+<!-- 多说最新评论 start -->
+  <div class="ds-recent-comments" data-num-items="6" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="50"></div>
+<!-- 多说最新评论 end -->
+<p><a href="/comment.html">显示更多</a></p>
+</div>
+
+</div>
+
+
+<script src="/js/showlxy.js"></script>
+<script src="/js/alpha2.js"></script>
+
+

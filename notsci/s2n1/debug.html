@@ -1,0 +1,52 @@
+---
+layout: notsci-de
+categories: s2n1
+title: s2n1-debug
+---
+
+<div class="content">
+  <p>我用理论力学和高中物理都推了一遍<s>，理论力学出的结论显然是错的，但找不到问题出在哪…</s></p>
+  <p>作品中的是高中物理推导，理论力学的推导如下：</p>
+</div>
+
+{% include header.html param="推导过程 (1)~(4)" %}
+<div class="content">
+  <p>首先推导出从轨道参数得角动量和周期的公式，供后续使用。</p>
+  <p>已知椭圆轨道半长轴 $a$ ，半短轴 $b$，已知太阳质量 $M$，记太阳的高斯常数 $k=\sqrt{GM}$ ，设周期为 $\tau$ ，则</p>
+  <p>$$\tau=\frac{A}{\dot{A}}=\frac{\pi ab}{h/2}$$</p>
+  <p>其中 $A$ 为椭圆面积， $\dot{A}$ 为面积速度， $h$ 乘以质量 $m$ 等于角动量。根据比耐公式<a href="http://en.wikipedia.org/wiki/Binet_equation">↗</a>推出的椭圆方程</p>
+  <p>$$\rho=\frac{h^2/k^2}{1+(Ch^2/k^2)\cos\theta}$$</p>
+  <p>和椭圆的极坐标方程对比，可确定</p>
+  <p>$$h^2/k^2=ep$$</p>
+  <p>其中 $ep$ 为椭圆的半通径长 $ep=\frac{b^2}{a}$ ，从式 (3) 可以求出 $h$ ，并且推出了带系数的开普勒第三定律</p>
+  <p>$$\tau=\frac{2\pi ab}{k\sqrt{ep}}=\frac{2\pi}{k}a^{\frac32}$$</p>
+  <p>即周期只和半长轴有关。</p>
+</div>
+
+{% include header.html param="推导过程 (5)~(7)" %}
+<div class="content">
+  <p>然后就可以求速度了，由万有引力等于向心力可得 $v=\sqrt{GM/r}$ ，即</p>
+  <p>$$v_0=\frac{k}{\sqrt{a}},\ v_3=\frac{k}{\sqrt{b}}$$</p>
+  <p><red>然而以上 $a,b$ 的含义为半长轴和半短轴… 应为 $v_0=\frac{k}{\sqrt{r_a}},\ r_a=a+c$</red></p>
+  <p>由前面推出的式 (3) 可得小行星位于转移轨道时的角动量</p>
+  <p>$$mh=mk\frac{b}{\sqrt{a}}=mv_0b=mvr$$</p>
+  <p><s>代入 $r=a,b$ 可得</s> <red>远日点为 $r_a=a+c$，近日点为 $r_b=a-c$</red></p>
+  <s><p>$$v_1=\frac{b}{a}v_0,\ v_2=v_0$$</p></s>
+  <red><p>$$\frac{v_1}{v_0}=\frac{b/(\sqrt{a}r_a)}{1/\sqrt{r_a}}=\frac{b}{\sqrt{ar_a}}=\sqrt{\frac{a-c}{a}}$$</p><p>对上了…</p></red>
+</div>
+
+{% include header.html param="问题 1～2" %}
+<div class="content">
+<p><s>问题 1：用理论力学推出的结论 (7) 显然是错的，但找不到问题出在哪…</s> <red>已解决</red></p>
+<p><s>问题 2：关于开普勒第三定律的结论，如果周期只和半长轴有关，那地球失速落入太阳需要的时间应为半年，而我以前算的结果是 64 天 <a href="http://www.guokr.com/question/496859/">↗</a></s> <red>已解决，还要算上半长轴短了一半</red></p>
+<p>请审稿人看看还有没有别的计算上的问题～</p>
+</div>
+
+{% include header.html param="讨论 1～2" %}
+<div class="content">
+<p>讨论 1：第二次变轨有可能不需要额外消耗能量吗？</p>
+<blockquote>
+  <p>绕地球转可能比 quasi satellite 更省燃料，前者是要求 $v_2$ 变成 $(v_3+v_I)$ ，后者是 $v_2$ 变成 $v_3$ 。后来我算出来 $(v_3+v_I)>v_2$ ，也就是说第二次变轨是要加速的，我就在想有没有可能中间有个刚好不消耗燃料的轨道（作品都是按圆形轨道算的，但实际上地球轨道是椭圆，所以结果应该还有个可以涨落的范围）</p>
+</blockquote>
+<p>讨论 2：搬运过来的小行星存储在什么轨道好（目前的设想是存储在和月球对称的位置，目的是最大程度减少碰撞的可能和对原引力系统的影响）</p>
+</div>

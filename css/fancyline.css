@@ -1,0 +1,13 @@
+/* fancyline.css for LePtC [2015.0403] */
+/* 代码来自：http://stackoverflow.com/questions/15215556/create-a-beautiful-horizontal-line-with-css-only */
+
+
+hr.fancy-line {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    box-shadow: 0px -2px 4px rgba(136,136,136,0.75);
+}

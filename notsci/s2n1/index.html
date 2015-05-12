@@ -1,0 +1,235 @@
+---
+layout: notsci
+categories: s2n1
+title: 钻石矿的小行星
+---
+<blockquote>
+  <p><a href="http://www.guokr.com/question/583518/">@夏天的冰</a>：用核武器的爆炸作为推动力，使富含矿物的小行星变轨飞向地球并俘获为卫星，成为人类的采矿基地，是否可行？</p>
+</blockquote>
+<hr />
+
+<div class="content">
+
+<p>
+  如果是开发近地小行星<a href="http://zh.wikipedia.org/wiki/%E8%BF%91%E5%9C%B0%E5%B0%8F%E8%A1%8C%E6%98%9F">↗</a>的话，它们的轨道本来就是和地球轨道相交的，所以我们只要等着它到碗里来就好啦～
+</p>
+<p>
+  题主：那我的小说肿么办！ (╯‵□′)╯︵┻┻
+</p>
+<p>
+  好吧好吧，假设某一天，我们突然在小行星带发现了一个有很高开采价值的矿石小行星！决定通过变轨的方式把它搬到地球…
+</p>
+
+<a href="s2n1-1.jpg" title="科学界对钻石小行星的来历展开了激烈的争论，最后主流观点认为该小行星很可能来自某个同地球环境十分相似的世界经历来（xiong）源（hai）不（zi）明的爆炸所残留的碎片"><img src="s2n1-1s.jpg" alt="萌狸の不科学系列-s2n1-图1" class="series"></a>
+
+<p>矿石小行星的半径设定为 1 公里，则它的质量 $m$ 约为 $1.3\E{13}\uni{kg}$ 。位置设定于小行星带内侧，公转半径 $a$ 为 2.3 天文单位（1 天文单位约为地球的公转半径）。设小行星公转速度为 $v_0$，地球公转速度为 $v_3$ 。</p>
+
+
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('div1')">
+    展开计算过程
+  </div>
+  <div class="fold-cont" id="div1" style="display:none">
+    <p>
+      取钻石矿石的密度为 $3\E{3}\uni{kg/m^3}$ <a href="http://wenku.baidu.com/link?url=Fx0inXvzKbSa5xRBG__IhRUwMzxtcAasYYDS_EwcO-wOHCZ0C4MNI6GFKvFvyKJ1YzPG6RXzVgyPBMGi2Baoock6rZJ4PU0AKApBB07mjei">↗</a>，则质量约为
+    </p>
+
+{% highlight mma %}
+4/3 \[Pi] (10^3)^3*3*(10^3) // N
+= 1.25664*10^13
+{% endhighlight %}
+
+  </div>
+</div>
+
+</div>
+
+
+
+{% include header.html param="方案一：火箭反推减速" %}
+
+<div class="content">
+
+<p>
+  用简单粗暴的爆炸来减速小行星的话，能量利用的效率很低，而且有可能会把小行星炸碎。有一种基于核爆炸的火箭引擎，叫作核脉冲推进引擎<a href="http://zh.wikipedia.org/wiki/%E6%A0%B8%E8%84%89%E5%86%B2%E6%8E%A8%E8%BF%9B">↗</a>。把聚变燃料用在这种火箭上，靠反推来减速是不是更合适呢？先估算一下试试吧～
+</p>
+
+<a href="s2n1-2.jpg" title="♪&nbsp;在那火星后边木星前边有一群小行星~&nbsp;♪&nbsp;它们又萌又聪明~&nbsp;♪&nbsp;它们都公转不停~&nbsp;♪&nbsp;它们自由自在飞翔在那黑暗的大森林~&nbsp;♪&nbsp;哦可爱的小行星~&nbsp;♪&nbsp;哦可爱的小行星~ … … 喂！把你们肮脏的火箭从我的小行星上拿开！ >_<"><img src="s2n1-2s.jpg" alt="萌狸の不科学系列-s2n1-图2" class="series"></a>
+
+<p>如图 2，小行星需要做两次变轨。第一次变轨是 $v_0$ 减速至 $v_1$ ，减速后的小行星受到的引力大于所需向心力，掉入图中灰色的椭圆转移轨道。第二次变轨是小行星到达和地球公转轨道相切的位置后，由 $v_2$ 变速为 $(v_3+v_I)$ （我们希望小行星最后停留在绕地球转的轨道上，因此小行星最后相对地球至少要具有相当于第一宇宙速度 $v_I$ 的动能）。<invi>还有势能因为毕竟不能贴着地球表面转，这个问题会在方案二讲…</invi></p>
+
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('div3')">
+        展开推导过程 (1)~(3)
+  </div>
+  <div class="fold-cont" id="div3" style="display:none">
+    <p>由万有引力等于向心力可得 $v=\sqrt{GM/r}$ ，即</p>
+    <p>$$v_0=\frac{k}{\sqrt{a}},\ v_3=\frac{k}{\sqrt{b}}$$</p>
+    <p>由角动量守恒有 $v_1a=v_2b$，由动能差等于引力势能差</p>
+    <p>$$\frac12(v_2^2-v_1^2)=k^2(\frac1b-\frac1a)$$</p>
+    <p>联立两个方程可解得</p>
+{% highlight mma %}
+Solve[{a v1 == b v2 && 1/2 (v2^2 - v1^2) == k^2 (1/b - 1/a)}, {v1, v2}]
+{% endhighlight %}
+    <p>$$v_1=k\sqrt{\frac{2b}{(a+b)a}},\ v_2=k\sqrt{\frac{2a}{(a+b)b}}$$</p>
+  </div>
+</div>
+
+<p>以上速度都可以由椭圆半轴长和太阳质量求解出来，然后就可以求出所需的动量变化量 $\Delta p$。设火箭的喷气速度为 $v_e$，则可换算出所需工质的质量 $m_e=\Delta p/v_e$。</p>
+
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('div4')">
+        展开计算过程 (1)~(11)
+  </div>
+  <div class="fold-cont" id="div4" style="display:none">
+    <p>（远低于光速，不用考虑相对论）</p>
+{% highlight mma %}
+In[1]:= k = Sqrt[1.9891*10^30*6.6738*10^-11]
+Out[1]= 1.15217*10^10
+In[2]:= b = 149597887000; a = 2.3 b
+Out[3]= 3.44075*10^11
+In[4]:= m = 4/3 \[Pi] (10^3)^3*3*10^3;
+In[5]:= v0 = k/Sqrt[a]
+Out[5]= 19642.1
+In[6]:= v3 = k/Sqrt[b]
+Out[6]= 29788.7
+In[7]:= v1 = Sqrt[(2 b)/((a + b) a)] k
+Out[7]= 15291.4
+In[8]:= v2 = Sqrt[(2 a)/((a + b) b)] k
+Out[8]= 35170.1
+In[9]:= ve = 10^6;
+In[10]:= me = (m (v0 - v1))/ve
+Out[10]= 5.46731*10^10
+{% endhighlight %}
+<p>维基百科告诉我聚变燃料释放能量的效率为 1% $mc^2$ <a href="http://en.wikipedia.org/wiki/Energy_density#Energy_density_in_energy_storage_and_in_fuel">↗</a>，因此把能量换算成聚变燃料质量为</p>
+{% highlight mma %}
+In[11]:= (1/2 me *ve^2)/(0.01*299792458^2)
+Out[11]= 3.0416*10^7
+{% endhighlight %}
+  </div>
+</div>
+
+<p>维基百科告诉我核脉冲推进<a href="http://en.wikipedia.org/wiki/Nuclear_thermal_rocket#Solid_core">↗</a>的比冲的理论上限是 $10^5\uni{s}$，相当于喷气速度<a href="http://zh.wikipedia.org/wiki/%E6%AF%94%E5%86%B2">↗</a>达到 $v_e\approx 10^6\uni{m/s}$ ，代入得需要工质 $5.5\E{10}\uni{kg}$ 。工质的动能若由聚变燃料提供，所需燃料的质量约为 3 万吨。</p>
+
+<p>嘛，我们最大的运载火箭土星五号 <a href="http://zh.wikipedia.org/wiki/%E5%9C%9F%E6%98%9F5%E5%8F%B7%E8%BF%90%E8%BD%BD%E7%81%AB%E7%AE%AD">↗</a> 的运载能力在 100 吨的量级，如果你有无限经费的话（← 做梦！(ｏ‵-′)ノ”），分上几百次把足够的聚变燃料送到小行星上去也不是不可能… 难以解决的是动量问题，火箭引擎的比冲（喷气速度）太小，用燃料作工质远远不够用。而更高比冲的引擎的推力又太小<a href="http://zh.wikipedia.org/zh/%E7%81%AB%E7%AE%AD%E5%8F%91%E5%8A%A8%E6%9C%BA#.E7.81.AB.E7.AE.AD.E5.8F.91.E5.8A.A8.E6.9C.BA.E7.A7.8D.E7.B1.BB">↗</a>，导致减速需要很漫长的时间。<invi>钻石还不够燃料钱的说…</invi></p>
+
+</div>
+
+<hr />
+
+<div class="content">
+
+<p>老板出现！：能不能再给力点？～</p>
+<p><a title="能不能再给力点～"><img src="/faces/zgl.png" alt="能不能再给力点～" class="faces"></a></p>
+<p>萌狸：报告老板！如果我们发射一个<s>钻石镐</s>采矿船上去，先就地开发再搬运的话，质量 $m$ 就可以节省很多。</p>
+<p>老板：不好，矿石也是重要的科研资源嘛，还有没有别的方案丫？</p>
+
+<p>萌狸：报告老板！要解决动量问题的话，可以试试就地取材～我认为，剧本应该是这个样子滴～</p>
+</div>
+
+
+
+{% include header.html param="方案二：炸开小行星" %}
+
+<div class="content">
+
+<p>二号方案：我们将满足题主对核弹的热衷，直接用核弹将小行星炸成两半。由于动量守恒，一半的小行星碎片会加速，另一半则会减速。如果核弹的当量和位置布置得准确，就可以让减速的那一半准确地达到速度 $v_1$ ，然后就没有其它问题了。额，只不过加速的那一半会进入更远的椭圆轨道…</p>
+
+<a href="s2n1-3.jpg" title="不能用 TNT ，那样只会把钻石矿炸没！"><img src="s2n1-3s.jpg" alt="萌狸の不科学系列-s2n1-图3" class="series"></a>
+
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('div5')">
+        展开计算过程 (12)
+  </div>
+  <div class="fold-cont" id="div5" style="display:none">
+    <p>减速的那块末速度为 $v_1$ ，由动量守恒得加速的那块的末速度为 $(2v_0-v_1)$ ，由质心系动能 $2\times\frac14m(v_0-v_1)^2$ 加质心动能 $\frac12mv_0^2$ 减原动能 $\frac12mv_0^2$，得爆炸需提供的能量至少为 $\frac12m(v_0-v_1)^2$ ，同理换算成聚变燃料质量为</p>
+{% highlight mma %}
+In[12]:= (1/2 m*(v0 - v1)^2)/(0.01*299792458^2)
+Out[12]= 132333.
+{% endhighlight %}
+  </div>
+</div>
+
+<p>所以剧本应该是这个样子滴：第一批聚变燃料送到小行星轨道用来炸开小行星，质量至少为 132 吨（没算把燃料本身送上太空需要的燃料，不过至少在我们正常的运载能力范围之内了… ）。小行星的第二次变轨最好不要用炸开两半的办法，因为另一块碎片很有可能会回来撞上地球… 实际上，第二次变轨既有可能是减速也有可能是加速，因此如果轨道设计得好的话，可以只消耗很少能量就刚好捕获它～<invi>（早知道就把小行星设定得再远一点… →_→）</invi></p>
+
+</div>
+
+<hr />
+
+<div class="content">
+
+<p>老板：一半的钻石矿就这样浪费了…</p>
+<p><a title="能不能再给力点～"><img src="/faces/zgl.png" alt="能不能再给力点～" class="faces"></a></p>
+<p>萌狸：如果钻石矿周围有速度相近的其它小行星的话，用那些没用的小行星当炮灰也可以的哦…</p>
+<p>老板（45 度角仰望星空）：对了，我们还有一些类似的任务要做，有很多物资等着送入小行星带公转轨道，部分物资已经在转移轨道上了，能不能把这些一块给解决啦？</p>
+<p>萌狸：这是没钱还想倒找钱的节奏啊！！！</p>
+<p><a title="吓得我颜色都掉惹"><img src="/faces/xdw.png" alt="吓得我颜色都掉惹" class="faces"></a></p>
+
+</div>
+
+
+{% include header.html param="方案三：弹性碰撞" %}
+
+<div class="content">
+<p>萌狸：报告老板！把小行星搬到地球本质上是减少引力势能的过程，如果我们把这部分能量利用起来，就可以同时把物资搬上去啦～</p>
+<p>三号方案：用需要送到小行星轨道的物资和小行星弹性碰撞，交换速度！</p>
+<a href="s2n1-4.jpg" title="听说不管是什么技术问题只要加上纳米两个字就好像解决了呢"><img src="s2n1-4s.jpg" alt="萌狸の不科学系列-s2n1-图4" class="series"></a>
+<p>所以剧本应该是这个样子滴：把转移轨道上的物资收集起来，使得质量和小行星的质量相等。这样弹性碰撞的结果就是速度交换，小行星进入椭圆转移轨道，物资进入小行星公转轨道。再收集第二批相等质量的物资，在地球公转轨道等着，然后把小行星换下来。 (～￣▽￣)ノ撒花 </p>
+</div>
+
+
+{% include header.html param="三年后…" %}
+
+<div class="content">
+
+<p>（之后，狸星人花了两年时间将钻石矿小行星转移到母星附近，存放在月球轨道上慢慢开发～）</p>
+
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('div6')">
+        展开计算过程 (13)~(16)
+  </div>
+  <div class="fold-cont" id="div6" style="display:none">
+    <p>由开普勒第三定律，椭圆轨道的周期为 $\tau=\frac{2\pi}{k}(\frac{a+b}{2})^{\frac32}$，则转完半个转移轨道需要的时间约为 387 天</p>
+{% highlight mma %}
+In[13]:= \[Pi]/k ((a + b)/2)^((3/2))/(24*3600)
+Out[13]= 387.022
+{% endhighlight %}
+    <p>同理可计算，从月球轨道落到地面需要的时间为 $\frac{\pi}{k_E}(\frac{r_E+r_M}{2})^{\frac32}$ ，约为 5 天 </p>
+{% highlight mma %}
+In[14]:= ke = Sqrt[5.9742*10^24*6.6738*10^-11]
+Out[14]= 1.99676*10^7
+In[15]:= re = 6372797; rm = 3.84*10^8;
+In[16]:= \[Pi]/ke ((re + rm)/2)^((3/2))/(24*3600)
+Out[16]= 4.96574
+{% endhighlight %}
+  </div>
+</div>
+
+  <a href="s2n1-5.jpg" title="「摘下星星送给你」之后，就没有「摘下月亮送给你」这回事了…"><img src="s2n1-5s.jpg" alt="萌狸の不科学系列-s2n1-图5" class="series"></a>
+
+  <p>* 注：题猪（Questpig），一种在自然界中天然生成的生物。每当有人产生一个不靠谱的想法时，就会有一只题猪凭空生成，直到看到那个不靠谱想法的实现之后才会消失。</p>
+
+</div>
+
+{% include header.html param="参考资料" %}
+
+<div class="content">
+<p><invi>参考资料就是把作品中的外链都再列一遍，然而作者和编辑都很懒，于是就愉快地决定不写参考资料了～</invi></p>
+</div>
+
+{% include header.html param="审稿人" %}
+
+<div class="content">
+  <p><h3>审稿人（按时间顺序排序）：</h3></p>
+  <p>
+    <a href="http://www.guokr.com/i/0275510731/">@ProtossProbe</a>
+    <a href="http://www.guokr.com/i/1769480175/">@章鱼喵.时见疏星</a>
+  </p>
+  <p><h3>编辑：</h3></p>
+  <p>
+    <a href="http://www.guokr.com/i/2038733165/">@窗敲雨</a>
+  </p>
+</div>
+
+
+

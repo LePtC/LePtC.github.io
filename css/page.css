@@ -1,0 +1,73 @@
+/* page.css for LePtC [2015.0309] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+body {
+	background: url(bg-grid.gif) repeat;
+	background-color: #151D34;
+	color: #111;
+	font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Tahoma,STHeiti,Arial,sans-serif;
+	font-size: 0.9em;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+	min-width: 100px;
+}
+
+#top{
+	width: 100%;
+	height: 0px;
+}
+#top li{
+	padding: 0;
+	position: relative;
+	top: -14px;
+}
+#top li a{
+	padding: 5px;
+	color: #112851;
+	background: rgba(255,255,255,0.7);
+	border: 1px solid #FFF;
+	border-radius: 4px;
+}
+#top li a:hover{
+	color: #FFF;
+	background: #112851;
+	text-decoration: none;
+}
+
+#topwarning{
+	width: 100%;
+	z-index: 9998;
+	position: fixed;
+	left: 0px;
+	top: -15px;
+	height: 45px;
+	background: rgba(217, 114, 11, 0.8);
+	color: #FFF;
+}
+
+#topwarning p{
+	padding: 0px 8px 0px 8px;
+}
+
+#body {
+	background: rgba(255,255,255,0.7);
+	margin: 0 auto;
+	padding-top: 14px;
+	border-radius: 14px;
+	position: relative;
+}
+
+#footer p{
+	color: #FFF;
+	margin: 0;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+}
+#footer p a{
+	color: #FFF;
+}
+
+

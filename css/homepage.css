@@ -1,0 +1,32 @@
+/* homepage.css for LePtC [2015.0317] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+body {
+	background: #151D34;
+}
+
+img.sky{
+	height: 100%;
+	width: auto;
+	min-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: fixed;
+	right: 0px;
+	top: 0px;
+	/*z-index: -999;*/
+}
+
+#demo{
+	color: #FFF;
+	overflow:hidden;
+	height:160px;
+	width:280px;
+  margin-left:50px;
+  margin-right:auto;
+	line-height:80%;
+}
+

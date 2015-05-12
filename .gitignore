@@ -1,0 +1,11 @@
+_drafts/
+_site/
+.DS_Store
+*.swp
+*.txt
+*.mht
+*.cmd
+*.bat
+*.tex
+*.gz
+loc.yml
