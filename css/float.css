@@ -11,14 +11,14 @@
 	top: 0px;
 	width: 54px;
 	height: 430px;
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 4px;
-	color: #112851;
+  border-radius: 4px;
+  color: #112851;
 }
 
 #floatright p{
-	font-size: 0.8em;
-	line-height: 10%;
-	padding: 0 0 0 3px;
+  font-size: 0.8em;
+  line-height: 10%;
+  padding: 0 0 0 3px;
+	background: rgba(255, 255, 255, 0.8);
 }
 
