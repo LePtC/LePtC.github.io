@@ -19,6 +19,9 @@
   font-size: 0.8em;
   line-height: 10%;
   padding: 0 0 0 3px;
+}
+
+#floatright p a{
 	background: rgba(255, 255, 255, 0.8);
 }
 
