@@ -211,6 +211,10 @@ red {
 	color: red;
 }
 
+hr.fade-highlight-bar {
+  margin-bottom: 15px;
+}
+
 hr.fade-highlight-bar::after {
   height: 1px;
   border: 0px none;
