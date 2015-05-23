@@ -211,23 +211,3 @@ red {
 	color: red;
 }
 
-hr.fade-highlight-bar {
-  margin-bottom: 15px;
-}
-
-hr.fade-highlight-bar::after {
-  height: 1px;
-  border: 0px none;
-  margin: 0px 10px;
-  background: transparent linear-gradient(to right, rgba(190, 203, 186, 0) 0%, #BECBBA 12%, #BECBBA 88%, rgba(190, 203, 186, 0) 100%) repeat scroll 0% 0%;
-}
-
-hr {
-  display: block;
-  border: 1px inset;
-  -moz-margin-start: auto;
-  -moz-margin-end: auto;
-  color: #808080;
-  -moz-float-edge: margin-box;
-  box-sizing: border-box;
-}
