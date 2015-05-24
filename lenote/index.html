@@ -10,10 +10,10 @@ title: 主页
 	<p><a href="index.html#热">热</a></p>
 	<p><a href="index.html#电">电</a></p>
 	<p><a href="index.html#光">光</a></p>
-	<p><a href="index.html#量子">量子</a></p>
-	<p><a href="index.html#场论">场论</a></p>
-	<p><a href="index.html#原子">原子</a></p>
 	<p><a href="index.html#信息">信息</a></p>
+  <p><a href="index.html#量子">量子</a></p>
+  <p><a href="index.html#原子">原子</a></p>
+  <p><a href="index.html#场论">场论</a></p>
 	<p><a href="index.html#凝态">凝态</a></p>
 	<p><a href="index.html#粒子">粒子</a></p>
 	<p><a href="index.html#相对论">相对论</a></p>
@@ -265,6 +265,42 @@ title: 主页
 		<li>Agarwal. Quantum Optics. Cambridge</li>
 	</ol>
 </div>
+{% include header.html param="信息" %}
+<div class="content">
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('divI')">
+    17 个章节
+  </div>
+  <div class="fold-cont" id="divI" style="display:none">
+  <ol>
+    <li>逻辑运算（手写 2 页，待整理）</li>
+    <li>逻辑门</li>
+    <li>数字电路</li>
+    <li>触发器</li>
+    <li>时序电路</li>
+    <li>布尔函数</li>
+    <li>计算模型</li>
+    <li>计算复杂度</li>
+    <li>基本实验</li>
+    <li>贝尔定理</li>
+    <li>量子门（电子 2 页，未完）</li>
+    <li>量子计算</li>
+    <li>量子傅氏变换</li>
+    <li>量子搜索</li>
+    <li>量子纠错</li>
+    <li>量子通讯</li>
+    <li>量子密码学</li>
+  </ol>
+  </div>
+</div>
+  <h3>精读书单：</h3>
+  <ol>
+    <li>Nielsen & Chuang. Quantum Computation and Quantum Information. Wiley（中译：赵千川. 量子计算和量子信息. 清华大学出版社）</li>
+    <li>Preskill@Caltech 讲义</li>
+  </ol>
+  <h3>其它参考书目：</h3>
+  <p>数字电路的书忘了？</p>
+</div>
 {% include header.html param="量子" %}
 <div class="content">
 <div class="fold">
@@ -316,36 +352,6 @@ title: 主页
 		<li>周世勋. 量子力学教程 (第二版). 高等教育出版社</li>
 	</ol>
 </div>
-{% include header.html param="场论" %}
-<div class="content">
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divF')">
-    9 个章节
-  </div>
-  <div class="fold-cont" id="divF" style="display:none">
-	<ol>
-		<li>经典场论</li>
-		<li>产灭算符</li>
-		<li>粒子数表象</li>
-		<li>二次量子化</li>
-		<li>规范场论</li>
-		<li>标量场</li>
-		<li>旋量场</li>
-		<li>希格斯机制</li>
-		<li>重整化（还没学）</li>
-	</ol>
-  </div>
-</div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>Lancaster. Quantum Field Theory for the gifted amateur. Oxford（初学入门严重推荐）</li>
-		<li>Zee. Quantum Field Theory in a Nutshell. Springer（NC 粉系列）</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>Merzbacher. Quantum Mechanics (3rd ed). Wiley</li>
-	</ol>
-</div>
 {% include header.html param="原子" %}
 <div class="content">
 <div class="fold">
@@ -377,41 +383,35 @@ title: 主页
 	<h3>精读书单：</h3>
 		<p>同量子（量子的内容实在太多了所以拆分一下…）</p>
 </div>
-{% include header.html param="信息" %}
+{% include header.html param="场论" %}
 <div class="content">
 <div class="fold">
-  <div class="fold-head" onclick="isHidden('divI')">
-    17 个章节
+  <div class="fold-head" onclick="isHidden('divF')">
+    9 个章节
   </div>
-  <div class="fold-cont" id="divI" style="display:none">
-	<ol>
-		<li>逻辑运算（手写 2 页，待整理）</li>
-		<li>逻辑门</li>
-		<li>数字电路</li>
-		<li>触发器</li>
-		<li>时序电路</li>
-		<li>布尔函数</li>
-		<li>计算模型</li>
-		<li>计算复杂度</li>
-		<li>基本实验</li>
-		<li>贝尔定理</li>
-		<li>量子门（电子 2 页，未完）</li>
-    <li>量子计算</li>
-    <li>量子傅氏变换</li>
-    <li>量子搜索</li>
-    <li>量子纠错</li>
-    <li>量子通讯</li>
-    <li>量子密码学</li>
-	</ol>
+  <div class="fold-cont" id="divF" style="display:none">
+  <ol>
+    <li>经典场论</li>
+    <li>产灭算符</li>
+    <li>粒子数表象</li>
+    <li>二次量子化</li>
+    <li>规范场论</li>
+    <li>标量场</li>
+    <li>旋量场</li>
+    <li>希格斯机制</li>
+    <li>重整化（还没学）</li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>Nielsen & Chuang. Quantum Computation and Quantum Information. Wiley（中译：赵千川. 量子计算和量子信息. 清华大学出版社）</li>
-		<li>Preskill@Caltech 讲义</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<p>数字电路的书忘了？</p>
+  <h3>精读书单：</h3>
+  <ol>
+    <li>Lancaster. Quantum Field Theory for the gifted amateur. Oxford（初学入门严重推荐）</li>
+    <li>Zee. Quantum Field Theory in a Nutshell. Springer（NC 粉系列）</li>
+  </ol>
+  <h3>其它参考书目：</h3>
+  <ol>
+    <li>Merzbacher. Quantum Mechanics (3rd ed). Wiley</li>
+  </ol>
 </div>
 {% include header.html param="凝态" %}
 <div class="content">
