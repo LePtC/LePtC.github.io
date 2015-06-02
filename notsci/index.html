@@ -6,8 +6,48 @@ title: 主页
 {% include header.html param="第二季作品目录" %}
 
 <div class="content">
-<input name="key" type="text" id="key" onkeypress="onSearch(this,'filters2')" onpaste="onSearch(this,'filters2')" oninput="onSearch(this,'filters2')" value=""/>
-<p> </p>
+
+<table>
+<tr>
+  <th>分类</th>
+  <th>标题</th>
+  <th>状态</th>
+</tr>
+
+<tr>
+  <td>s2m2</td>
+  <td>麦酱主角故事：穿越的萌狸</a></td>
+  <td>
+    <div class="fold">
+      <div class="fold-head" onclick="isHidden('folds2m2')">
+        计划中（2015.06.02）
+      </div>
+      <div class="fold-cont" id="folds2m2" style="display:none">
+        <table>
+          <tr><td>列入计划</td><td>2015.06.02</td></tr>
+        </table>
+      </div>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>s2m1</td>
+  <td>题猪主角故事：罗素悖论</a></td>
+  <td>
+    <div class="fold">
+      <div class="fold-head" onclick="isHidden('folds2m1')">
+        计划中（2015.03.10）
+      </div>
+      <div class="fold-cont" id="folds2m1" style="display:none">
+        <table>
+          <tr><td>列入计划</td><td>2015.03.10</td></tr>
+        </table>
+      </div>
+    </div>
+  </td>
+</tr>
+</table>
+
 <table id="filters2">
 <tr>
 	<th>分类</th>
@@ -110,6 +150,18 @@ title: 主页
 	</table>
 </div>
 
+
+
+
+{% include header.html param="告示牌" %}
+
+<div class="active">
+<ul>
+  <li><a href="/notsci.html">不科学系列作品创作流程</a></li>
+  <li><a href="/season2.html">第二季作品说明</a></li>
+  <li><a href="/season1.html">第一季作品说明</a></li>
+</ul>
+</div>
 
 
 
