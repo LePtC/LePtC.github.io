@@ -1,0 +1,60 @@
+/* images.css for LePtC [2015.0619] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+img.moele{
+  height: 60px;
+  vertical-align: text-bottom;
+}
+/*img.moele:hover{
+  height: 66px;
+}*/
+span.glass {
+  font-size: 0.8em;
+  color: #112851;
+  background-color: rgba(255,255,255,0.7);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+
+
+img.series{
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px #333;
+  /*cursor: zoom-in;*/
+}
+
+img.lenote{
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px #333;
+}
+
+img.wiki{
+  /*width: 20%;
+  min-width: 200px;*/
+  max-width: 100%;
+  float: right;
+  margin: 10px;
+  box-shadow: 0px 0px 15px #333;
+}
+
+
+/*img.faces{
+  height: 75px;
+  max-width: 90%;
+  display: block;
+  box-shadow: 0px 0px 15px #333;
+}*/
+
+
+

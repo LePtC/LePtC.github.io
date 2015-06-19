@@ -1,0 +1,59 @@
+/* wiki.css for LePtC [2015.0619] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+
+.wikipcon {
+  height: 120px;
+  width: 120px;
+  position: relative;
+}
+img.wikip{
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  width: 120px;
+  max-width: 100%;
+  border: 6px solid transparent;
+  /*outline: #151D34 solid 1px;*/
+}
+.wikiptext {
+  z-index: 10;
+  position: relative;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  left: -6px;
+  top: -6px;
+  width: 126px;
+  padding: 3px 3px 3px 3px;
+  margin: 0px;
+}
+/*.wikiptextb {
+  z-index: 10;
+  position: relative;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  left: -6px;
+  top: 60px;
+  width: 126px;
+  height: 30px;
+  padding: 3px 3px 3px 3px;
+  margin: 0px;
+  font-size: 1.4em;
+  visibility:hidden;
+}*/
+
+.wikiptb {
+  display: inline-block;
+  border-collapse: collapse;
+  border: none;
+  margin: 10px;
+  padding: 0px;
+}
+.wikiptb td {
+  border: 2px solid #151D34;
+  vertical-align: top;
+}
+
+

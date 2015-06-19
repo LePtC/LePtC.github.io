@@ -21,7 +21,7 @@ body {
 #top li{
 	padding: 0;
 	position: relative;
-	top: -10px;
+	top: -14px;
 }
 #top li a{
 	padding: 5px;
@@ -41,15 +41,13 @@ body {
 	z-index: 9998;
 	position: fixed;
 	left: 0px;
-	top: -15px;
-	height: 40px;
+	top: 0px;
+	height: 25px;
 	background: rgba(217, 114, 11, 0.7);
 	color: #FFF;
+  padding-left: 3px;
 }
 
-#topwarning p{
-	padding: 3px 8px 0px 8px;
-}
 
 #body {
 	background: rgba(255,255,255,0.7);

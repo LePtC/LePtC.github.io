@@ -5,12 +5,14 @@
 
 @import url("page.css");
 @import url("elements.css");
+@import url("images.css");
 @import url("strike.css");
 @import url("fold.css");
 @import url("discuss.css");
 @import url("syntax.css");
 @import url("float.css");
 @import url("shake.css");
+@import url("wiki.css");
 
 /*@media only screen and (min-device-width: 480px){#body{width: 470px;}}*/
 #body{width: 90%; max-width: 850px;}

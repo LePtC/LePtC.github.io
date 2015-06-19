@@ -29,23 +29,6 @@ h3 {
 .content {
 	padding: 0px 20px 10px 20px;
 }
-img.moele{
-	height: 60px;
-	vertical-align: text-bottom;
-}
-/*img.moele:hover{
-	height: 66px;
-}*/
-span.glass {
-	font-size: 0.8em;
-	color: #112851;
-	background-color: rgba(255,255,255,0.7);
-	padding: 2px;
-	border-radius: 4px;
-}
-span.warning {
-	color: #F00;
-}
 
 a:link {
 	/*color: #F4400B;*/
@@ -90,14 +73,15 @@ li {
 }
 
 .active {
-	padding: 0px 0px 10px 0px;
+	padding: 0px 0px 5px 0px;
 }
 .active ul {
 	list-style: none;
+  padding: 0px 6px 0px 6px;
 }
 .active li {
 	display: inline;
-	padding: 0px 10px 0px 10px;
+	padding: 0px 6px 0px 6px;
 }
 
 .line {
@@ -153,43 +137,13 @@ pre code{
 	font-size: 1.1em;
 }
 
-img.series{
-	width: 100%;
-	max-width: 500px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	box-shadow: 0px 0px 15px #333;
-  /*cursor: zoom-in;*/
-}
-
-img.lenote{
-	width: 100%;
-	max-width: 800px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	box-shadow: 0px 0px 15px #333;
-}
-
-img.wiki{
-	/*width: 20%;
-	min-width: 200px;*/
-	max-width: 100%;
-	float: right;
-	margin: 10px;
-	box-shadow: 0px 0px 15px #333;
-}
-
-img.faces{
-  height: 75px;
-  max-width: 90%;
-  display: block;
-  box-shadow: 0px 0px 15px #333;
-}
-
 br{
 	clear: both;
+}
+
+hr{
+  height: 1px;
+  background: #151D34;
 }
 
 .float {
@@ -209,5 +163,9 @@ invi {
 
 red {
 	color: red;
+}
+
+span.warning {
+  color: #F00;
 }
 
