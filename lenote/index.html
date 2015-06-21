@@ -4,863 +4,549 @@ author: 笔记
 title: 主页
 ---
 
-<div id="floatright">
-	<p><a href="index.html#实验">实验</a></p>
-	<p><a href="index.html#力">力</a></p>
-	<p><a href="index.html#热">热</a></p>
-	<p><a href="index.html#电">电</a></p>
-	<p><a href="index.html#光">光</a></p>
-	<p><a href="index.html#信息">信息</a></p>
-  <p><a href="index.html#量子">量子</a></p>
-  <p><a href="index.html#原子">原子</a></p>
-  <p><a href="index.html#场论">场论</a></p>
-	<p><a href="index.html#凝态">凝态</a></p>
-	<p><a href="index.html#粒子">粒子</a></p>
-	<p><a href="index.html#相对论">相对论</a></p>
-	<hr />
-	<p><a href="index.html#公式">公式</a></p>
-	<p><a href="index.html#实分析">实分析</a></p>
-	<p><a href="index.html#概统">概统</a></p>
-	<p><a href="index.html#复分析">复分析</a></p>
-	<p><a href="index.html#代数">代数</a></p>
-	<p><a href="index.html#群论">群论</a></p>
-  <p><a href="index.html#几何">几何</a></p>
-	<p><a href="index.html#拓扑">拓扑</a></p>
-	<p><a href="index.html#数模">数模</a></p>
-	<p><a href="index.html#数值">数值</a></p>
-	<p><a href="index.html#数理">数理</a></p>
-	<hr />
-	<p><a href="index.html#外语">外语</a></p>
-</div>
+<link rel="stylesheet" type="text/css" href="/css/smint.css">
+<script src="/js/jquery-1.11.2.min.js"></script>
+
+<script src="/js/jquery_002.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready( function() {
+    $('.subMenu').smint({
+      'scrollSpeed' : 500
+    });
+});
+</script>
 
 <div id="body">
+<div class="wrap">
 
-<blockquote>
-	<p>“用四年的时间，走完前辈们花四百年走过的路。”</p>
-</blockquote>
-<hr />
-
-{% include header.html param="萌狸笔记" %}
+  <div class="section sTop">
+    <div class="inner">
 
 <div class="content">
-	<p>狸笔记（<a href="http://github.com/LePtC/LeNote">LeNote</a>）是 LePtC 为整理自己的笔记开发的 LaTeX 模版，主要特点为方便中英混排、图文混排、版面尽量紧凑、简化数理常用命令、强迫症友好型格式约定等… 模版文件、使用说明以及范例的下载链接<a href="http://github.com/LePtC/LeNote/archive/master.zip">点这里</a>。</p>
-	<p>以前在果壳问答回答问题时，觉得很多问题直接把笔记贴过去就是很好的回答… 于是决定把笔记共享出来，方便以后的讨论交流～</p>
-  <p>顺便列出推荐书单，个人比较喜欢推荐初学入门的书（一般是在图书馆哪本看的爽就看哪本…），深入学习的书追求少而精（复习阶段，榨干图书馆，选讲的清楚讲的全的书）。</p>
-	<p>由于 MathJax 还没有强大到完全实现 LaTeX 在线编译… <s>目前计划以截图的形式在线浏览已完成的笔记</s>，同时也会提供 pdf 文件下载。</p>
-  <p><red>由于大量图片导致本地 jekyll 运行缓慢，暂时去掉在线浏览功能，笔记只能下载后查看了（手写笔记也制成 pdf 了）。</red>（多个章节合在一个 pdf 里的，在第一个章节处的链接下载）</p>
-	<p><h3>笔记仅限学习交流使用，未经编者同意禁止用于商业用途。</h3></p>
-	<p>欢迎童鞋检查笔记中的错误，提出改进意见。如果你有自己的基于 LeNote 的笔记，欢迎<a href="/author.html">与我分享</a>～</p>
-	<p>先把目录开了，坑用有生之年慢慢填… （注：先填的笔记是比较靠后的内容，因为早期的笔记还是纸质的形式，有待整理成电子版…）</p>
+  <p>狸笔记（LeNote）是 LePtC 为整理学习笔记开发的 LaTeX 模版，主要特点有双语词条、自动高亮、图文混排、表文混排、紧凑版面、简化数理命令、强迫症友好型格式约定等… 【<a href="http://github.com/LePtC/LeNote">项目主页</a>】【<a href="http://github.com/LePtC/LeNote/archive/master.zip">模版下载</a>】。</p>
+
+  <img src="lenotef1.jpg" height="244" alt="双语词条" class="lenotef">
+  <img src="lenotef3.jpg" height="244" alt="自动高亮" class="lenotef">
+  <img src="lenotef2.jpg" height="244" alt="图文混排" class="lenotef">
+  <img src="lenotef4.jpg" height="244" alt="数理约定" class="lenotef">
+
+  <p>本主页为狸笔记的内容分享项目，提供 LePtC 学习笔记的 pdf 文件下载。</p>
+  <p><h3>笔记仅限学习交流使用，未经编者同意禁止用于商业用途。</h3></p>
+  <p>欢迎童鞋检查笔记中的错误，提出改进意见。如果你有自己的 LeNote 笔记，欢迎<a href="/author.html">与我分享</a>～</p>
 </div>
 
+    </div>
+  </div>
 
-{% include cheader.html param="物理" %}
+<div>
+  <div style="position: relative; top: 0px; left: 0px;" class="subMenu smint">
+    <div class="inner">
+      <a id="sTop" href="#sTop" class="subNavBtn action">↑</a>
+      <a id="s-Ex" href="#s-Ex" class="subNavBtn">实</a>
+      <a id="s-M" href="#s-M" class="subNavBtn">力</a>
+      <a id="s-T" href="#s-T" class="subNavBtn">热</a>
+      <a id="s-E" href="#s-E" class="subNavBtn">电</a>
+      <a id="s-O" href="#s-O" class="subNavBtn">光</a>
 
+      <a id="s-I" href="#s-I"  class="subNavBtn">信</a>
+      <a id="s-Q" href="#s-Q"  class="subNavBtn">量</a>
+      <a id="s-A" href="#s-A"  class="subNavBtn">原</a>
+      <a id="s-F" href="#s-F"  class="subNavBtn">场</a>
+      <a id="s-C" href="#s-C"  class="subNavBtn">凝</a>
+      <a id="s-H" href="#s-H"  class="subNavBtn">粒</a>
+      <a id="s-G" href="#s-G"  class="subNavBtn">相</a>
+      <a id="s-fo" href="#s-fo"  class="subNavBtn">公</a>
+      <a id="s-r" href="#s-r"  class="subNavBtn">实</a>
+      <a id="s-p" href="#s-p"  class="subNavBtn">概</a>
+      <a id="s-c" href="#s-c"  class="subNavBtn">复</a>
+      <a id="s-a" href="#s-a"  class="subNavBtn">代</a>
+      <a id="s-ag" href="#s-ag"  class="subNavBtn">群</a>
+      <a id="s-g" href="#s-g"  class="subNavBtn">几</a>
+      <a id="s-t" href="#s-t"  class="subNavBtn">拓</a>
+      <a id="s-m" href="#s-m"  class="subNavBtn">模</a>
+      <a id="s-n" href="#s-n"  class="subNavBtn">值</a>
+      <a id="s-Pm" href="#s-Pm"  class="subNavBtn">理</a>
+      <a id="s-en" href="#s-en"  class="subNavBtn">外</a>
 
-{% include header.html param="实验" %}
-<div class="content">
+{% include lenote.html cn="实验" en="Ex" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divEx')">
     计划 9 个章节，已上传 7 个，已完结 4 个
   </div>
   <div class="fold-cont" id="divEx" style="display:none">
-	<ol>
-		<li>形式逻辑
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/Ex1.pdf">电子</a> 1 页，未完）</li>
-		<li>误差分析（手写 1 页，待整理）</li>
-		<li>量纲分析（手写 1 页，未完）</li>
-		<li>希腊字母表
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/希腊字母.pdf">电子</a> 2 页，LaTeX）</li>
-		<li>物理单位表（电子 3 页，现代汉语词典）</li>
-		<li>物理常数表
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/CODATA2010.pdf">电子</a> 6 页，CODATA 2010 汇总）</li>
-		<li>元素周期表</li>
-		<li>核素表
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/nuclear wallet card 2011-摘.pdf">电子</a> 8 页，Nuclear Wallet Cards 2011 摘选）</li>
-		<li>其它数据库</li>
-	</ol>
+  <ol>
+    <li>物理实验 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/Ex1.pdf">Ex1.pdf</a></li>
+    <li>字母及单位表 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/希腊字母.pdf">希腊字母.pdf</a></li>
+    <li>物理常数表 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/CODATA2010.pdf">CODATA2010.pdf</a></li>
+    <li>核素表 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/nuclear wallet card 2011-摘.pdf">nuclear wallet card 2011-摘.pdf</a></li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<h3>其它参考书目：</h3>
-</div>
-{% include header.html param="力" %}
-<div class="content">
+  <h3>精：</h3>
+  <h3>参：</h3>
+
+{% include lenote.html cn="力" en="M" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divM')">
     计划 14 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divM" style="display:none">
-	<ol>
-		<li>质点力学</li>
-		<li>质点组力学</li>
-		<li>空间转动</li>
-		<li>刚体力学</li>
-		<li>中心力场</li>
-		<li>碰撞问题</li>
-		<li>弹性力学</li>
-		<li>流体力学</li>
-		<li>物理声学</li>
-		<li>分析力学</li>
-		<li>虚功原理</li>
-		<li>拉氏量</li>
-		<li>哈氏量</li>
-		<li>作用量</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>赵凯华. 新概念物理教程－力学（第二版）. 高等教育出版社（赵凯华新概念系列 NC 粉…）</li>
-		<li>舒幼生. 力学. 北京大学出版社（以及北大红蓝封面系列 NC 粉…）</li>
-		<li>清华分析力学讲义</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>周衍柏. 理论力学教程（第三版）. 高等教育出版社</li>
-		<li>（英文书待整）</li>
-	</ol>
-</div>
-{% include header.html param="热" %}
-<div class="content">
+  <h3>精：</h3>
+  <ol>
+    <li>赵凯华. 新概念物理教程－力学（第二版）. 高等教育出版社（赵凯华新概念系列 NC 粉…）</li>
+    <li>舒幼生. 力学. 北京大学出版社（以及北大红蓝封面系列 NC 粉…）</li>
+    <li>清华分析力学讲义</li>
+  </ol>
+  <h3>参：</h3>
+  <ol>
+    <li>周衍柏. 理论力学教程（第三版）. 高等教育出版社</li>
+    <li>（英文书待整）</li>
+  </ol>
+
+{% include lenote.html cn="热" en="T" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divT')">
     计划 22 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divT" style="display:none">
-	<ol>
-		<li>热力学系统</li>
-		<li>热力学变量</li>
-		<li>平衡态</li>
-		<li>可逆过程</li>
-		<li>温度，熵</li>
-		<li>理想气体</li>
-		<li>分子动理论</li>
-		<li>输运理论</li>
-		<li>热力学势</li>
-		<li>热力学方程</li>
-		<li>物态方程</li>
-		<li>相变</li>
-		<li>普通化学？</li>
-		<li>统计物理</li>
-		<li>统计分布</li>
-		<li>费米气体</li>
-		<li>玻色气体</li>
-		<li>配分函数</li>
-		<li>巨配分函数</li>
-		<li>涨落理论</li>
-		<li>量子统计</li>
-		<li>量子统计系综</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>Greiner. Thermodynamics and Statistical Mechanics. Springer（中译：锺云霄. 热力学与统计力学. 北京大学出版社）（也是这个北大中译系列的 NC 粉）（有这一本就够了，一本书把热学热力学量子统计全讲了…）</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>赵凯华. 新概念物理教程－热学（第二版）. 高等教育出版社</li>
+  <h3>精：</h3>
+  <ol>
+    <li>Greiner. Thermodynamics and Statistical Mechanics. Springer（中译：锺云霄. 热力学与统计力学. 北京大学出版社）（也是这个北大中译系列的 NC 粉）（有这一本就够了，一本书把热学热力学量子统计全讲了…）</li>
+  </ol>
+  <h3>参：</h3>
+  <ol>
+    <li>赵凯华. 新概念物理教程－热学（第二版）. 高等教育出版社</li>
     <li>汪志诚. 热力学统计物理（第五版）. 高等教育出版社</li>
-		<!-- <li>北大编写组. 量子统计物理学. 北京大学出版社</li> -->
-	</ol>
-</div>
-{% include header.html param="电" %}
-<div class="content">
+    <!-- <li>北大编写组. 量子统计物理学. 北京大学出版社</li> -->
+  </ol>
+
+{% include lenote.html cn="电" en="E" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divE')">
     计划 24 个章节，已上传 11 个，已完结 7 个
   </div>
   <div class="fold-cont" id="divE" style="display:none">
-	<ol>
-		<li>静电
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/E.pdf">电子</a> 1 页，已完结）</li>
-		<li>静电场（电子 2 页，已完结）</li>
-		<li>电学（电子 1 页，已完结）</li>
-		<li>电流（电子 1 页，已完结）</li>
-		<li>静磁（电子 1 页，已完结）</li>
-		<li>静磁场（电子 2 页，未完）</li>
-		<li>电源</li>
-		<li>电磁感应</li>
-		<li>磁学</li>
-		<li>电介质（电子 1 页，未完）</li>
-		<li>磁介质</li>
-		<li>麦氏方程组（电子 1 页，待整理）</li>
-		<li>电磁波（电子 1 页，未完）</li>
-		<li>电磁波传播</li>
-		<li>电磁波辐射</li>
-		<li>等离子体物理（还没学）</li>
-		<li>直流电路
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/E-c.pdf">手写</a> 1 页，已完结）</li>
-		<li>交流电路（手写 2 页，已完结）</li>
-		<li>晶体管</li>
-		<li>放大电路</li>
-		<li>运算电路</li>
-		<li>滤波器</li>
-		<li>振荡电路</li>
-		<li>端口与响应</li>
-	</ol>
+  <ol>
+    <li>电磁学 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/E.pdf">E.pdf</a></li>
+    <li>电路 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/E-c.pdf">E-c.pdf</a></li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>赵凯华. 电磁学（第三版）. 高等教育出版社（有新概念版，相当于这本书的缩水版）</li>
-		<li>Purcell. Electricity and Magnetism (2nd ed). McGraw-Hili</li>
-		<li>虞福春. 电动力学（修订版）. 北京大学出版社</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>郭硕鸿. 电动力学（第三版）. 高等教育出版社</li>
-		<li>Jackson, Classical Electrodynamics (3rd ed). Wiley（tedious…）</li>
-	</ol>
-</div>
-{% include header.html param="光" %}
-<div class="content">
+  <h3>精：</h3>
+  <ol>
+    <li>赵凯华. 电磁学（第三版）. 高等教育出版社（有新概念版，相当于这本书的缩水版）</li>
+    <li>Purcell. Electricity and Magnetism (2nd ed). McGraw-Hili</li>
+    <li>虞福春. 电动力学（修订版）. 北京大学出版社</li>
+  </ol>
+  <h3>参：</h3>
+  <ol>
+    <li>郭硕鸿. 电动力学（第三版）. 高等教育出版社</li>
+    <li>Jackson, Classical Electrodynamics (3rd ed). Wiley（tedious…）</li>
+  </ol>
+
+{% include lenote.html en="O" cn="光" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divO')">
     计划 25 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divO" style="display:none">
-	<ol>
-		<li>波动光学</li>
-		<li>干涉</li>
-		<li>衍射</li>
-		<li>傅里叶光学</li>
-		<li>几何光学</li>
-		<li>连续介质光学</li>
-		<li>偏振光学</li>
-		<li>晶体光学</li>
-		<li>散射光学</li>
-		<li>色散理论</li>
-		<li>成像学</li>
-		<li>光度学</li>
-		<li>黑体辐射</li>
-		<li>激光</li>
-		<li>高斯光束</li>
-		<li>非线性光学</li>
-		<li>相位匹配</li>
-		<li>超快光学</li>
-		<li>量子光学</li>
-		<li>相干态</li>
-		<li>压缩态</li>
-		<li>干涉仪</li>
-		<li>原子与光场</li>
-		<li>原子光学</li>
-		<li>量子电动力学（还没学）</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>赵凯华. 新概念物理教程－光学. 高等教育出版社</li>
-		<li>钟锡华. 现代光学基础（第三版）. 北京大学出版社</li>
-		<li>Boyd. Nonlinear Optics (3rd ed). Elsevier</li>
-		<li>李福利. 高等激光物理学. 中国科学技术大学</li>
-		<li>Fox. Quantum Optics - An Introduction. Oxford</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>[印度] Ajoy Ghatak. Optics. （中译：张晓光. 光学（第四版）. 清华大学出版社）（讲的相当的全…）</li>
-		<li>安连生. 应用光学. 北京理工大学出版社</li>
-		<li>Gerry. Introductory Quantum Optics. Cambridge</li>
-		<li>Agarwal. Quantum Optics. Cambridge</li>
-	</ol>
-</div>
-{% include header.html param="信息" %}
-<div class="content">
+  <h3>精：</h3>
+  <ol>
+    <li>赵凯华. 新概念物理教程－光学. 高等教育出版社</li>
+    <li>钟锡华. 现代光学基础（第三版）. 北京大学出版社</li>
+    <li>Boyd. Nonlinear Optics (3rd ed). Elsevier</li>
+    <li>李福利. 高等激光物理学. 中国科学技术大学</li>
+    <li>Fox. Quantum Optics - An Introduction. Oxford</li>
+  </ol>
+  <h3>参：</h3>
+  <ol>
+    <li>[印度] Ajoy Ghatak. Optics. （中译：张晓光. 光学（第四版）. 清华大学出版社）（讲的相当的全…）</li>
+    <li>安连生. 应用光学. 北京理工大学出版社</li>
+    <li>Gerry. Introductory Quantum Optics. Cambridge</li>
+    <li>Agarwal. Quantum Optics. Cambridge</li>
+  </ol>
+
+{% include lenote.html en="I"  cn="信息" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divI')">
     计划 17 个章节，已上传 5 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divI" style="display:none">
-  <ol>
-    <li>逻辑运算（手写 2 页，待整理）</li>
-    <li>逻辑门</li>
-    <li>数字电路</li>
-    <li>触发器</li>
-    <li>时序电路</li>
-    <li>信息学（电子 1 页，未完）</li>
-    <li>布尔函数</li>
-    <li>计算复杂度（电子 1 页，待整理）</li>
-    <li>基本实验</li>
-    <li>贝尔定理（电子 1 页，未完）</li>
-    <li>量子门（电子 2 页，未完）</li>
-    <li>量子计算</li>
-    <li>量子傅氏变换</li>
-    <li>量子搜索</li>
-    <li>量子纠错</li>
-    <li>量子通讯</li>
-    <li>量子密码学</li>
-  </ol>
+
   </div>
 </div>
-  <h3>精读书单：</h3>
+  <h3>精：</h3>
   <ol>
     <li>Nielsen & Chuang. Quantum Computation and Quantum Information. Wiley（中译：赵千川. 量子计算和量子信息. 清华大学出版社）</li>
     <li>张礼. 量子力学的前沿问题. 清华大学出版社</li>
   </ol>
-  <h3>其它参考书目：</h3>
+  <h3>参：</h3>
   <ol>
     <li>Preskill@Caltech 讲义</li>
     <li>数字电子技术基础</li>
     <li>龙桂鲁. 量子力学新进展（第五辑）. 清华大学出版社</li>
   </ol>
-</div>
-{% include header.html param="量子" %}
-<div class="content">
+
+{% include lenote.html en="Q"  cn="量子" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divQ')">
     计划 8 个章节，已上传 7 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divQ" style="display:none">
-	<ol>
-		<li>波函数
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/Q.pdf">电子</a> 4 页，未完）</li>
-		<li>态矢（电子 2 页，待整理）</li>
-		<li>自旋（电子 2 页，待整理）</li>
-		<li>角动量（电子 2 页，待整理）</li>
-		<li>算符（电子 1 页，未完）</li>
-		<li>变换（电子 3 页，未完）</li>
-		<li>路径积分（电子 1 页，未完）</li>
-		<li>几何相</li>
-	</ol>
+  <ol>
+    <li>初等量子力学 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/Q.pdf">Q.pdf</a></li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>赵凯华. 新概念物理教程－量子物理（第二版）. 高等教育出版社（初学入门）</li>
-		<li>Griffiths. Introduction to quantum mechanics. Pearson（中译: 机械工业出版社）（最好的初量教材没有之一）</li>
-		<li>Sakurai. Modern Quantum Mechanics (2nd ed). Wesley（概念讲的很好， 就是符号记号陈旧）</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>曾谨言. 量子力学教程 (第三版). 科学出版社（数学很详细…）</li>
-		<li>周世勋. 量子力学教程 (第二版). 高等教育出版社</li>
-	</ol>
-</div>
-{% include header.html param="原子" %}
-<div class="content">
+  <h3>精：</h3>
+  <ol>
+    <li>赵凯华. 新概念物理教程－量子物理（第二版）. 高等教育出版社（初学入门）</li>
+    <li>Griffiths. Introduction to quantum mechanics. Pearson（中译: 机械工业出版社）（最好的初量教材没有之一）</li>
+    <li>Sakurai. Modern Quantum Mechanics (2nd ed). Wesley（概念讲的很好， 就是符号记号陈旧）</li>
+  </ol>
+  <h3>参：</h3>
+  <ol>
+    <li>曾谨言. 量子力学教程 (第三版). 科学出版社（数学很详细…）</li>
+    <li>周世勋. 量子力学教程 (第二版). 高等教育出版社</li>
+  </ol>
+
+{% include lenote.html en="A"  cn="原子" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divA')">
     计划 11 个章节，已上传 6 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divA" style="display:none">
-	<ol>
-		<li>氢原子
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/A.pdf">电子</a> 1 页，待整理）</li>
-		<li>光谱学</li>
-		<li>精细结构（电子 1 页，待整理）</li>
-    <li>微扰论（电子 2 页，待整理）</li>
-		<li>跃迁（电子 1 页，未完）</li>
-		<li>微扰效应（电子 1 页，待整理）</li>
-		<li>氦原子（电子 1 页，待整理）</li>
-		<li>核磁共振</li>
-		<li>MOT</li>
-		<li>SO(4)对称性</li>
-		<li>猫态与退相干</li>
-	</ol>
+  <ol>
+    <li>氢原子 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/A.pdf">A.pdf</a></li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
+  <h3>精：</h3>
   <ol>
     <li>同量子（量子的内容实在太多了所以拆分一下…）</li>
     <li>Demtröder. Atom, Molecules and Photons (2nd ed). Springer（补充实验上的知识）</li>
   </ol>
-</div>
-{% include header.html param="场论" %}
-<div class="content">
+
+{% include lenote.html en="F"  cn="场论" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divF')">
     计划 9 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divF" style="display:none">
-  <ol>
-    <li>经典场论</li>
-    <li>产灭算符</li>
-    <li>粒子数表象</li>
-    <li>二次量子化</li>
-    <li>规范场论</li>
-    <li>标量场</li>
-    <li>旋量场</li>
-    <li>希格斯机制</li>
-    <li>重整化（还没学）</li>
-  </ol>
   </div>
 </div>
-  <h3>精读书单：</h3>
+  <h3>精：</h3>
   <ol>
     <li>Lancaster. Quantum Field Theory for the gifted amateur. Oxford（初学入门严重推荐）</li>
     <li>Zee. Quantum Field Theory in a Nutshell. Springer（NC 粉系列）</li>
   </ol>
-  <h3>其它参考书目：</h3>
+  <h3>参：</h3>
   <ol>
     <li>Merzbacher. Quantum Mechanics (3rd ed). Wiley</li>
   </ol>
-</div>
-{% include header.html param="凝态" %}
-<div class="content">
+
+{% include lenote.html en="C"  cn="凝态" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divC')">
     计划 19 个章节，已上传 4 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divC" style="display:none">
-	<ol>
-		<li>晶格（手写 2 页，待整理）</li>
-		<li>结合能（手写 1 页，待整理）</li>
-		<li>能带论（手写 1 页，未完）</li>
-		<li>晶格振（手写 1 页，未完）</li>
-		<li>热容</li>
-		<li>冷原子</li>
-		<li>玻爱凝聚</li>
-		<li>双势阱</li>
-		<li>波氏变换</li>
-		<li>宏观波函数</li>
-		<li>超流</li>
-		<li>拓扑激发</li>
-		<li>费米液体</li>
-		<li>BCS 理论</li>
-		<li>有限温度</li>
-		<li>光晶格</li>
-		<li>铁磁性</li>
-		<li>拓扑相</li>
-		<li>量子霍尔效应（还没学）</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>阎守胜. 固体物理基础（第二版） . 北京大学出版社（适合初学科普）</li>
-		<li>Kittel. Introduction to Solid State Physics (8th edition)（中译: 项金钟. 固体物理导论. 机械工业出版社）</li>
-		<li>Annett. Superconductivity, Superfluids and Condensates. Oxford</li>
-		<li>清华冷原子课程讲义</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<p>同场论</p>
-</div>
-{% include header.html param="粒子" %}
-<div class="content">
+  <h3>精：</h3>
+  <ol>
+    <li>阎守胜. 固体物理基础（第二版） . 北京大学出版社（适合初学科普）</li>
+    <li>Kittel. Introduction to Solid State Physics (8th edition)（中译: 项金钟. 固体物理导论. 机械工业出版社）</li>
+    <li>Annett. Superconductivity, Superfluids and Condensates. Oxford</li>
+    <li>清华冷原子课程讲义</li>
+  </ol>
+  <h3>参：</h3>
+  <p>同场论</p>
+
+{% include lenote.html en="H"  cn="粒子" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divH')">
     计划 19 个章节，已上传 10 个，已完结 1 个
   </div>
   <div class="fold-cont" id="divH" style="display:none">
-	<ol>
-		<li>原子核
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/N.pdf">手写</a> 1 页，待整理）</li>
-		<li>放射性（手写 2 页，待整理）</li>
-		<li>核探测（手写 2 页，待整理）</li>
-		<li>核电子学（手写 1 页，已完结）</li>
-		<li>$\alpha$ 衰变（手写 1 页，待整理）</li>
-		<li>$\beta$ 衰变（手写 2 页，待整理）</li>
-		<li>$\gamma$ 跃迁（手写 1 页，待整理）</li>
-		<li>核反应（电子 1 页，未完）</li>
-		<li>核模型（手写 1 页，待整理）</li>
-		<li>核力</li>
-		<li>散射理论（电子 2 页，未完）</li>
-		<li>中子物理</li>
-		<li>量子色动力学（还没学）</li>
-		<li>高能物理</li>
-		<li>介子</li>
-		<li>轻子</li>
-		<li>标准模型</li>
-		<li>超出标准模型</li>
-		<li>弦理论（感觉有生之年不会学了…）</li>
-	</ol>
+  <ol>
+    <li>核物理 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/N.pdf">N.pdf</a></li>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>卢希庭. 原子核物理. 原子能出版社</li>
-		<li>丁富荣. 辐射物理. 北京大学出版社</li>
-		<li>Perkins. Introduction to High Energy Physics (4th ed). Cambridge</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>Robert Mann. An Introduction to Particle Physics and the Standard Model. CRC Press</li>
-	</ol>
-</div>
-{% include header.html param="相对论" %}
-<div class="content">
+  <h3>精：</h3>
+  <ol>
+    <li>卢希庭. 原子核物理. 原子能出版社</li>
+    <li>丁富荣. 辐射物理. 北京大学出版社</li>
+    <li>Perkins. Introduction to High Energy Physics (4th ed). Cambridge</li>
+  </ol>
+  <h3>参：</h3>
+  <ol>
+    <li>Robert Mann. An Introduction to Particle Physics and the Standard Model. CRC Press</li>
+  </ol>
+
+{% include lenote.html en="G"  cn="相对论" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divG')">
     计划 11 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divG" style="display:none">
-	<ol>
-		<li>狭义相对论</li>
-		<li>闵氏空间</li>
-		<li>动体电动力学</li>
-		<li>庞加莱变换</li>
-		<li>KG 方程</li>
-		<li>狄拉克方程</li>
-		<li>基本解</li>
-		<li>手性</li>
-		<li>规范变换</li>
-		<li>广义相对论（还没学）</li>
-		<li>黑洞，宇宙学（和我的方向比较远，以后有兴趣学）</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>虞福春. 电动力学（修订版）. 北京大学出版社（第 6 章）</li>
-		<li>Schwabl. Advanced Quantum Mechanics. Springer</li>
-		<li>Zee. Einstein Gravity in a Nutshell. Princeton</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-</div>
+  <h3>精：</h3>
+  <ol>
+    <li>虞福春. 电动力学（修订版）. 北京大学出版社（第 6 章）</li>
+    <li>Schwabl. Advanced Quantum Mechanics. Springer</li>
+    <li>Zee. Einstein Gravity in a Nutshell. Princeton</li>
+  </ol>
+  <h3>参：</h3>
 
+{% include lenote.html en="fo"  cn="公式" %}
 
-
-
-{% include cheader.html param="数学" %}
-
-
-
-{% include header.html param="公式" %}
-<div class="content">
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divfo')">
     计划 11 个章节，已上传 7 个，已完结 4 个
   </div>
   <div class="fold-cont" id="divfo" style="display:none">
-	<ol>
-		<li>数列</li>
-		<li>不等式</li>
-		<li>排列组合</li>
-		<li>三角函数
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/fo.pdf">手写</a> 2 页，未完）</li>
-		<li>平面几何（手写 2 页，未完）</li>
-		<li>统计分布</li>
-		<li>微分表（手写 1 页，已完结）</li>
-		<li>积分表（手写 1 页，已完结）</li>
-		<li>级数表（手写 1 页，已完结）</li>
-		<li>常微表（手写 2 页，已完结）</li>
-		<li>傅氏拉氏变换（手写 1 页，待整理）</li>
-	</ol>
+  <ol>
+    <li>常用数学公式 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/fo.pdf">fo.pdf</a></li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<h3>其它参考书目：</h3>
-</div>
-{% include header.html param="实分析" %}
-<div class="content">
+  <h3>精：</h3>
+  <h3>参：</h3>
+
+{% include lenote.html en="r"  cn="实分析" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divr')">
     计划 13 个章节，已上传 3 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divr" style="display:none">
-	<ol>
-		<li>集合（<a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/r.pdf">手写</a> 2 页，未完）</li>
-		<li>函数（手写 1 页，未完）</li>
-		<li>微积分（手写 1 页，未完）</li>
-		<li>级数</li>
-		<li>广义积分</li>
-		<li>多元函数</li>
-		<li>重积分</li>
-		<li>测度论</li>
-		<li>可测函数</li>
-		<li>勒贝格积分</li>
-		<li>度量空间</li>
-		<li>线性空间</li>
-		<li>赋范空间</li>
-	</ol>
+  <ol>
+    <li>数学分析 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/r.pdf">r.pdf</a></li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<h3>其它参考书目：</h3>
+  <h3>精：</h3>
+  <h3>参：</h3>
   <ol>
     <li>杨小远. 工科数学分析. 科学出版社</li>
     <li>丁同仁. 常微分方程教程（第二版）. 高等教育出版社</li>
     <li>程其襄. 实变函数与泛函分析基础（第三版）. 高等教育出版社</li>
   </ol>
-</div>
-{% include header.html param="概统" %}
-<div class="content">
+
+{% include lenote.html en="p"  cn="概统" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divp')">
     计划 9 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divp" style="display:none">
-	<ol>
-		<li>概率</li>
-		<li>分布</li>
-		<li>二维分布</li>
-		<li>变量函数</li>
-		<li>统计特征</li>
-		<li>大数定律</li>
-		<li>统计估计</li>
-		<li>统计检验</li>
-		<li>随机过程</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<h3>其它参考书目：</h3>
-</div>
-{% include header.html param="复分析" %}
-<div class="content">
+  <h3>精：</h3>
+  <h3>参：</h3>
+
+{% include lenote.html en="c"  cn="复分析" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divc')">
     计划 12 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divc" style="display:none">
-	<ol>
-		<li>复数</li>
-		<li>单位根</li>
-		<li>解析函数</li>
-		<li>解析函数积分</li>
-		<li>复变级数</li>
-		<li>留数理论</li>
-		<li>$\Gamma$ 函数</li>
-		<li>信号函数</li>
-		<li>傅氏变换</li>
-		<li>拉氏变换</li>
-		<li>差分方程</li>
-		<li>z 变换（还没看）</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>梁昆淼. 数学物理方法（第四版）. 高等教育出版社（第一篇）</li>
-		<li>吴崇试. 数学物理方法（第二版）. 北京大学出版社（第一部分）</li>
-	</ol>
-	<h3>其它参考书目：</h3>
+  <h3>精：</h3>
+  <ol>
+    <li>梁昆淼. 数学物理方法（第四版）. 高等教育出版社（第一篇）</li>
+    <li>吴崇试. 数学物理方法（第二版）. 北京大学出版社（第一部分）</li>
+  </ol>
+  <h3>参：</h3>
   <ol>
     <li>郑君里. 信号与系统（第二版）. 高等教育出版社</li>
   </ol>
-</div>
-{% include header.html param="代数" %}
-<div class="content">
+
+{% include lenote.html en="a"  cn="代数" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('diva')">
     计划 8 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="diva" style="display:none">
-	<ol>
-		<li>行列式</li>
-		<li>方程组</li>
-		<li>矩阵</li>
-		<li>特征值</li>
-		<li>二次型</li>
-		<li>基矢（接实分析的线性空间）</li>
-		<li>线性变换</li>
-		<li>张量代数</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
+  <h3>精：</h3>
   <ol>
     <li>蓝以中. 高等代数简明教程. 北京大学出版社</li>
   </ol>
-	<h3>其它参考书目：</h3>
+  <h3>参：</h3>
   <ol>
     <li>高宗升. 线性代数（第二版）. 北京航空航天大学出版社</li>
   </ol>
-</div>
-{% include header.html param="群论" %}
-<div class="content">
+
+{% include lenote.html en="ag"  cn="群论" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divag')">
     计划 9 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divag" style="display:none">
-	<ol>
-		<li>初等数论</li>
-		<li>群论</li>
-    <li>同态同构</li>
-    <li>环域</li>
-		<li>群表示论</li>
-    <li>循环群</li>
-		<li>对称群</li>
-    <li>置换群</li>
-		<li>李群</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>韩士安. 近世代数（第二版）. 科学出版社（数学专业，讲群环域）</li>
+  <h3>精：</h3>
+  <ol>
+    <li>韩士安. 近世代数（第二版）. 科学出版社（数学专业，讲群环域）</li>
     <li>Elliott. Symmetries in Physics. Macmillan（中译: 仝道荣. 物理学中的对称性. 科学出版社）（完整讲群和群表示论以及物理应用）</li>
   </ol>
-  <h3>其它参考书目：</h3>
+  <h3>参：</h3>
   <ol>
     <li>Serre. Linear Representation of Finite Groups（中译: 郝鈵新. 有限群的线性表示. 科学出版社）</li>
     <li>Greiner. Quantum Mechanics Symmetries. Springer（中译: 钱裕昆. 量子力学：对称性. 北京大学出版社）（李群）（不确定这本书是放在数学里还是放粒子物理里…）</li>
-	</ol>
-</div>
-{% include header.html param="几何" %}
-<div class="content">
+  </ol>
+
+{% include lenote.html en="g"  cn="几何" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divg')">
     计划 10 个章节，已上传 3 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divg" style="display:none">
-  <ol>
-    <li>三角形</li>
-    <li>圆</li>
-    <li>圆锥曲线</li>
-    <li>解析几何（手写 1 页，待整理）</li>
-    <li>微分几何（手写 1 页，待整理）</li>
-    <li>基本量（手写 1 页，待整理）</li>
-    <li>曲率</li>
-    <li>外代数</li>
-    <li>矢量场</li>
-    <li>度规</li>
-  </ol>
+
   </div>
 </div>
-  <h3>精读书单：</h3>
+  <h3>精：</h3>
   <ol>
     <li>梅向明. 微分几何（第四版）. 高等教育出版社</li>
   </ol>
-  <h3>其它参考书目：</h3>
-</div>
-{% include header.html param="拓扑" %}
-<div class="content">
+  <h3>参：</h3>
+
+{% include lenote.html en="t"  cn="拓扑" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divt')">
     计划 2 个章节，已上传 1 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divt" style="display:none">
-	<ol>
-    <li>图论（手写 1 页，未完）</li>
-		<li>拓扑学（刚开头）</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>Armstrong. Basic Topology（中译：孙以丰. 基础拓扑学. 北京大学出版社）</li>
-	</ol>
-	<h3>其它参考书目：</h3>
+  <h3>精：</h3>
+  <ol>
+    <li>Armstrong. Basic Topology（中译：孙以丰. 基础拓扑学. 北京大学出版社）</li>
+  </ol>
+  <h3>参：</h3>
     <ol>
       <li>王敬庚. 直观拓扑（第三版）. 北京师范大学出版社</li>
     </ol>
-</div>
-{% include header.html param="数模" %}
-<div class="content">
+
+{% include lenote.html en="m"  cn="数模" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divm')">
     计划 8 个章节，已上传 8 个，已完结 6 个
   </div>
   <div class="fold-cont" id="divm" style="display:none">
-	<ol>
-		<li>单纯形
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/m.pdf">手写</a> 1 页，已完结）</li>
-		<li>运筹学（手写 1 页，已完结）</li>
-		<li>动态规划（手写 1 页，已完结）</li>
-		<li>存储论与排队论（手写 1 页，已完结）</li>
-		<li>博弈论（手写 1 页，未完）</li>
-		<li>策略模型（手写 1 页，未完）</li>
-		<li>经济模型（手写 1 页，已完结）</li>
-		<li>生物模型（手写 1 页，已完结）</li>
-	</ol>
+  <ol>
+    <li>运筹学，数学模型 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/m.pdf">m.pdf</a></li>
+  </ol>
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>运筹学教材编写组. 运筹学（第三版）. 清华大学出版社</li>
+  <h3>精：</h3>
+  <ol>
+    <li>运筹学教材编写组. 运筹学（第三版）. 清华大学出版社</li>
   </ol>
-  <h3>其它参考书目：</h3>
+  <h3>参：</h3>
   <ol>
     <li>姜启源. 数学模型（第四版）. 高等教育出版社</li>
   </ol>
-</div>
-{% include header.html param="数值" %}
-<div class="content">
+
+{% include lenote.html en="n"  cn="数值" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divn')">
     计划 10 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divn" style="display:none">
-	<ol>
-		<li>数值误差</li>
-		<li>解线性方程组</li>
-		<li>求特征值</li>
-		<li>数值求根</li>
-		<li>插值与逼近</li>
-		<li>数值积分</li>
-		<li>高斯积分</li>
-		<li>解微分方程</li>
-		<li>蒙特卡洛方法</li>
-		<li>有限元方法</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>Landau. A survey of computational physics. Princeton and Oxford</li>
-	</ol>
-	<h3>其它参考书目：</h3>
-	<ol>
-		<li>颜庆津. 数值分析（第三版）. 北京航空航天大学出版社</li>
-	</ol>
-</div>
-{% include header.html param="数理" %}
-<div class="content">
+  <h3>精：</h3>
+  <ol>
+    <li>Landau. A survey of computational physics. Princeton and Oxford</li>
+  </ol>
+  <h3>参：</h3>
+  <ol>
+    <li>颜庆津. 数值分析（第三版）. 北京航空航天大学出版社</li>
+  </ol>
+
+{% include lenote.html en="Pm"  cn="数理" %}
+
 <div class="fold">
   <div class="fold-head" onclick="isHidden('divPm')">
     计划 13 个章节，已上传 0 个，已完结 0 个
   </div>
   <div class="fold-cont" id="divPm" style="display:none">
-	<ol>
-		<!-- <li>常微分方程（已制成<a href="index.html#公式">常微表</a>）</li> -->
-		<li>偏微分方程</li>
-		<li>积分方程</li>
-		<li>定解问题</li>
-		<li>行波法</li>
-		<li>分离变量法</li>
-		<li>厄米函数</li>
-		<li>球函数</li>
-		<li>柱函数</li>
-		<li>超几何函数</li>
-		<li>SL 型方程</li>
-		<li>格林函数法</li>
-		<li>变分法</li>
-		<li>非线性方程</li>
-	</ol>
+
   </div>
 </div>
-	<h3>精读书单：</h3>
-	<ol>
-		<li>梁昆淼. 数学物理方法（第四版）. 高等教育出版社（第二篇）</li>
-		<li>吴崇试. 数学物理方法（第二版）. 北京大学出版社（第二部分）</li>
-	</ol>
-	<h3>其它参考书目：</h3>
+  <h3>精：</h3>
+  <ol>
+    <li>梁昆淼. 数学物理方法（第四版）. 高等教育出版社（第二篇）</li>
+    <li>吴崇试. 数学物理方法（第二版）. 北京大学出版社（第二部分）</li>
+  </ol>
+  <h3>参：</h3>
+
+{% include lenote.html en="en"  cn="外语" %}
+
+  <ol>
+    <li>英语 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/Eng.pdf">Eng.pdf</a></li>
+    <li>英语法 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/英语语法.pdf">英语语法.pdf</a></li>
+    <li>德语法 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/德语变化表.pdf">德语变化表.pdf</a></li>
+    <li>日语法 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/日语变化一览表.pdf">日语变化一览表.pdf</a></li>
+  </ol>
+
+
+</div>
+
+  </div>
 </div>
 
 
-
-{% include cheader.html param="外语" %}
-
-<hr />
-<div class="content">
-	<ol>
-		<li>英语
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/Eng.pdf">手写</a> 3 页，已完结）</li>
-    <li>英语法
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/英语语法.pdf">手写</a> 5 页，已完结）</li>
-		<li>听 OST 背单词（筹划中）</li>
-		<li>德语法
-    （<a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/德语变化表.pdf">电子</a> 2 页，未完）</li>
-		<li>日语法
-    （<!-- <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/Jp.jpg">手写</a> 1 页， -->
-    <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/日语变化一览表.pdf">电子</a> 2 页，未完）</li>
-		<li>听译日语歌（筹划中）</li>
-	</ol>
 </div>
 
-
-<hr />
 <div class="content">
 <p>（其它科目笔记多为纸质版，尚待积累）</p>
 </div>
 
-
-
 </div>
+
 
 
 <div id="discuss">
@@ -875,3 +561,4 @@ title: 主页
   </div>
   </div>
 </div>
+

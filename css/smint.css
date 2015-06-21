@@ -1,0 +1,95 @@
+h2{
+  color: #112851;
+  padding: 10px;
+}
+
+.wrap {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.section {
+	width: 100%;
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+	height: 600px;
+}
+
+.inner {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	min-height: 25px;
+	padding: 10px 0;
+	font-size: 0.9em;
+}
+
+.inner:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+}
+
+.subMenu {
+	height: 42px;
+	z-index: 1000;
+	width: 100%;
+	background: rgba(17,40,81,0.5);
+}
+
+.subMenu .inner {
+	padding:0;
+	margin: 0 auto;
+}
+
+
+.subNavBtn {
+	display: block;
+	height: 20px;
+	width: 3%;
+	float: left;
+	margin: 0;
+	padding: 1px 2% 0 2%;
+  font-size: 0.9em;
+	text-align: center;
+}
+a.subNavBtn {
+	color: #fff;
+}
+.subMenu a:hover {
+	background: #1783c7;
+}
+
+.action {
+	background: #25aae1;
+}
+.end {
+	margin: 0;
+}
+
+
+
+/* SECTIONS */
+.sTop {
+  min-height: 620px;
+  height: 1100px;
+}
+
+
+span.notebkg {
+  font-size: 12em;
+  color: rgba(255,255,255,0.3);
+  margin: 20px 0 0 25px;
+  position: absolute;
+  z-index: -999;
+}
+
+

@@ -30,6 +30,14 @@ img.series{
   /*cursor: zoom-in;*/
 }
 
+img.faces{
+  height: 75px;
+  max-width: 90%;
+  display: block;
+  box-shadow: 0px 0px 15px #333;
+}
+
+
 img.lenote{
   width: 100%;
   max-width: 800px;
@@ -49,12 +57,10 @@ img.wiki{
 }
 
 
-/*img.faces{
-  height: 75px;
-  max-width: 90%;
-  display: block;
-  box-shadow: 0px 0px 15px #333;
-}*/
-
-
+img.lenotef{
+  height: 140px;
+  margin: 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
 
