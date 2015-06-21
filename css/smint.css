@@ -57,7 +57,7 @@ h2{
 	width: 3%;
 	float: left;
 	margin: 0;
-	padding: 1px 2% 0 2%;
+	padding: 2px 2% 0 2%;
   font-size: 0.9em;
 	text-align: center;
 }
@@ -85,7 +85,7 @@ a.subNavBtn {
 
 
 span.notebkg {
-  font-size: 12em;
+  font-size: 16em;
   color: rgba(255,255,255,0.3);
   margin: 20px 0 0 25px;
   position: absolute;
