@@ -4,8 +4,8 @@
 
 
 .fold {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   border: 1px solid #112851;
   border-radius: 4px;
 }
@@ -13,7 +13,7 @@
 .fold-head {
   display: block;
   padding: 3px;
-  background: #112851;
+  background: rgba(17,40,81,0.7);
   color: #FFF;
   cursor:pointer;
 }

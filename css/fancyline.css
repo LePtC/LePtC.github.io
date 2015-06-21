@@ -1,13 +1,15 @@
-/* fancyline.css for LePtC [2015.0403] */
-/* 代码来自：http://stackoverflow.com/questions/15215556/create-a-beautiful-horizontal-line-with-css-only */
+/* fancyline.css for LePtC [2015.0621] */
+/* 代码来自：https://css-tricks.com/simple-styles-for-horizontal-rules/ */
 
-
-hr.fancy-line {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
-    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
-    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
-    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
-    box-shadow: 0px -2px 4px rgba(136,136,136,0.75);
+hr.style2{
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+hr.style3 { border: 0; border-bottom: 2px dashed #112851; /*background: #999;*/ }
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }

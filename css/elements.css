@@ -4,157 +4,155 @@
 
 
 h1 {
-	color: #FFFFFF;
-	font-weight: bold;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 .cheader h2 {
-	text-align: center;
-	padding: 10px 10px 0px 10px;
-	color: #112851;
-	font-size: 1.6em;
+  text-align: center;
+  padding: 10px 10px 0px 10px;
+  color: #112851;
+  font-size: 1.6em;
+}
+.header {
+  margin-top: 10px;
 }
 .header h2 {
-	display: inline;
-	padding: 10px 10px 0px 10px;
-	color: #112851;
-	font-size: 1.4em;
+  display: inline;
+  padding: 10px 10px 0px 10px;
+  color: #112851;
+  font-size: 1.4em;
 }
 h3 {
-	display:inline;
-	padding: 0;
-	margin: 0;
-	color: #112851;
-	font-size: 1.1em;
+  display:inline;
+  padding: 0;
+  margin: 0;
+  color: #112851;
+  font-size: 1.1em;
 }
 .content {
-	padding: 0px 20px 10px 20px;
+  padding: 0px 20px 10px 20px;
 }
 
 a:link {
-	/*color: #F4400B;*/
-	color: #2E691F;
-	text-decoration:none;
+  /*color: #F4400B;*/
+  color: #2E691F;
+  text-decoration:none;
 }
 a:visited {
-	color: #505F1B;
-	text-decoration:none;
+  color: #505F1B;
+  text-decoration:none;
 }
 a:hover, a:active {
-	color: #4BA733;
-	text-decoration:underline;
+  color: #4BA733;
+  text-decoration:underline;
 }
 h2 a:hover, a:active {
-	color: #112851;
-	text-decoration:none;
+  color: #112851;
+  text-decoration:none;
 }
 
 table {
-	border-collapse:collapse;
-	border: 1px solid rgba(68,68,68,0.4);
+  border-collapse:collapse;
+  border: 1px solid #112851;
 }
 th, td {
-	border: 1px solid rgba(68,68,68,0.4);
-	padding: 5px;
+  border: 1px solid #112851;
+  padding: 5px;
 }
 th {
-	background: rgba(17,40,81,0.7);
-	color: #FFF;
-	/*font-style: normal;*/
+  background: rgba(17,40,81,0.7);
+  color: #FFF;
+  /*font-style: normal;*/
 }
 /* td{
-	max-width: 200px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 } */
 
 li {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .active {
-	padding: 0px 0px 5px 0px;
+  padding: 0px 0px 5px 0px;
 }
 .active ul {
-	list-style: none;
+  list-style: none;
   padding: 0px 6px 0px 6px;
 }
 .active li {
-	display: inline;
-	padding: 0px 6px 0px 6px;
+  display: inline;
+  padding: 0px 6px 0px 6px;
 }
 
 .line {
-	border-bottom: 1px dashed #999;
+  border-bottom: 1px dashed #999;
 }
 
 input[type=text] {
-	font-size: 1.1em;
-	font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Tahoma,STHeiti,Arial,sans-serif;
-	padding: 2px;
-	color: #222;
-	background: url(search.png) no-repeat right;
-	background-color: rgba(17,40,81,0.7);
-	border: 2px solid rgba(68,68,68,0.4);
-	border-radius: 5px;
+  font-size: 1.1em;
+  font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Tahoma,STHeiti,Arial,sans-serif;
+  padding: 2px;
+  color: #222;
+  background: url(search.png) no-repeat right;
+  background-color: rgba(17,40,81,0.7);
+  border: 2px solid rgba(68,68,68,0.4);
+  border-radius: 5px;
 }
 input[type=text]:focus {
-	background-color: #CCC;
-	border-color:rgba(217, 114, 11, 0.8);
+  background-color: #CCC;
+  border-color:rgba(217, 114, 11, 0.8);
   box-shadow: inset 2px 0 2px rgba(34,34,34,0.4);
 }
 
 blockquote{
-	color: #444;
-	border-left: 2px solid #666;
-	margin: 0px 0px 10px 5px;
-	padding: 0px 0px 0px 9px;
+  color: #444;
+  border-left: 2px solid #666;
+  margin: 0px 0px 10px 5px;
+  padding: 0px 0px 0px 9px;
 }
 
 p code{
-	padding: 1px;
-	background-color: #7A94C9;
-	border: 1px solid #000;
-	border-radius: 3px;
+  padding: 1px;
+  background-color: #7A94C9;
+  border: 1px solid #000;
+  border-radius: 3px;
 }
 
 pre {
-	/*color: #A34;
-	font-family: Consolas,"courier new";
-	font-size: 16px;*/
-	border: 1px solid #A34;
-	border-left-width: 5px;
-	padding: 8px 8px 8px 9px;
-	white-space: pre-wrap;       /* CSS 3 */
-	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-	white-space: -pre-wrap;      /* Opera 4-6 */
-	white-space: -o-pre-wrap;    /* Opera 7 */
-	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  /*color: #A34;
+  font-family: Consolas,"courier new";
+  font-size: 16px;*/
+  border: 1px solid #A34;
+  border-left-width: 5px;
+  padding: 8px 8px 8px 9px;
+  white-space: pre-wrap;       /* CSS 3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 pre code{
-	font-family: Consolas,"courier new";
-	font-size: 1.1em;
+  font-family: Consolas,"courier new";
+  font-size: 1.1em;
 }
 
 br{
-	clear: both;
-}
-
-hr{
-  height: 1px;
-  background: #151D34;
+  clear: both;
 }
 
 .float {
-	display: block;
+  display: block;
 }
 
 
 pnum{
-	color: #7A94C9;
-	position: absolute;
-	left: -25px;
+  color: #7A94C9;
+  position: absolute;
+  left: -25px;
 }
 
 invi {
@@ -162,7 +160,7 @@ invi {
 }
 
 red {
-	color: red;
+  color: red;
 }
 
 span.warning {

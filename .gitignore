@@ -9,3 +9,4 @@ _site/
 *.tex
 *.gz
 loc.yml
+_configloc.yml
