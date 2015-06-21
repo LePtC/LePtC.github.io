@@ -29,8 +29,25 @@ title: LePtC
   <p style="font-size:1.1em;padding:20px;text-indent:40px;"><a href="/author.html">LePtC</a>，一只物理和数学没学好经常算错数的呆萌狐狸。特长是超大质量脑洞，大到整个宇宙都在视界之内。爱好吃饭、睡觉、卖萌，一个卖萌卖到烦人也要卖的家伙，制作了这个主页研究物<invi>(如)</invi>理<invi>(何)</invi>问<invi>(卖)</invi>题<invi>(萌)</invi>，哩哩～</p>
   <br />
   <p style="text-align: right;">但愿 Github 不要被墙… _Σ:з」∠)_</p>
+</div>
+
+
+{% include header.html param="告示牌" %}
+
+<div class="content">
+<div class="active">
+  <ul>
+  <li><a href="posts/plan.html">版块规划</a>(2015.06)</li>
+  <!-- <li><a href="posts/website.html">网站使用说明</a>(2015.03)</li> -->
+  <li><a href="posts/questionnaire.html">问卷调查</a>(2015.05)</li>
+  </ul><ul>
+  <li><b><a href="/author.html">联系作者</a></b>(2015.03)</li>
+  <li><b><a href="/copyright.html">版权声明</a></b>(2015.03)</li>
+  </ul>
+</div>
 <p style="text-align: right;">最后更新时间（Jekyll 生成时间）：{{ site.time }}</p>
 </div>
+
 
 {% include header.html param="狸站动态" %}
 
@@ -72,7 +89,7 @@ title: LePtC
 </tr>
 <tr>
   <td style="color:#444">2015.07</td>
-  <td style="color:#444">制作主角故事</td>
+  <td style="color:#444">制作主角故事 s2m1~3</td>
 </tr>
 <tr>
   <td style="color:#444">2015.06</td>
@@ -80,8 +97,12 @@ title: LePtC
 </tr>
 
 <tr>
+  <td>2015.06.21</td>
+  <td>发布 post <a href="/posts/plan.html">版块规划</a></td>
+</tr>
+<tr>
   <td>2015.06.20</td>
-  <td><a href="wiki/">百科</a>主页改版（图片预览），不再区分科幻</td>
+  <td><a href="/wiki/">百科</a>主页改版（图片预览），不再区分科幻</td>
 </tr>
 <tr>
   <td>2015.06.13</td>
@@ -89,7 +110,7 @@ title: LePtC
 </tr>
 <tr>
   <td>2015.06.09</td>
-  <td><a href="popsci/">看不懂</a>主页改版（分组）</td>
+  <td><a href="/popsci/">看不懂</a>主页改版（分组）</td>
 </tr>
 <tr>
   <td>2015.06.09</td>
@@ -113,7 +134,7 @@ title: LePtC
 </tr>
 <tr>
   <td>2015.05.24</td>
-  <td>发布一个 <a href="http://leptc.github.io/2015/05/24/questionnaire.html">问卷调查</a>，长期有效</td>
+  <td>发布 post <a href="/posts/questionnaire.html">问卷调查</a>，长期有效</td>
 </tr>
 <tr>
   <td>2015.05.19</td>
@@ -298,7 +319,7 @@ title: LePtC
 <tr>
   <td>三月</td>
   <td>169</td>
-  <td>/3</td>
+  <td>/2</td>
   <td>/20,/17</td>
   <td>/0</td>
   <td>/1</td>
@@ -325,7 +346,7 @@ title: LePtC
 <tr>
   <td>六月</td>
   <td></td>
-  <td>+0</td>
+  <td>+1</td>
   <td>/72</td>
   <td>+0</td>
   <td>+2</td>
@@ -333,7 +354,7 @@ title: LePtC
 </tr>
 <tr>
   <th>总计</th>
-  <th></th>
+  <th>4</th>
   <th>4</th>
   <th>72</th>
   <th>1</th>
@@ -341,18 +362,6 @@ title: LePtC
   <th>76,24</th>
 </tr>
 </table>
-</div>
-
-{% include header.html param="告示牌" %}
-
-<div class="content">
-<ul>
-{% for post in site.posts %}
-  <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-<li><b><a href="/author.html">联系作者</a></b></li>
-<li><b><a href="/copyright.html">版权声明</a></b></li>
-</ul>
 </div>
 
 
