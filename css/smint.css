@@ -20,7 +20,7 @@ h2{
   z-index: 10;
   position: relative;
   margin: 0 auto;
-	height: 600px;
+	height: 450px;
 }
 
 .inner {
@@ -88,6 +88,15 @@ span.notebkg {
   font-size: 16em;
   color: rgba(255,255,255,0.3);
   margin: 20px 0 0 25px;
+  position: absolute;
+  z-index: -999;
+}
+
+h2.notebkg {
+  font-size: 4em;
+  color: rgba(255,255,255,0.3);
+  margin: 20px 0 0 25px;
+  right: 20px;
   position: absolute;
   z-index: -999;
 }

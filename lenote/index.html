@@ -66,36 +66,17 @@ $(document).ready( function() {
       <a id="s-m" href="#s-m"  class="subNavBtn">模</a>
       <a id="s-n" href="#s-n"  class="subNavBtn">值</a>
       <a id="s-Pm" href="#s-Pm"  class="subNavBtn">理</a>
-      <a id="s-en" href="#s-en"  class="subNavBtn">外</a>
+      <a id="s-En" href="#s-En"  class="subNavBtn">英</a>
+      <a id="s-De" href="#s-De"  class="subNavBtn">德</a>
+      <a id="s-Jp" href="#s-Jp"  class="subNavBtn">日</a>
 
-{% include lenote.html cn="实验" en="Ex" %}
+{% include lenote.html ca="Phys" cn="实验" en="Ex" pl="9" fin="4" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divEx')">
-    计划 9 个章节，已上传 7 个，已完结 4 个
-  </div>
-  <div class="fold-cont" id="divEx" style="display:none">
-  <ol>
-    <li>物理实验 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/Ex1.pdf">Ex1.pdf</a></li>
-    <li>字母及单位表 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/希腊字母.pdf">希腊字母.pdf</a></li>
-    <li>物理常数表 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/CODATA2010.pdf">CODATA2010.pdf</a></li>
-    <li>核素表 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/nuclear wallet card 2011-摘.pdf">nuclear wallet card 2011-摘.pdf</a></li>
-  </ol>
-  </div>
-</div>
   <h3>精：</h3>
   <h3>参：</h3>
 
-{% include lenote.html cn="力" en="M" %}
+{% include lenote.html ca="Phys" cn="力" en="M" pl="14" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divM')">
-    计划 14 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divM" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>赵凯华. 新概念物理教程－力学（第二版）. 高等教育出版社（赵凯华新概念系列 NC 粉…）</li>
@@ -108,16 +89,8 @@ $(document).ready( function() {
     <li>（英文书待整）</li>
   </ol>
 
-{% include lenote.html cn="热" en="T" %}
+{% include lenote.html ca="Phys" cn="热" en="T" pl="22" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divT')">
-    计划 22 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divT" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>Greiner. Thermodynamics and Statistical Mechanics. Springer（中译：锺云霄. 热力学与统计力学. 北京大学出版社）（也是这个北大中译系列的 NC 粉）（有这一本就够了，一本书把热学热力学量子统计全讲了…）</li>
@@ -129,19 +102,8 @@ $(document).ready( function() {
     <!-- <li>北大编写组. 量子统计物理学. 北京大学出版社</li> -->
   </ol>
 
-{% include lenote.html cn="电" en="E" %}
+{% include lenote.html ca="Phys" cn="电" en="E" pl="24" fin="7" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divE')">
-    计划 24 个章节，已上传 11 个，已完结 7 个
-  </div>
-  <div class="fold-cont" id="divE" style="display:none">
-  <ol>
-    <li>电磁学 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/E.pdf">E.pdf</a></li>
-    <li>电路 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/E-c.pdf">E-c.pdf</a></li>
-  </ol>
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>赵凯华. 电磁学（第三版）. 高等教育出版社（有新概念版，相当于这本书的缩水版）</li>
@@ -154,16 +116,8 @@ $(document).ready( function() {
     <li>Jackson, Classical Electrodynamics (3rd ed). Wiley（tedious…）</li>
   </ol>
 
-{% include lenote.html en="O" cn="光" %}
+{% include lenote.html en="O" ca="Phys" cn="光" pl="25" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divO')">
-    计划 25 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divO" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>赵凯华. 新概念物理教程－光学. 高等教育出版社</li>
@@ -175,45 +129,27 @@ $(document).ready( function() {
   <h3>参：</h3>
   <ol>
     <li>[印度] Ajoy Ghatak. Optics. （中译：张晓光. 光学（第四版）. 清华大学出版社）（讲的相当的全…）</li>
-    <li>安连生. 应用光学. 北京理工大学出版社</li>
+    <!-- <li>安连生. 应用光学. 北京理工大学出版社</li>
     <li>Gerry. Introductory Quantum Optics. Cambridge</li>
-    <li>Agarwal. Quantum Optics. Cambridge</li>
+    <li>Agarwal. Quantum Optics. Cambridge</li> -->
   </ol>
 
-{% include lenote.html en="I"  cn="信息" %}
+{% include lenote.html en="I" ca="Phys" cn="信息" pl="17" fin="5" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divI')">
-    计划 17 个章节，已上传 5 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divI" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
-    <li>Nielsen & Chuang. Quantum Computation and Quantum Information. Wiley（中译：赵千川. 量子计算和量子信息. 清华大学出版社）</li>
+    <li>Nielsen, Chuang. Quantum Computation and Quantum Information. Wiley（中译：赵千川. 量子计算和量子信息. 清华大学出版社）</li>
     <li>张礼. 量子力学的前沿问题. 清华大学出版社</li>
   </ol>
   <h3>参：</h3>
   <ol>
     <li>Preskill@Caltech 讲义</li>
-    <li>数字电子技术基础</li>
-    <li>龙桂鲁. 量子力学新进展（第五辑）. 清华大学出版社</li>
+    <!-- <li>数字电子技术基础</li>
+    <li>龙桂鲁. 量子力学新进展（第五辑）. 清华大学出版社</li> -->
   </ol>
 
-{% include lenote.html en="Q"  cn="量子" %}
+{% include lenote.html en="Q" ca="Phys" cn="量子" pl="8" fin="7" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divQ')">
-    计划 8 个章节，已上传 7 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divQ" style="display:none">
-  <ol>
-    <li>初等量子力学 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/Q.pdf">Q.pdf</a></li>
-  </ol>
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>赵凯华. 新概念物理教程－量子物理（第二版）. 高等教育出版社（初学入门）</li>
@@ -226,33 +162,16 @@ $(document).ready( function() {
     <li>周世勋. 量子力学教程 (第二版). 高等教育出版社</li>
   </ol>
 
-{% include lenote.html en="A"  cn="原子" %}
+{% include lenote.html en="A" ca="Phys" cn="原子" pl="11" fin="6" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divA')">
-    计划 11 个章节，已上传 6 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divA" style="display:none">
-  <ol>
-    <li>氢原子 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/A.pdf">A.pdf</a></li>
-  </ol>
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>同量子（量子的内容实在太多了所以拆分一下…）</li>
     <li>Demtröder. Atom, Molecules and Photons (2nd ed). Springer（补充实验上的知识）</li>
   </ol>
 
-{% include lenote.html en="F"  cn="场论" %}
+{% include lenote.html en="F" ca="Phys" cn="场论" pl="9" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divF')">
-    计划 9 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divF" style="display:none">
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>Lancaster. Quantum Field Theory for the gifted amateur. Oxford（初学入门严重推荐）</li>
@@ -263,16 +182,8 @@ $(document).ready( function() {
     <li>Merzbacher. Quantum Mechanics (3rd ed). Wiley</li>
   </ol>
 
-{% include lenote.html en="C"  cn="凝态" %}
+{% include lenote.html en="C" ca="Phys" cn="凝态" pl="19" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divC')">
-    计划 19 个章节，已上传 4 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divC" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>阎守胜. 固体物理基础（第二版） . 北京大学出版社（适合初学科普）</li>
@@ -283,17 +194,8 @@ $(document).ready( function() {
   <h3>参：</h3>
   <p>同场论</p>
 
-{% include lenote.html en="H"  cn="粒子" %}
+{% include lenote.html en="H" ca="Phys" cn="粒子" pl="19" fin="10" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divH')">
-    计划 19 个章节，已上传 10 个，已完结 1 个
-  </div>
-  <div class="fold-cont" id="divH" style="display:none">
-  <ol>
-    <li>核物理 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Phys/N.pdf">N.pdf</a></li>
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>卢希庭. 原子核物理. 原子能出版社</li>
@@ -305,16 +207,8 @@ $(document).ready( function() {
     <li>Robert Mann. An Introduction to Particle Physics and the Standard Model. CRC Press</li>
   </ol>
 
-{% include lenote.html en="G"  cn="相对论" %}
+{% include lenote.html en="G" ca="Phys" cn="相对论" pl="11" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divG')">
-    计划 11 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divG" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>虞福春. 电动力学（修订版）. 北京大学出版社（第 6 章）</li>
@@ -323,33 +217,13 @@ $(document).ready( function() {
   </ol>
   <h3>参：</h3>
 
-{% include lenote.html en="fo"  cn="公式" %}
+{% include lenote.html en="fo" ca="Math" cn="公式" pl="7" fin="4" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divfo')">
-    计划 11 个章节，已上传 7 个，已完结 4 个
-  </div>
-  <div class="fold-cont" id="divfo" style="display:none">
-  <ol>
-    <li>常用数学公式 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/fo.pdf">fo.pdf</a></li>
-  </ol>
-  </div>
-</div>
   <h3>精：</h3>
   <h3>参：</h3>
 
-{% include lenote.html en="r"  cn="实分析" %}
+{% include lenote.html en="r" ca="Math" cn="实分析" pl="13" fin="3" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divr')">
-    计划 13 个章节，已上传 3 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divr" style="display:none">
-  <ol>
-    <li>数学分析 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/r.pdf">r.pdf</a></li>
-  </ol>
-  </div>
-</div>
   <h3>精：</h3>
   <h3>参：</h3>
   <ol>
@@ -358,29 +232,13 @@ $(document).ready( function() {
     <li>程其襄. 实变函数与泛函分析基础（第三版）. 高等教育出版社</li>
   </ol>
 
-{% include lenote.html en="p"  cn="概统" %}
+{% include lenote.html en="p" ca="Math" cn="概统" pl="9" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divp')">
-    计划 9 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divp" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <h3>参：</h3>
 
-{% include lenote.html en="c"  cn="复分析" %}
+{% include lenote.html en="c" ca="Math" cn="复分析" pl="12" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divc')">
-    计划 12 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divc" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>梁昆淼. 数学物理方法（第四版）. 高等教育出版社（第一篇）</li>
@@ -391,16 +249,8 @@ $(document).ready( function() {
     <li>郑君里. 信号与系统（第二版）. 高等教育出版社</li>
   </ol>
 
-{% include lenote.html en="a"  cn="代数" %}
+{% include lenote.html en="a" ca="Math" cn="代数" pl="8" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('diva')">
-    计划 8 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="diva" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>蓝以中. 高等代数简明教程. 北京大学出版社</li>
@@ -410,16 +260,8 @@ $(document).ready( function() {
     <li>高宗升. 线性代数（第二版）. 北京航空航天大学出版社</li>
   </ol>
 
-{% include lenote.html en="ag"  cn="群论" %}
+{% include lenote.html en="ag" ca="Math" cn="群论" pl="9" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divag')">
-    计划 9 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divag" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>韩士安. 近世代数（第二版）. 科学出版社（数学专业，讲群环域）</li>
@@ -431,32 +273,16 @@ $(document).ready( function() {
     <li>Greiner. Quantum Mechanics Symmetries. Springer（中译: 钱裕昆. 量子力学：对称性. 北京大学出版社）（李群）（不确定这本书是放在数学里还是放粒子物理里…）</li>
   </ol>
 
-{% include lenote.html en="g"  cn="几何" %}
+{% include lenote.html en="g" ca="Math" cn="几何" pl="10" fin="3" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divg')">
-    计划 10 个章节，已上传 3 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divg" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>梅向明. 微分几何（第四版）. 高等教育出版社</li>
   </ol>
   <h3>参：</h3>
 
-{% include lenote.html en="t"  cn="拓扑" %}
+{% include lenote.html en="t" ca="Math" cn="拓扑" pl="2" fin="1" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divt')">
-    计划 2 个章节，已上传 1 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divt" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>Armstrong. Basic Topology（中译：孙以丰. 基础拓扑学. 北京大学出版社）</li>
@@ -466,18 +292,8 @@ $(document).ready( function() {
       <li>王敬庚. 直观拓扑（第三版）. 北京师范大学出版社</li>
     </ol>
 
-{% include lenote.html en="m"  cn="数模" %}
+{% include lenote.html en="m" ca="Math" cn="数模" pl="8" fin="6" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divm')">
-    计划 8 个章节，已上传 8 个，已完结 6 个
-  </div>
-  <div class="fold-cont" id="divm" style="display:none">
-  <ol>
-    <li>运筹学，数学模型 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Math/m.pdf">m.pdf</a></li>
-  </ol>
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>运筹学教材编写组. 运筹学（第三版）. 清华大学出版社</li>
@@ -487,16 +303,8 @@ $(document).ready( function() {
     <li>姜启源. 数学模型（第四版）. 高等教育出版社</li>
   </ol>
 
-{% include lenote.html en="n"  cn="数值" %}
+{% include lenote.html en="n" ca="Math" cn="数值" pl="10" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divn')">
-    计划 10 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divn" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>Landau. A survey of computational physics. Princeton and Oxford</li>
@@ -506,16 +314,8 @@ $(document).ready( function() {
     <li>颜庆津. 数值分析（第三版）. 北京航空航天大学出版社</li>
   </ol>
 
-{% include lenote.html en="Pm"  cn="数理" %}
+{% include lenote.html en="Pm" ca="Math" cn="数理" pl="13" fin="0" %}
 
-<div class="fold">
-  <div class="fold-head" onclick="isHidden('divPm')">
-    计划 13 个章节，已上传 0 个，已完结 0 个
-  </div>
-  <div class="fold-cont" id="divPm" style="display:none">
-
-  </div>
-</div>
   <h3>精：</h3>
   <ol>
     <li>梁昆淼. 数学物理方法（第四版）. 高等教育出版社（第二篇）</li>
@@ -523,14 +323,27 @@ $(document).ready( function() {
   </ol>
   <h3>参：</h3>
 
-{% include lenote.html en="en"  cn="外语" %}
+{% include lenote.html en="En" ca="Lang" cn="英语" pl="2" fin="2" %}
 
+  <h3>精：</h3>
   <ol>
-    <li>英语 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/Eng.pdf">Eng.pdf</a></li>
-    <li>英语法 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/英语语法.pdf">英语语法.pdf</a></li>
-    <li>德语法 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/德语变化表.pdf">德语变化表.pdf</a></li>
-    <li>日语法 <a href="https://github.com/LePtC/LeNotePDF/raw/master/Lang/日语变化一览表.pdf">日语变化一览表.pdf</a></li>
+    <li>牛津高阶英汉双解词典（第八版）. 商务印书馆</li>
   </ol>
+
+{% include lenote.html en="De" ca="Lang" cn="德语" pl="1" fin="0" %}
+
+  <h3>精：</h3>
+  <ol>
+    <li>新德汉词典（第三版）. 上海译文出版社</li>
+  </ol>
+
+{% include lenote.html en="Jp" ca="Lang" cn="日语" pl="1" fin="0" %}
+
+  <h3>精：</h3>
+  <ol>
+    <li>新明解日汉词典. 外语教学与研究出版社</li>
+  </ol>
+
 
 
 </div>
@@ -547,18 +360,4 @@ $(document).ready( function() {
 
 </div>
 
-
-
-<div id="discuss">
-  <div class="fold">
-  <div class="fold-head" onclick="isHidden('discu')">
-    展开讨论
-  </div>
-  <div class="fold-cont" id="discu" style="display:none">
-    <!-- 多说评论框 start -->
-      <div class="ds-thread" data-thread-key="lenote-Phys/Ex" data-title="lenote" data-url="http://leptc.github.io/lenote/"></div>
-    <!-- 多说评论框 end -->
-  </div>
-  </div>
-</div>
 

@@ -3,9 +3,10 @@
 
 
 .popscip{
+  display: inline-block;
   color: #fff;
   height:50px;
-  width: 420px;
+  width: 350px;
   max-width: 80%;
   padding:10px;
   margin:10px;
