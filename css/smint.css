@@ -40,7 +40,7 @@ h2{
 
 .subMenu {
 	height: 44px;
-	z-index: 1000;
+	z-index: 900;
 	width: 100%;
 	background: rgba(17,40,81,0.5);
 }
