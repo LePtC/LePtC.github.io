@@ -1,0 +1,21 @@
+/* popsci.css for LePtC [2015.0622] */
+/* 代码来自：http://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion */
+
+
+.popscip{
+  color: #fff;
+  height:50px;
+  width: 420px;
+  max-width: 80%;
+  padding:10px;
+  margin:10px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.popscip a{
+  color: #fff;
+}
