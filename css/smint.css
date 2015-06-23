@@ -20,7 +20,7 @@ h2{
   z-index: 10;
   position: relative;
   margin: 0 auto;
-	height: 450px;
+	height: 480px;
 }
 
 .inner {
@@ -40,7 +40,7 @@ h2{
 
 .subMenu {
 	height: 44px;
-	z-index: 900;
+	z-index: 750;
 	width: 100%;
 	background: rgba(17,40,81,0.5);
 }
@@ -80,7 +80,7 @@ a.subNavBtn {
 /* SECTIONS */
 .sTop {
   min-height: 620px;
-  height: 1100px;
+  height: 1000px;
 }
 
 
@@ -101,4 +101,11 @@ h2.notebkg {
   z-index: -999;
 }
 
+p.pdl{
+  width: 100%;
+  max-width: 350px;
+  padding-bottom: 3px;
+  border: 1px solid #151D34;
+  border-radius: 6px;
+}
 
