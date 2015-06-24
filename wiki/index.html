@@ -69,17 +69,22 @@ title: 主页
 
 {% include cheader.html param="狸星系" %}
 
+{% include header.html param="天然天体" %}
+
 <div class="content">
 
-
 {% include wikip.html cn="狸星系" en="lesystem" %}
+<li>太阳</li>
 {% include wikipend.html %}
 
 
-{% include wikip.html cn="狸母星" en="leplanet" %}
-  <li>大月球</li>
-  <li>小月球</li>
-  <li>天坑</li>
+{% include wikip.html cn="母星" en="leplanet" %}
+  <li>大月</li>
+  <li>小月</li>
+  <!-- <li>天坑</li> -->
+{% include wikipend.html %}
+
+{% include wikip.html cn="光环" en="#" %}
 {% include wikipend.html %}
 
 <!--
@@ -97,21 +102,31 @@ title: 主页
   <li>水能站</li>
   <li>木能站</li>
 
-
-{% include header.html param="太空工程" %}
-
 -->
 
+{% include wikip.html cn="孪星" en="#" %}
+<li>孪星A</li>
+<li>孪星B</li>
+<li>黑洞B</li>
+{% include wikipend.html %}
+
+
+
+{% include header.html param="人造天体" %}
+
 {% include wikip.html cn="摄动球" en="perturbationstar" %}
-  <li>解耦工程</li>
+  <li>后羿工程</li>
   <li>双子星工程</li>
 {% include wikipend.html %}
 
 
 {% include wikip.html cn="戴森泡" en="dysonbubble" %}
-<li>第零代</li>
+<li>第零代（银星）</li>
+</ul><ul>
 <li>第一代</li>
 <li>第二代</li>
+</ul><ul>
+<li>第三代（戴森点）</li>
 {% include wikipend.html %}
 
 
@@ -226,11 +241,11 @@ title: 主页
 {% include wikipend.html %}
 
 
+
+<!--
 {% include wikip.html cn="空气炮" en="#" %}
 {% include wikipend.html %}
 
-
-<!--
 <li>工程板</li>
 <li>空气笔</li>
 
