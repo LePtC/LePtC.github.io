@@ -1,5 +1,5 @@
-/* fancyline.css for LePtC [2015.0621] */
-/* 代码来自：https://css-tricks.com/simple-styles-for-horizontal-rules/ */
+/* fancyline.css for LePtC [2015.0621]
+代码来自：https://css-tricks.com/simple-styles-for-horizontal-rules/ */
 
 hr.style2{
   border: 0;
@@ -7,9 +7,19 @@ hr.style2{
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 hr.style3 { border: 0; border-bottom: 2px dashed #112851; /*background: #999;*/ }
+
 hr {
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
+
+/*.vertical_dotted_line li
+{
+  border-left: 2px dotted #112851;
+  padding-left: 6px;
+  border: 5px solid transparent;
+  outline: #151D34 dotted 2px;
+}*/
+
