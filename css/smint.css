@@ -20,7 +20,7 @@ h2{
   z-index: 10;
   position: relative;
   margin: 0 auto;
-	height: 480px;
+	height: 320px;
 }
 
 .inner {
@@ -85,7 +85,7 @@ a.subNavBtn {
 
 
 span.notebkg {
-  font-size: 16em;
+  font-size: 10em;
   color: rgba(255,255,255,0.3);
   margin: 20px 0 0 25px;
   position: absolute;
@@ -93,7 +93,7 @@ span.notebkg {
 }
 
 h2.notebkg {
-  font-size: 4em;
+  font-size: 3em;
   color: rgba(255,255,255,0.3);
   margin: 20px 0 0 25px;
   right: 20px;
