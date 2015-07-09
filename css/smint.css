@@ -63,6 +63,7 @@ h2{
 }
 a.subNavBtn {
 	color: #fff;
+  text-shadow: 0 0 0.1em #FFF, 0 0 0.1em #FFF, 0 0 0.1em #FFF
 }
 .subMenu a:hover {
 	background: #1783c7;
