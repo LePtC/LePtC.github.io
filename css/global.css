@@ -16,6 +16,10 @@
 @import url("syntax.css");
 @import url("discuss.css");
 
-/*@media only screen and (min-device-width: 480px){#body{width: 470px;}}*/
-#body{width: 90%; max-width: 850px;}
+
+@media screen and (min-device-width: 861px){
+  #body{width: 90%; max-width: 850px;}}
+@media screen and (max-device-width: 860px){
+  #body{width: 98%; max-width: 850px;}}
+
 

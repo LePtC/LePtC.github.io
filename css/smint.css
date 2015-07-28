@@ -20,7 +20,7 @@ h2{
   z-index: 10;
   position: relative;
   margin: 0 auto;
-	height: 320px;
+	height: 400px;
 }
 
 .inner {
@@ -79,10 +79,12 @@ a.subNavBtn {
 
 
 /* SECTIONS */
-.sTop {
-  min-height: 620px;
-  height: 1000px;
-}
+@media screen and (min-device-width: 861px){
+  .sTop {height: 620px;}}
+@media screen and (max-device-width: 860px){
+  .sTop {height: 1000px;}}
+@media screen and (max-device-width: 540px){
+  .sTop {height: 1200px;}}
 
 
 span.notebkg {
@@ -90,7 +92,7 @@ span.notebkg {
   color: rgba(255,255,255,0.3);
   margin: 20px 0 0 25px;
   position: absolute;
-  z-index: -999;
+  z-index: -998;
 }
 
 h2.notebkg {
@@ -99,7 +101,17 @@ h2.notebkg {
   margin: 20px 0 0 25px;
   right: 20px;
   position: absolute;
-  z-index: -999;
+  z-index: -998;
+}
+
+img.notebkg {
+  width: 300px;
+  max-width: 60%;
+  margin-top: 20px;
+  right: 15%;
+  position: absolute;
+  z-index: -998;
+  opacity: 0.4;
 }
 
 p.pdl{

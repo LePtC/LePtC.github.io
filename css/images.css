@@ -59,6 +59,8 @@ img.lenote{
 */
 img.lenotef{
   height: 140px;
+  width: 338px;
+  max-width: 90%;
   margin: 10px;
   border-radius: 6px;
   display: inline-block;
