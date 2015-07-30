@@ -152,8 +152,6 @@ title: 酷炫动图：物理篇 2
 
 <div class="content">
 
-<p>这张图的篇幅最长，所以放到最后。</p>
-
   <p><h3>危险：</h3>请勿在乘坐公共交通工具时观看此图，以免坐过站。（← 嗯，因为很危险所以要把这句话放在图片前面）</p>
 
   <a title="如何看图看得停不下来"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/s2p6/6.gif" alt="如何看图看得停不下来" class="series"></a>
@@ -162,11 +160,37 @@ title: 酷炫动图：物理篇 2
 
   <p>蛇摆是这么设计的：首先选一个让蛇摆整体恢复的大周期 $T$，然后让最长的摆在 $T$ 内摆比如说 10 次，那么次长的摆就在 $T$ 内摆 11 次，次次长的摆 12 次…以此类推，我们先以三个摆为例画一张位移-时间图（横轴是时间，纵轴你说是位移或者摆角都行）</p>
 
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('div61')">
+    展开 Mathematica 代码
+  </div>
+  <div class="fold-cont" id="div61" style="display:none">
+{% highlight mma %}
+Plot[{-Cos[2 \[Pi] t], -Cos[2 \[Pi] 11/10 t], -Cos[
+  2 \[Pi] 12/10 t]}, {t, 0, 10}, AspectRatio -> 0.1]
+{% endhighlight %}
+  </div>
+</div>
+
   <a title="matica 6.1"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/s2p6/6.1.jpg" alt="matica 6.1" class="series"></a>
 
   <p>只有三个摆就可以大概看出在半个大周期的时刻有一个分组恢复现象了。这不难理解，接下来我们用小球各自的小周期数来称呼小球，则在 $t=5$ 时 10/10、12/10、14/10…等偶数号球都是正好摆回来，而 11/10、13/10 …等奇数号球都是正好摆到对面。</p>
 
   <p>很好，上面动图中的蛇摆是是 15 个球的（我数了好几次你造吗），那么我们就画它 15 个 cos 函数：</p>
+
+<div class="fold">
+  <div class="fold-head" onclick="isHidden('div62')">
+    展开 Mathematica 代码
+  </div>
+  <div class="fold-cont" id="div62" style="display:none">
+{% highlight mma %}
+T = 12;
+Plot[Table[-Cos[2 \[Pi] n/T t], {n, T, T + 15}], {t, 0, T},
+  AspectRatio -> 0.1, PlotStyle -> Thin, Frame -> True,
+  FrameTicks -> {Table[12/m, {m, 1, 12}], {-1, 0, 1}}]
+{% endhighlight %}
+  </div>
+</div>
 
   <a title="matica 6.2"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/s2p6/6.2.jpg" alt="matica 6.2" class="series"></a>
 
