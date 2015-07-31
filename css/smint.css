@@ -113,12 +113,3 @@ img.notebkg {
   z-index: -998;
   opacity: 0.4;
 }
-
-p.pdl{
-  width: 100%;
-  max-width: 350px;
-  padding-bottom: 3px;
-  border: 1px solid #151D34;
-  border-radius: 6px;
-}
-
