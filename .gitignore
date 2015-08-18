@@ -2,11 +2,14 @@ _drafts/
 _site/
 .DS_Store
 *.swp
+TODO*
+*.zip
 *.txt
 *.mht
 *.cmd
 *.bat
-*.tex
-*.gz
+*.nb
+*.fla
+*.psd
 loc.yml
 _configloc.yml
