@@ -70,3 +70,20 @@ img.dl{
   vertical-align: text-bottom;
   height: 40px;
 }
+
+
+
+
+
+
+img.bkg {
+  width: 160px;
+  max-width: 60%;
+  margin-top: -75px;
+  right: 5%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+
