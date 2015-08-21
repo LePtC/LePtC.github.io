@@ -3,12 +3,12 @@
 
 .tree {
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
-.tree * {
+/*.tree * {
   margin: 0;
   padding: 0;
-}
+}*/
 .tree ul {
   padding-top: 20px;
   position: relative;
