@@ -77,13 +77,11 @@ img.dl{
 
 
 img.bkg {
-  width: 160px;
+  width: 200px;
   max-width: 60%;
-  margin-top: -75px;
   right: 5%;
   position: absolute;
   z-index: 0;
-  opacity: 0.4;
 }
 
 
