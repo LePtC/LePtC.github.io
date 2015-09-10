@@ -1,0 +1,52 @@
+/* homepageB.css for LePtC [2015.0910] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+body{
+	background: #351A0F;
+}
+span.glass{
+  color: #351A0F;
+}
+
+#demo{
+  margin-left:auto;
+  margin-right:50px;
+  height:360px;
+  line-height:60%;
+}
+orange{
+  /*font-size: 0.9em;*/
+  color: #F05B1C;
+}
+white{
+  color: #FFF;
+}
+orange, white{
+  background: rgba(0,0,0,0.5);
+  padding-left: 3px;
+  border-radius: 4px;
+}
+blue{
+  color: #487BD9;
+  font-size: 1.1em;
+}
+
+/*#body{
+  background: rgba(0,0,0,0.7);
+}*/
+
+.body{
+  color: #FFF;
+  background: rgba(0,0,0,0.7);
+  margin: 25px auto;
+  padding-top: 6px;
+  position: relative;
+  border-radius: 14px;
+}
+
+h2, h2 * {
+  color: #487BD9;
+}
+

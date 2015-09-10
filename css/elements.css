@@ -35,7 +35,7 @@ h3 {
 
 a:link {
   /*color: #F4400B;*/
-  color: #2E691F;
+  color: #4BA733;
   text-decoration:none;
 }
 a:visited {
@@ -43,7 +43,7 @@ a:visited {
   text-decoration:none;
 }
 a:hover, a:active {
-  color: #4BA733;
+  color: #2E691F;
   text-decoration:underline;
 }
 h2 a:hover, a:active {

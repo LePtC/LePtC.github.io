@@ -85,3 +85,7 @@ img.bkg {
 }
 
 
+img.framed{
+  border: 3px solid #AAA;
+  /*outline: #151D34 solid 1px;*/
+}
