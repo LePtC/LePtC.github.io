@@ -7,7 +7,8 @@ body{
 	background: #351A0F;
 }
 span.glass{
-  color: #351A0F;
+  color: #BA492B;
+  background: rgba(0,0,0,0.5);
 }
 
 #demo{
