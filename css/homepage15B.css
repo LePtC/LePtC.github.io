@@ -58,10 +58,11 @@ p.button a:hover{
   margin: 25px auto;
   padding-top: 6px;
   position: relative;
+  border: 1px solid #AAA;
   border-radius: 14px;
 }
 
-h2, h2 * {
+h2 *, h2 a:hover{
   color: #487BD9;
 }
 
