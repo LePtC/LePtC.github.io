@@ -7,7 +7,7 @@ body{
 	background: #351A0F;
 }
 span.glass{
-  color: #FFF;
+  color: #F05B1C;
   background: rgba(0,0,0,0.5);
 }
 
@@ -32,6 +32,20 @@ orange, white{
 blue{
   color: #487BD9;
   font-size: 1.1em;
+}
+
+p.button{
+  text-align: right;
+}
+p.button a{
+  color: #000;
+  background: #487BD9;
+  padding: 2px 4px 2px 4px;
+  border-radius: 4px;
+}
+p.button a:hover{
+  background: #AAA;
+  text-decoration:none;
 }
 
 /*#body{
