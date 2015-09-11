@@ -79,11 +79,11 @@ a.subNavBtn {
 
 /* SECTIONS */
 @media screen and (min-device-width: 861px){
-  .sTop {height: 580px;}}
+  .sTop {height: 590px;}}
 @media screen and (max-device-width: 860px){
-  .sTop {height: 900px;}}
+  .sTop {height: 950px;}}
 @media screen and (max-device-width: 540px){
-  .sTop {height: 1200px;}}
+  .sTop {height: 1050px;}}
 
 
 span.notebkg {
