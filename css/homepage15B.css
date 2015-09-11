@@ -62,7 +62,7 @@ p.button a:hover{
   border-radius: 14px;
 }
 
-h2 *, h2 a:hover{
+h2 *, h2 a:hover, h3{
   color: #487BD9;
 }
 

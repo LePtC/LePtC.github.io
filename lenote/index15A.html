@@ -4,8 +4,6 @@ author: 笔记
 title: 主页
 ---
 
-<link rel="stylesheet" type="text/css" href="/css/homepage.css">
-<link rel="stylesheet" type="text/css" href="/css/homepage15B.css">
 <link rel="stylesheet" type="text/css" href="/css/smint.css">
 <script src="/js/jquery-1.11.2.min.js"></script>
 
@@ -18,17 +16,9 @@ $(document).ready( function() {
 });
 </script>
 
-
-<div>
-<a id="logo-imgb" title="狸笔记"><img src="/img/lenote15Bblur.jpg" class="sky" style="z-index:-5"></a>
-<a id="logo-img" title="狸笔记"><img src="/img/lenote15B.jpg" class="sky" style="z-index:-4"></a>
-</div>
-
-
-
+<div id="body">
 <div class="wrap">
 
-<div class="body">
   <div class="section sTop">
     <div class="inner">
 
@@ -47,39 +37,36 @@ $(document).ready( function() {
 
     </div>
   </div>
-</div>
 
 <div>
-<div>
-<div style="position: relative; top: 0px; left: 0px;" class="subMenu smint">
-  <div class="inner">
-    <a id="sTop" href="#sTop" class="subNavBtn action">↑</a>
-    <a id="s-Ex" href="#s-Ex" class="subNavBtn" style="color:#4BA733">实</a>
-    <a id="s-M" href="#s-M" class="subNavBtn">力</a>
-    <a id="s-T" href="#s-T" class="subNavBtn">热</a>
-    <a id="s-E" href="#s-E" class="subNavBtn" style="color:#FF8000">电</a>
-    <a id="s-O" href="#s-O" class="subNavBtn">光</a>
+  <div style="position: relative; top: 0px; left: 0px;" class="subMenu smint">
+    <div class="inner">
+      <a id="sTop" href="#sTop" class="subNavBtn action">↑</a>
+      <a id="s-Ex" href="#s-Ex" class="subNavBtn" style="color:#4BA733">实</a>
+      <a id="s-M" href="#s-M" class="subNavBtn">力</a>
+      <a id="s-T" href="#s-T" class="subNavBtn">热</a>
+      <a id="s-E" href="#s-E" class="subNavBtn" style="color:#FF8000">电</a>
+      <a id="s-O" href="#s-O" class="subNavBtn">光</a>
 
-    <a id="s-I" href="#s-I"  class="subNavBtn" style="color:#4BA733">信</a>
-    <a id="s-Q" href="#s-Q"  class="subNavBtn" style="color:#4BA733">量</a>
-    <a id="s-C" href="#s-C"  class="subNavBtn">凝</a>
-    <a id="s-H" href="#s-H"  class="subNavBtn">粒</a>
-    <a id="s-G" href="#s-G"  class="subNavBtn">相</a>
-    <a id="s-fo" href="#s-fo"  class="subNavBtn">公</a>
-    <a id="s-r" href="#s-r"  class="subNavBtn" style="color:#FF8000">实</a>
-    <a id="s-p" href="#s-p"  class="subNavBtn">概</a>
-    <a id="s-c" href="#s-c"  class="subNavBtn">复</a>
-    <a id="s-a" href="#s-a"  class="subNavBtn">代</a>
-    <a id="s-ag" href="#s-ag"  class="subNavBtn" style="color:#4BA733">群</a>
-    <a id="s-g" href="#s-g"  class="subNavBtn">几</a>
-    <a id="s-t" href="#s-t"  class="subNavBtn">拓</a>
-    <a id="s-m" href="#s-m"  class="subNavBtn" style="color:#4BA733">模</a>
-    <a id="s-n" href="#s-n"  class="subNavBtn">值</a>
-    <a id="s-Pm" href="#s-Pm"  class="subNavBtn">理</a>
-    <a id="s-En" href="#s-En"  class="subNavBtn" style="color:#4BA733">英</a>
-    <a id="s-De" href="#s-De"  class="subNavBtn" style="color:#4BA733">德</a>
-    <a id="s-Jp" href="#s-Jp"  class="subNavBtn" style="color:#4BA733">日</a>
-
+      <a id="s-I" href="#s-I"  class="subNavBtn" style="color:#4BA733">信</a>
+      <a id="s-Q" href="#s-Q"  class="subNavBtn" style="color:#4BA733">量</a>
+      <a id="s-C" href="#s-C"  class="subNavBtn">凝</a>
+      <a id="s-H" href="#s-H"  class="subNavBtn">粒</a>
+      <a id="s-G" href="#s-G"  class="subNavBtn">相</a>
+      <a id="s-fo" href="#s-fo"  class="subNavBtn">公</a>
+      <a id="s-r" href="#s-r"  class="subNavBtn" style="color:#FF8000">实</a>
+      <a id="s-p" href="#s-p"  class="subNavBtn">概</a>
+      <a id="s-c" href="#s-c"  class="subNavBtn">复</a>
+      <a id="s-a" href="#s-a"  class="subNavBtn">代</a>
+      <a id="s-ag" href="#s-ag"  class="subNavBtn" style="color:#4BA733">群</a>
+      <a id="s-g" href="#s-g"  class="subNavBtn">几</a>
+      <a id="s-t" href="#s-t"  class="subNavBtn">拓</a>
+      <a id="s-m" href="#s-m"  class="subNavBtn" style="color:#4BA733">模</a>
+      <a id="s-n" href="#s-n"  class="subNavBtn">值</a>
+      <a id="s-Pm" href="#s-Pm"  class="subNavBtn">理</a>
+      <a id="s-En" href="#s-En"  class="subNavBtn" style="color:#4BA733">英</a>
+      <a id="s-De" href="#s-De"  class="subNavBtn" style="color:#4BA733">德</a>
+      <a id="s-Jp" href="#s-Jp"  class="subNavBtn" style="color:#4BA733">日</a>
 
 {% include lenote.html ca="Phys" cn="实验" en="Ex" pl="6" fin="3.5" col="g" %}
 <ol>
@@ -211,13 +198,19 @@ $(document).ready( function() {
   <li>听译日语歌：更新至 3p（2015.07.13）</li>
 </ol>
 
+
 </div>
-</div>
-</div>
+
+  </div>
 </div>
 
 
 </div>
 
+<div class="content">
+<!-- <p>（其它科目笔记多为纸质版，尚待积累）</p> -->
+</div>
 
-<script src="/js/changeblur.js"></script>
+</div>
+
+
