@@ -79,9 +79,9 @@ a.subNavBtn {
 
 /* SECTIONS */
 @media screen and (min-device-width: 861px){
-  .sTop {height: 600px;}}
+  .sTop {height: 580px;}}
 @media screen and (max-device-width: 860px){
-  .sTop {height: 1000px;}}
+  .sTop {height: 900px;}}
 @media screen and (max-device-width: 540px){
   .sTop {height: 1200px;}}
 
