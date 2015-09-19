@@ -7,10 +7,12 @@ h1 {
   color: #FFFFFF;
   font-weight: bold;
 }
+h2 {
+  color: #112851;
+}
 .cheader h2 {
   text-align: center;
   padding: 10px 10px 0px 10px;
-  color: #112851;
   font-size: 1.6em;
 }
 .header {
@@ -19,7 +21,6 @@ h1 {
 .header h2 {
   display: inline;
   padding: 10px 10px 0px 10px;
-  color: #112851;
   font-size: 1.4em;
 }
 h3 {
