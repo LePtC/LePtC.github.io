@@ -115,7 +115,7 @@ img.notebkg {
 
 .body{
   min-height: 370px;
-  z-index: -99;
+  /*z-index: -99;*/
 }
 .pdl{
   z-index: 9;
