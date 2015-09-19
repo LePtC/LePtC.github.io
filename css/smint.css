@@ -100,7 +100,7 @@ h2.notebkg {
   margin: 20px 0 0 25px;
   right: 20px;
   position: absolute;
-  z-index: -98;
+  z-index: 9;
 }
 
 img.notebkg {
@@ -115,7 +115,7 @@ img.notebkg {
 
 .body{
   min-height: 370px;
-  /*z-index: -99;*/
+  z-index: 1;
 }
 .pdl{
   z-index: 9;
