@@ -34,7 +34,7 @@ blue{
   font-size: 1.1em;
 }
 grey{
-  color: #666;
+  color: #666 !important;
 }
 
 p.button{
