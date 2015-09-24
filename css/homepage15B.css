@@ -33,6 +33,9 @@ blue{
   color: #487BD9;
   font-size: 1.1em;
 }
+grey{
+  color: #666;
+}
 
 p.button{
   text-align: right;
