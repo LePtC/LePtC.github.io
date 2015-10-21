@@ -122,6 +122,12 @@ p code{
   border-radius: 3px;
 }
 
+p.pictitle{
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
+
 pre {
   /*color: #A34;
   font-family: Consolas,"courier new";
