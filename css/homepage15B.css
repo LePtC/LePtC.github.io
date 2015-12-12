@@ -8,7 +8,7 @@ body{
 }
 span.glass{
   color: #F05B1C;
-  background: rgba(0,0,0,0.5);
+  background: rgba(25,25,25,0.5);
 }
 
 #demo{
@@ -25,7 +25,7 @@ white{
   color: #FFF;
 }
 orange, white{
-  background: rgba(0,0,0,0.5);
+  background: rgba(25,25,25,0.5);
   padding-left: 3px;
   border-radius: 4px;
 }
@@ -42,12 +42,12 @@ p.button{
 }
 p.button a{
   color: #000;
-  background: #487BD9;
+  background: #AAA;
   padding: 2px 4px 2px 4px;
   border-radius: 4px;
 }
 p.button a:hover{
-  background: #AAA;
+  background: #487BD9;
   text-decoration:none;
 }
 
@@ -57,7 +57,7 @@ p.button a:hover{
 
 .body{
   color: #EEE;
-  background: rgba(0,0,0,0.7);
+  background: rgba(25,25,25,0.9);
   margin: 25px auto;
   padding-top: 6px;
   position: relative;
@@ -69,3 +69,15 @@ h2, h2 *, h2 a:hover, h3{
   color: #487BD9;
 }
 
+
+
+table {
+  border: 1px solid #444;
+}
+th, td {
+  border: 1px solid #444;
+}
+th {
+  background: #444;
+  color: #CCC;
+}

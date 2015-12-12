@@ -170,6 +170,11 @@ red {
   color: red;
 }
 
+blue{
+  color: #1C4084;
+  font-size: 1.1em;
+}
+
 span.warning {
   color: #F00;
 }
