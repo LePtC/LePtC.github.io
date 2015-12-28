@@ -6,46 +6,31 @@ title: LePtC
 
 <link rel="stylesheet" type="text/css" href="/css/homepage.css">
 <link rel="stylesheet" type="text/css" href="/css/homepage15B.css">
-<link rel="stylesheet" type="text/css" href="/css/homepage16A.css">
 <script src="/js/jquery-1.11.2.min.js"></script>
 <script src="/js/changeblur.js"></script>
-<script>
-var looper;
-var degrees = 0;
-function rotateAnimation(el,speed){
-  var elem = document.getElementById(el);
-  if(navigator.userAgent.match("Chrome")){
-    elem.style.WebkitTransform = "rotate("+degrees+"deg)";
-  } else if(navigator.userAgent.match("Firefox")){
-    elem.style.MozTransform = "rotate("+degrees+"deg)";
-  } else if(navigator.userAgent.match("MSIE")){
-    elem.style.msTransform = "rotate("+degrees+"deg)";
-  } else if(navigator.userAgent.match("Opera")){
-    elem.style.OTransform = "rotate("+degrees+"deg)";
-  } else {
-    elem.style.transform = "rotate("+degrees+"deg)";
-  }
-  looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
-  degrees+=0.1;
-  if(degrees > 359.9){
-    degrees = 0.1;
-  }
-  document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
-}
-</script>
+
 
 <div>
-  <img id="img1" src="/img/16Aa.png" style="position:fixed;right:-1000px;bottom:-1000px;z-index:-3;">
-<script>rotateAnimation("img1",30);</script>
-<!-- <h2 style="width:200px;" id="status"></h2> -->
-  <a id="logo-img"><img src="/img/16A.png" class="sky" style="z-index: -2;"></a>
+<a id="logo-imgb" title="狸太阳"><img src="/img/sky15B.jpg" class="sky" style="z-index:-5"></a>
+<a id="logo-img" title="狸太阳"><img src="/img/sky15B.png" class="sky" style="z-index:-4"></a>
 </div>
 
 <div style="height:8vh;min-height:20px;"> </div>
 
+
 <div id="demo">
-    <p><span class="glass">你仍像我离开那天一样美丽</span></p>
+    <p><orange>我是谁？</orange></p>
+    <p><white>- 你是一只狸星智慧生物。</white></p>
+    <p><orange>什么是智慧生物？</orange></p>
+    <p><white>- 会问问题。</white></p>
+    <p><orange>我从哪里来？</orange></p>
+    <p><white>- 你从你的已知中来。</white></p>
+    <p><orange>我要到哪里去？</orange></p>
+    <p><white>- 你要到未知中去。</white></p>
+    <p><orange>一切问题的答案是什么？</orange></p>
+    <p><white>- 宇宙即答案。</white></p>
 </div>
+
 
 <div style="height:50vh;min-height:200px;"> </div>
 
@@ -182,11 +167,6 @@ function rotateAnimation(el,speed){
 </tr> -->
 
 <tr>
-  <td>2015.12.28</td>
-  <td>lesite</td>
-  <td>新 2016A 封面</td>
-</tr>
-<tr>
   <td>2015.12.27</td>
   <td>popsci</td>
   <td><a href="/popsci/p151227-lexplain-lorentz-transform-2/">狸解洛伦兹变换（二）</a> </td>
@@ -206,6 +186,141 @@ function rotateAnimation(el,speed){
   <td>lesite</td>
   <td>新系列开坑 <a href="/posts/lexplain.html">「狸解」系列作品</a> </td>
 </tr>
+<tr>
+  <td>2015.11.26</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Math/r/">矢量与张量分析</a> 二周目完</td>
+</tr>
+<tr>
+  <td>2015.11.16</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/E/">电动力学</a> 一周目完</td>
+</tr>
+<tr style="color:#666">
+  <td></td>
+  <td></td>
+  <td>midterm 休更</td>
+</tr>
+<tr>
+  <td>2015.10.30</td>
+  <td>wiki</td>
+  <td>科幻词条 <a href="/wiki/marshosphere/">棉花糖层</a></td>
+</tr>
+<tr>
+  <td>2015.10.23</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/O/">偏振及散射光学</a> 讲稿</td>
+</tr>
+<tr>
+  <td>2015.10.21</td>
+  <td>popsci</td>
+  <td><a href="/popsci/s2p7/">酷炫动图：如何“看”到声音？</a> <a href="http://www.guokr.com/article/440873/">↗</a></td>
+</tr>
+<tr>
+  <td>2015.10.11</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/G/">狭义相对论</a> 一周目完</td>
+</tr>
+<tr>
+  <td>2015.09.27</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/T/">热力学</a> 一周目完</td>
+</tr>
+<tr>
+  <td>2015.09.18</td>
+  <td>popsci</td>
+  <td>怎样学好物理学专业？ <a href="http://www.zhihu.com/question/35703887/answer/64096204">↗</a></td>
+</tr>
+<tr>
+  <td>2015.09.16</td>
+  <td>lediary</td>
+  <td>一个冷故事…  <a href="http://www.guokr.com/post/700465/">↗</a></td>
+</tr>
+<tr>
+  <td>2015.09.11</td>
+  <td>lenote</td>
+  <td><a href="/lenote/">狸笔记主页</a> 加入封面</td>
+</tr>
+<tr>
+  <td>2015.09.10</td>
+  <td>lesite</td>
+  <td>新 2015·冬季 封面</td>
+</tr>
+<tr>
+  <td>2015.09.08</td>
+  <td>posts</td>
+  <td><a href="/posts/ask.html">提问与反馈</a></td>
+</tr>
+<tr>
+  <td>2015.09.04</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/E/">电磁学</a> 二周目完</td>
+</tr>
+<tr>
+  <td>2015.08.26</td>
+  <td>project</td>
+  <td><a href="https://github.com/LePtC/MC-PE-Mod">萌狸的 MC PE mod 项目</a> 更新</td>
+</tr>
+<tr>
+  <td>2015.08.21</td>
+  <td>lesite</td>
+  <td>将未发布页面重定向到 <a href="/403.html">403</a></td>
+</tr>
+<tr>
+  <td>2015.08.18</td>
+  <td>wiki</td>
+  <td>第一个科幻词条 <a href="/wiki/lesolar/">狸太阳</a></td>
+</tr>
+<tr>
+  <td>2015.08.16</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Math/r/">矢量分析</a> 一周目完</td>
+</tr>
+<tr style="color:#666">
+  <td>2015.08.01~10</td>
+  <td></td>
+  <td>偶休假了十天～</td>
+</tr>
+<tr>
+  <td>2015.07.31</td>
+  <td>popsci</td>
+  <td><a href="/popsci/s2p6/">酷炫动图：物理篇 2</a> <a href="http://www.guokr.com/article/440557/">↗</a></td>
+</tr>
+<tr>
+  <td>2015.07.28</td>
+  <td>lesite</td>
+  <td>CSS 升级，最窄支持宽度 360px</td>
+</tr>
+<tr>
+  <td>2015.07.28</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/E/">电磁学</a> 一周目完</td>
+</tr>
+<tr>
+  <td>2015.07.27</td>
+  <td>lenote</td>
+  <td><a href="http://github.com/LePtC/LeNote">LaTeX 模版</a> 加入封面</td>
+</tr>
+<tr>
+  <td>2015.07.16</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/Q/">量子力学</a> 一周目完</td>
+</tr>
+<tr>
+  <td>2015.07.13</td>
+  <td>lenote</td>
+  <td>新笔记开坑 <a href="/lenote/Lang/Jp/">听译日语歌</a></td>
+</tr>
+<tr>
+  <td>2015.07.09</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Phys/I/">量子信息</a> 一周目完</td>
+</tr>
+<tr>
+  <td>2015.06.30</td>
+  <td>lenote</td>
+  <td><a href="/lenote/Math/ag/">群论</a> 二周目完</td>
+</tr>
 
 </table>
 
@@ -214,16 +329,5 @@ function rotateAnimation(el,speed){
 </div>
 </div>
 
-<div class="body">
-{% include header.html param="最新评论" %}
-
-<div class="content">
-<!-- 多说最新评论 start -->
-  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="50"></div>
-<!-- 多说最新评论 end -->
-<p class="button"><a href="/comment.html">显示更多</a></p>
-</div>
-
-</div>
 
 

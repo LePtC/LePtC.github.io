@@ -1,4 +1,6 @@
 markdown: rdiscount
-# highlighter: false
-highlighter: pygments
+highlighter: false
+# highlighter: pygments
 encoding: "utf-8"
+# ,'TODO*'
+exclude: [2048physics,'README.md','*.zip','*.txt','*.mht','*.cmd','*.bat','*.fla','*.psd','*.nb','*.mht']

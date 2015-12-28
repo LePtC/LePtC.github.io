@@ -1,0 +1,36 @@
+/* homepage16A.css for LePtC [2015.1228] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+body {
+  background: none;
+  background-color:#2D4D88;
+}
+
+span.glass{
+  color: #FFF;
+  background: rgba(25,25,25,0.5);
+}
+
+.body{
+  color: #DDD;
+  background: rgba(0,0,0,0.4);
+  margin: 25px auto;
+  padding-top: 6px;
+  position: relative;
+  border: 1px solid #999;
+  border-radius: 14px;
+}
+
+
+table {
+  border: 1px solid #999;
+}
+th, td {
+  border: 1px solid #999;
+}
+th {
+  background: rgba(0,0,0,0.4);
+  color: #DDD;
+}
