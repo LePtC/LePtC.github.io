@@ -26,17 +26,17 @@ function rotateAnimation(el,speed){
     elem.style.transform = "rotate("+degrees+"deg)";
   }
   looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
-  degrees+=0.1;
+  degrees+=0.2;
   if(degrees > 359.9){
-    degrees = 0.1;
+    degrees = 0.2;
   }
-  document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+  //document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
 }
 </script>
 
 <div>
-  <img id="img1" src="/img/16Aa.png" style="position:fixed;right:-1000px;bottom:-1000px;z-index:-3;">
-<script>rotateAnimation("img1",30);</script>
+  <img id="img1" src="/img/16Aa.png" style="position:fixed;right:-800px;bottom:-800px;z-index:-3;">
+<script>rotateAnimation("img1",50);</script>
 <!-- <h2 style="width:200px;" id="status"></h2> -->
   <a id="logo-img"><img src="/img/16A.png" class="sky" style="z-index: -2;"></a>
 </div>

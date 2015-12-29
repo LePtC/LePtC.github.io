@@ -9,6 +9,7 @@ TODO*
 *.cmd
 *.bat
 *.nb
+*.xlsx
 *.fla
 *.psd
 loc.yml
