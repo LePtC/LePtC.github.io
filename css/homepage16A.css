@@ -16,11 +16,7 @@ span.glass{
 .body{
   color: #DDD;
   background: rgba(0,0,0,0.4);
-  margin: 25px auto;
-  padding-top: 6px;
-  position: relative;
-  border: 1px solid #999;
-  border-radius: 14px;
+  border-radius: 6px;
 }
 
 
