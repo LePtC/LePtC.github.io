@@ -76,8 +76,6 @@ img.dl{
 
 
 
-
-
 img.bkg {
   width: 200px;
   max-width: 60%;
@@ -92,3 +90,14 @@ img.framed{
   /*border-radius: 8px;
   outline: #151D34 solid 1px;*/
 }
+
+
+img.history {
+  width: 500px;
+  max-width: 99%;
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
+
+
