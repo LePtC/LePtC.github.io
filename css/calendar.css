@@ -1,0 +1,40 @@
+
+.calendar {
+  padding: 0;
+  margin-bottom:10px;
+  border: 0;
+  border-collapse: separate;
+}
+.calendar td {
+  border: 0px;
+  background: rgba(0,0,0,0.2);
+  padding: 3px;
+  color: rgba(255,255,255,0.2);
+  font-size: 0.8em;
+}
+
+.calendar td:hover {
+  color: #DDD;
+  background: rgba(255,255,255,0.2);
+}
+
+.calendar td a {
+  color: #DDD;
+}
+
+.calendar td.today {
+  background: rgba(255,80,0,0.7);
+  color: rgba(255,255,255,0.9);
+}
+
+.calendar td.lastday {
+  border: 1px solid #FF5000;
+}
+
+.calendar td img {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+

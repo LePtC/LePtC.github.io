@@ -1,127 +1,374 @@
 ---
-layout: index-s
+layout: default
 author: 主页
 title: LePtC
 ---
 
-<link rel="stylesheet" type="text/css" href="/css/homepage.css">
-<link rel="stylesheet" type="text/css" href="/css/homepage15B.css">
-<link rel="stylesheet" type="text/css" href="/css/homepage16A.css">
-<script src="/js/jquery-1.11.2.min.js"></script>
-<script src="/js/changeblur.js"></script>
-<script>
-var looper;
-var degrees = 0;
-function rotateAnimation(el,speed){
-  var elem = document.getElementById(el);
-  if(navigator.userAgent.match("Chrome")){
-    elem.style.WebkitTransform = "rotate("+degrees+"deg)";
-  } else if(navigator.userAgent.match("Firefox")){
-    elem.style.MozTransform = "rotate("+degrees+"deg)";
-  } else if(navigator.userAgent.match("MSIE")){
-    elem.style.msTransform = "rotate("+degrees+"deg)";
-  } else if(navigator.userAgent.match("Opera")){
-    elem.style.OTransform = "rotate("+degrees+"deg)";
-  } else {
-    elem.style.transform = "rotate("+degrees+"deg)";
-  }
-  looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
-  degrees+=0.1;
-  //if(degrees > 359.9){degrees = 0.1;}
-  //document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
-}
-</script>
-
-<div>
-  <img id="img1" src="/img/16Aa.png" style="position:fixed;right:-800px;bottom:-800px;z-index:-3;">
-<script>rotateAnimation("img1",30);</script>
-<!-- <h2 style="width:200px;" id="status"></h2> -->
-  <a id="logo-img"><img src="/img/16A.png" class="sky" style="z-index: -2;"></a>
-</div>
-
-<div style="height:8vh;min-height:20px;"> </div>
-
-<div id="demo">
-    <p><span class="glass">你仍像我离开那天一样美丽</span></p>
-</div>
-
-<div style="height:50vh;min-height:200px;"> </div>
+<link rel="stylesheet" type="text/css" href="/css/homepage2col.css">
+<link rel="stylesheet" type="text/css" href="/css/calendar.css">
+<link rel="stylesheet" type="text/css" href="/css/timeline.css">
 
 
-<div class="body">
-<div class="content">
-<a title="LePtC"><img src="/img/avatar.jpg" alt="LePtC" class="framed" style="width:150px;float:left;margin:5px 20px 5px 0"></a>
 
-  <p><a href="/author.html"><blue>LePtC</blue></a> 是一只物理和数学木有学好，经常算错数的呆萌狐狸 T_T</p>
-  <p><blue>特长</blue> 是超大质量脑洞，大到整个宇宙都在视界之内 >_<</p>
-  <p><blue>爱好</blue> 吃饭、睡觉、卖萌，制作了这个主页研究物<invi>(如)</invi>理<invi>(何)</invi>问<invi>(卖)</invi>题<invi>(萌)</invi></p>
-  <p>开坑小能手，有生之年填，建议读者养成养肥再看的好习惯，喵～</p>
-  <br />
-</div>
-</div>
+<div id="nav">
+
+{% include top.html %}
 
 
-<div class="body">
-{% include header.html param="动态墙" %}
-
-<div class="content">
-
-<blue>置顶</blue>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/ask.html">提问与反馈</a> (2015.09)
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/questionnaire.html">问卷调查</a> (2015.05)</p>
-
-<blue>最新</blue>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/2015end.html">2015 年终总结</a> (2015.12)
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/lexplain.html">「狸解」系列作品</a> (2015.12)</p>
-
-<p class="button"><a href="/posts.html">显示更多</a></p>
-
-</div>
-</div>
-
-
-<div class="body">
-{% include header.html param="更新记录" %}
-
-<div class="content">
-<p>最后更新时间：<a href="https://github.com/LePtC/LePtC.github.io/commits/master">{{ site.time }}</a></p>
-
-<table align="center">
-<tr>
-  <th>休更中…</th>
-</tr>
-
-<tr style="color:#666">
-  <td>&nbsp;&nbsp;&nbsp;&nbsp;预计会一直休更到二月份，之后狸笔记版块会有大幅更新，同时会有一批新笔记完结。以后的作品准备直接在知乎上写，因为作者太特喵的懒了，在这里写完后基本就懒得再搬一遍了… 狸站主页将继续提供 LePtC 在线上的所有动态的索引功能，2016 可能在果壳、知乎、B 站都会有投稿。</td>
-</tr>
-
+<table class="calendar">
+  <tr>
+    <td style="padding:0" class="lastday">&nbsp;&nbsp;&nbsp;</td>
+    <td style="padding:0;color:#DDD;background:none;">：最后更新，</td>
+    <td style="padding:0" class="today">&nbsp;&nbsp;&nbsp;</td>
+    <td style="padding:0;color:#DDD;background:none;">：今天</td>
+  </tr>
 </table>
 
-<div id="discuss">
-  <div class="fold">
-  <div class="fold-head" onclick="isHidden('discu')">
-    对作者的休更进行谴责
-  </div>
-  <div class="fold-cont" id="discu" style="display:none">
-      <div class="ds-thread" data-thread-key="index-2016sleep" data-title="index-2016sleep" data-url="{{ site.baseurl }}"></div>
-  </div>
-  </div>
+<table id="calendar" class="calendar" align="center">
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>一</td>
+  <td>2</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>9</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>12</td>
+  <td><a href="#01.13">13</a></td>
+  <td>14</td>
+  <td>15</td>
+  <td>16</td>
+  <td>17</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>19</td>
+  <td><a href="#01.20">狸</a></td>
+  <td>21</td>
+  <td>22</td>
+  <td>23</td>
+  <td>24</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><a href="#01.26">狸</a></td>
+  <td>27</td>
+  <td><a href="#01.28">28</a></td>
+  <td>29</td>
+  <td>30</td>
+  <td>31</td>
+</tr>
+<tr>
+  <td>二</td>
+  <td>2</td>
+  <td>3</td>
+  <td><a href="#02.04">4</a></td>
+  <td>5</td>
+  <td class="lastday"><a href="#02.06">帖</a></td>
+  <td>7</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>9</td>
+  <td>10</td>
+  <td>11</td>
+  <td>12</td>
+  <td>13</td>
+  <td>14</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>16</td>
+  <td>17</td>
+  <td>18</td>
+  <td>19</td>
+  <td>20</td>
+  <td>21</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td>23</td>
+  <td>24</td>
+  <td>25</td>
+  <td>26</td>
+  <td>27</td>
+  <td>28</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td>三</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>8</td>
+  <td>9</td>
+  <td>10</td>
+  <td>11</td>
+  <td>12</td>
+  <td>13</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>15</td>
+  <td>16</td>
+  <td>17</td>
+  <td>18</td>
+  <td>19</td>
+  <td>20</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td>22</td>
+  <td>23</td>
+  <td>24</td>
+  <td>25</td>
+  <td>26</td>
+  <td>27</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td>29</td>
+  <td>30</td>
+  <td>31</td>
+  <td>四</td>
+  <td>2</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>9</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>12</td>
+  <td>13</td>
+  <td>14</td>
+  <td>15</td>
+  <td>16</td>
+  <td>17</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>19</td>
+  <td>20</td>
+  <td>21</td>
+  <td>22</td>
+  <td>23</td>
+  <td>24</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td>26</td>
+  <td>27</td>
+  <td>28</td>
+  <td>29</td>
+  <td>30</td>
+  <td>五</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>10</td>
+  <td>11</td>
+  <td>12</td>
+  <td>13</td>
+  <td>14</td>
+  <td>15</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td>17</td>
+  <td>18</td>
+  <td>19</td>
+  <td>20</td>
+  <td>21</td>
+  <td>22</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td>24</td>
+  <td>25</td>
+  <td>26</td>
+  <td>27</td>
+  <td>28</td>
+  <td>29</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td>31</td>
+  <td>六</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>9</td>
+  <td>10</td>
+  <td>11</td>
+  <td>12</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td>14</td>
+  <td>15</td>
+  <td>16</td>
+  <td>17</td>
+  <td>18</td>
+  <td>19</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td>21</td>
+  <td>22</td>
+  <td>23</td>
+  <td>24</td>
+  <td>25</td>
+  <td>26</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td>28</td>
+  <td>29</td>
+  <td>30</td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</table>
+
+<script language="javascript" type="text/javascript">
+  var Calendar = new Date(); // Calendar.getFullYear() Returns year
+  var mon = Calendar.getMonth(); //  Returns month (0-11)
+  var first = 5;
+  if(mon>0){first+=31;}
+  if(mon>1){first+=29;}
+  if(mon>2){first+=31;}
+  if(mon>3){first+=30;}
+  if(mon>4){first+=31;}
+  var j = Calendar.getDay(); // Returns weekday (0-6)
+  if(j==0){j=7;}
+  var i = (first + Calendar.getDate() -1 -j) / 7 // Returns day (1-31)
+  var calenId = document.getElementById("calendar");
+  calenId.rows[i].cells[j-1].className = "today";
+</script>
+
+<div class="icon">
+  <a title="联系作者" href="/author.html"><img src="css/author.png" alt="作者"></a>
+  <a title="问卷调查" href="posts/questionnaire.html"><img src="css/question.png" alt="问卷"></a>
+  <a title="最近评论" href="/comment.html"><img src="css/comment.png" alt="评论"></a>
+  <a title="历史动态" href="/history.html"><img src="css/history.png" alt="历史"></a>
 </div>
 
-<p class="button"><a href="/history.html">显示更多</a></p>
+</div>
+
+
+<div id="section">
+
+
+<div class="body">
+{% include header.html param="置顶" %}
+
+<div class="content">
+
+<p>新版主页正在施工中，如果你发现网页显示有 bug 可<a href="posts/ask.html">在此反馈</a></p>
 
 </div>
 </div>
+
+<div class="body">
+{% include header.html param="2016A 动态" %}
+
+<div class="content">
+
+<table class="timeline">
+  <tr class="com"><td><a name="01.13">01.13</a></td>
+    <td class="left">final 之后仍然很忙，厚着脸皮把休更期充值到二月份</td>
+  </tr>
+  <tr><td><a name="01.20">01.20</a></td>
+    <td class="left">狸站 2016 新图标</td>
+  </tr>
+  <tr><td><a name="01.26">01.26</a></td>
+    <td class="left">狸站 2016 新 logo</td>
+  </tr>
+  <tr class="com"><td><a name="01.28">01.28</a></td>
+    <td class="left">修改完最后一篇论文，休更期结束</td>
+  </tr>
+  <tr><td><a name="02.04">02.04</a></td>
+    <td class="left">狸站新双栏主页开发，javascript 日历开发</td>
+  </tr>
+  <tr><td><a name="02.06">02.06</a></td>
+    <td class="left">低产了一年的萌狸君祝大家母卫一和母星的近似公倍数回归周期节快乐</td>
+    <td><a href="http://www.guokr.com/post/718985/">壳</a></td>
+    <td><a href="https://www.zhihu.com/question/39056993/answer/85058276">知</a></td>
+  </tr>
+  <tr class="com"><td><a name="02.??">02.??</a></td>
+    <td class="left">狸笔记主页的升级要等到春节后了…</td>
+  </tr>
+  <tr class="com"><td><a name="02.??">02.??</a></td>
+    <td class="left">计划二月份之内把代数和力学这两个坑填了</td>
+  </tr>
+</table>
+
+<!-- <p class="icon">
+  <a title="历史动态" href="/history.html"><img src="css/history.png" alt="历史"></a>
+</p> -->
+
+</div>
+</div>
+
+
 
 <div class="body">
 {% include header.html param="最新评论" %}
 
 <div class="content">
 <!-- 多说最新评论 start -->
-  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="50"></div>
+  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="50"></div>
 <!-- 多说最新评论 end -->
-<p class="button"><a href="/comment.html">显示更多</a></p>
+
+<!-- <p class="icon">
+  <a title="最新评论" href="/comment.html"><img src="css/comment.png" alt="评论"></a>
+</p> -->
+
 </div>
+
+</div>
+
+
 
 </div>
 

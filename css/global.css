@@ -17,11 +17,4 @@
 @import url("discuss.css");
 
 
-@media screen and (min-device-width: 861px){
-  #body,.body{width: 90%; max-width: 850px;}
-}
-@media screen and (max-device-width: 860px){
-  #body,.body{width: 98%; max-width: 850px;}
-}
-
 

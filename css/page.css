@@ -12,7 +12,7 @@ body {
 	font-size: 0.9em;
   word-spacing: 1px;
   letter-spacing: 1px;
-	min-width: 360px;
+	min-width: 300px;
 }
 
 #top{
@@ -49,6 +49,8 @@ body {
   padding-left: 3px;
 }
 
+
+#body, .body {/*width: 90%;*/ max-width: 850px;}
 
 #body {
 	background: rgba(255,255,255,0.7);

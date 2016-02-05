@@ -4,11 +4,12 @@
 
 
 h1 {
-  color: #FFFFFF;
+  color: #FFF;
   font-weight: bold;
 }
 h2 {
-  color: #112851;
+  /*color: #112851;*/
+  color: #EEE;
 }
 .cheader h2 {
   text-align: center;
@@ -47,7 +48,7 @@ a:hover, a:active {
   color: #2E691F;
   text-decoration:underline;
 }
-h2 a:hover, a:active {
+/*h2 a:hover,*/ a:active {
   color: #112851;
   text-decoration:none;
 }

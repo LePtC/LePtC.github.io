@@ -1,0 +1,49 @@
+/* homepage2col.css for LePtC [2016.0204] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+/*#header {
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:5px;
+}*/
+#nav {
+  width:250px;
+  float:left;
+  padding:5px;
+}
+#section {
+  float:left;
+  padding:5px;
+}
+#footer {
+  clear:both;
+  text-align:center;
+  padding:5px;
+}
+
+
+@media screen and (min-device-width: 1100px){
+  #section {
+    width:75%;
+    max-width:880px;
+  }
+}
+@media screen and (min-device-width: 900px) and (max-device-width: 1100px){
+  #section {
+    width:65%;
+  }
+}
+@media screen and (min-device-width: 570px) and (max-device-width: 900px){
+  #section {
+    width:50%;
+  }
+}
+@media screen and (max-device-width: 570px){
+  #section {
+    width:97%;
+    min-width:200px;
+  }
+}
+

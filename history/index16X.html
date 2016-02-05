@@ -1,0 +1,128 @@
+---
+layout: index-s
+author: 主页
+title: LePtC
+---
+
+<link rel="stylesheet" type="text/css" href="/css/homepage.css">
+<link rel="stylesheet" type="text/css" href="/css/homepage15B.css">
+<link rel="stylesheet" type="text/css" href="/css/homepage16A.css">
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/changeblur.js"></script>
+<script>
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+  var elem = document.getElementById(el);
+  if(navigator.userAgent.match("Chrome")){
+    elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+  } else if(navigator.userAgent.match("Firefox")){
+    elem.style.MozTransform = "rotate("+degrees+"deg)";
+  } else if(navigator.userAgent.match("MSIE")){
+    elem.style.msTransform = "rotate("+degrees+"deg)";
+  } else if(navigator.userAgent.match("Opera")){
+    elem.style.OTransform = "rotate("+degrees+"deg)";
+  } else {
+    elem.style.transform = "rotate("+degrees+"deg)";
+  }
+  looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+  degrees+=0.1;
+  //if(degrees > 359.9){degrees = 0.1;}
+  //document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+</script>
+
+<div>
+  <img id="img1" src="/img/16Aa.png" style="position:fixed;right:-800px;bottom:-800px;z-index:-3;">
+<script>rotateAnimation("img1",30);</script>
+<!-- <h2 style="width:200px;" id="status"></h2> -->
+  <a id="logo-img"><img src="/img/16X.png" class="sky" style="z-index: -2;"></a>
+</div>
+
+<div style="height:8vh;min-height:20px;"> </div>
+
+<div id="demo">
+    <p><span class="glass">你仍像我离开那天一样美丽</span></p>
+</div>
+
+<div style="height:50vh;min-height:200px;"> </div>
+
+
+<div class="body">
+<div class="content">
+<a title="LePtC"><img src="/img/avatar.jpg" alt="LePtC" class="framed" style="width:150px;float:left;margin:5px 20px 5px 0"></a>
+
+  <p><a href="/author.html"><blue>LePtC</blue></a> 是一只物理和数学木有学好，经常算错数的呆萌狐狸 T_T</p>
+  <p><blue>特长</blue> 是超大质量脑洞，大到整个宇宙都在视界之内 >_<</p>
+  <p><blue>爱好</blue> 吃饭、睡觉、卖萌，制作了这个主页研究物<invi>(如)</invi>理<invi>(何)</invi>问<invi>(卖)</invi>题<invi>(萌)</invi></p>
+  <p>开坑小能手，有生之年填，建议读者养成养肥再看的好习惯，喵～</p>
+  <br />
+</div>
+</div>
+
+
+<div class="body">
+{% include header.html param="动态墙" %}
+
+<div class="content">
+
+<blue>置顶</blue>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/ask.html">提问与反馈</a> (2015.09)
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/questionnaire.html">问卷调查</a> (2015.05)</p>
+
+<blue>最新</blue>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/2015end.html">2015 年终总结</a> (2015.12)
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="posts/lexplain.html">「狸解」系列作品</a> (2015.12)</p>
+
+<p class="button"><a href="/posts.html">显示更多</a></p>
+
+</div>
+</div>
+
+
+<div class="body">
+{% include header.html param="更新记录" %}
+
+<div class="content">
+<p>最后更新时间：<a href="https://github.com/LePtC/LePtC.github.io/commits/master">{{ site.time }}</a></p>
+
+<table align="center">
+<tr>
+  <th>休更中…</th>
+</tr>
+
+<tr style="color:#666">
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;预计会一直休更到二月份，之后狸笔记版块会有大幅更新，同时会有一批新笔记完结。以后的作品准备直接在知乎上写，因为作者太特喵的懒了，在这里写完后基本就懒得再搬一遍了… 狸站主页将继续提供 LePtC 在线上的所有动态的索引功能，2016 可能在果壳、知乎、B 站都会有投稿。</td>
+</tr>
+
+</table>
+
+<div id="discuss">
+  <div class="fold">
+  <div class="fold-head" onclick="isHidden('discu')">
+    对作者的休更进行谴责
+  </div>
+  <div class="fold-cont" id="discu" style="display:none">
+      <div class="ds-thread" data-thread-key="index-2016sleep" data-title="index-2016sleep" data-url="{{ site.baseurl }}"></div>
+  </div>
+  </div>
+</div>
+
+<p class="button"><a href="/history.html">显示更多</a></p>
+
+</div>
+</div>
+
+<div class="body">
+{% include header.html param="最新评论" %}
+
+<div class="content">
+<!-- 多说最新评论 start -->
+  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="50"></div>
+<!-- 多说最新评论 end -->
+<p class="button"><a href="/comment.html">显示更多</a></p>
+</div>
+
+</div>
+
+

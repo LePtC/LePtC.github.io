@@ -1,0 +1,27 @@
+/* timeline.css for LePtC [2016.0205] */
+/* Shared under the MIT license */
+
+.timeline {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 4px 10px;
+}
+.timeline td {
+  border: 0px;
+  /*color: #FFF;*/
+  padding: 5px 1px 5px 3px;
+  vertical-align: top;
+}
+.timeline td.left {
+  border-left: 2px solid #CCC;
+}
+
+.timeline td a {
+  color: #DDD;
+  padding: 1px 3px 1px 3px;
+  background: rgba(0,0,0,0.2);
+}
+
+.timeline tr.com {
+  color: rgba(221, 221, 221, 0.4);
+}

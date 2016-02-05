@@ -1,0 +1,106 @@
+/* homepage2col.css for LePtC [2016.0204] */
+/* Shared under the MIT license */
+
+
+body {
+  background: none;
+  background-color: #223B67;
+}
+
+span.glass{
+  color: #FFF;
+  background: rgba(0,0,0,0.2);
+}
+
+.body{
+  color: #DDD;
+  background: rgba(0,0,0,0.2);
+  padding-top: 3px;
+  margin-top: 15px;
+}
+
+.header h2{
+  font-size: 1.2em;
+}
+.header h2 a:hover{
+  color: #DDD;
+  text-decoration: none;
+}
+
+
+.icon a img {
+  height: 30px;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+.icon a:hover img {
+  filter: invert(92%);
+}
+p.icon{
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.content p a {
+  color: #DDD;
+  padding: 1px 3px 1px 3px;
+  background: rgba(0,0,0,0.2);
+}
+.ds-recent-comments a {
+  color: #DDD;
+}
+
+
+h1 {
+  font-size:1.4em;
+}
+img.moele{
+  height: 45px;
+}
+
+#nav {
+  position: fixed;
+  top: 0px;
+  left: 10px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+
+
+@media screen and (min-device-width: 580px){
+  #nav {
+    width: 230px;
+    height: 100%;
+  }
+  #section {
+    max-width: 880px;
+    padding: 5px 10px 5px 250px;
+  }
+  /*body h1, */#footer {
+    text-align: center;
+    padding-left: 250px;
+  }
+}
+
+
+@media screen and (max-device-width: 580px){
+  #nav {
+    width: 100%;
+    height: 100px;
+    background-color: #223B67;
+  }
+  #section {
+    min-width: 300px;
+    padding: 110px 10px 5px 10px;
+  }
+  #footer {
+    text-align: center;
+  }
+}
