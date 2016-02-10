@@ -17,7 +17,7 @@
 }
 
 .timeline td a {
-  color: #DDD;
+  /*color: #DDD;*/
   padding: 1px 3px 1px 3px;
   background: rgba(0,0,0,0.2);
 }

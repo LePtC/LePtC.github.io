@@ -26,9 +26,11 @@ span.glass{
   color: #DDD;
   text-decoration: none;
 }
+h3 {
+  color: #DDD;
+}
 
-
-.icon a img {
+/*.icon a img {
   height: 30px;
   padding: 2px;
   margin-bottom: 5px;
@@ -41,10 +43,22 @@ p.icon{
   padding: 0;
   margin: 0;
   border: 0;
+}*/
+
+#leftguide {
+  color: #DDD;
+  padding: 10pt 0pt 10pt 3pt;
+}
+#leftguide ul{
+  padding: 10pt;
+}
+#leftguide a {
+  color: #DDD;
 }
 
+
 .content p a {
-  color: #DDD;
+  /*color: #DDD;*/
   padding: 1px 3px 1px 3px;
   background: rgba(0,0,0,0.2);
 }
