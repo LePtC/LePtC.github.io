@@ -7,6 +7,43 @@ title: LePtC
 <link rel="stylesheet" type="text/css" href="/css/homepage2col.css">
 <link rel="stylesheet" type="text/css" href="/css/calendar.css">
 <link rel="stylesheet" type="text/css" href="/css/timeline.css">
+<script src="/js/paper.js"></script>
+
+<canvas id="canvas-test" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:-4"></canvas>
+<script type="text/paperscript" canvas="canvas-test">
+
+var count = 10;
+var path = new Array();
+
+for (var i = 0; i < count; i++) {
+    path[i] = new Path();
+    path[i].add(new Point(150*(Math.random()+0.5), 0));
+    path[i].add(new Point(150*(Math.random()+0.5), 100*(Math.random()+0.5)));
+    path[i].add(new Point(100, 50));
+    path[i].closed = true;
+
+    path[i].fillColor = 'rgba(0, 0, 0, 0.05)';
+    path[i].blendMode = 'multiply';
+
+    var randomTranslate = view.size * new Point(Math.random()-0.5, Math.random()-0.5) * 2;
+    path[i].translate(randomTranslate);
+    path[i].rotate(180*Math.random());
+    path[i].scale(15 * (i+11) / count);
+    //path[i].selected = true
+}
+
+// clock=0; // called 60 times a second
+function onFrame(event) {
+//  clock++;
+//  if(clock%10==0){
+    for (var i = 0; i < count; i++) {
+    //path[i].fillColor.hue += .1;
+        path[i].rotate(.1);
+    }
+//  }
+}
+
+</script>
 
 
 
@@ -55,7 +92,7 @@ title: LePtC
 <tr>
   <td>18</td>
   <td>19</td>
-  <td><a href="#01.20">狸</a></td>
+  <td><a href="#01.20">站</a></td>
   <td>21</td>
   <td>22</td>
   <td>23</td>
@@ -63,7 +100,7 @@ title: LePtC
 </tr>
 <tr>
   <td>25</td>
-  <td><a href="#01.26">狸</a></td>
+  <td><a href="#01.26">站</a></td>
   <td>27</td>
   <td><a href="#01.28">28</a></td>
   <td>29</td>
@@ -82,9 +119,9 @@ title: LePtC
 <tr>
   <td>8</td>
   <td>9</td>
-  <td class="lastday"><a href="#02.10">狸</a></td>
+  <td><a href="#02.10">站</a></td>
   <td>11</td>
-  <td>12</td>
+  <td class="lastday"><a href="#02.12">站</a></td>
   <td>13</td>
   <td>14</td>
 </tr>
@@ -338,7 +375,10 @@ title: LePtC
     <a href="https://www.zhihu.com/question/39056993/answer/85058276">知</a></td>
   </tr>
   <tr><td><a name="02.10">02.10</a></td>
-    <td class="left"><a href="lenote/">狸笔记主页</a>升级为双栏</td>
+    <td class="left">新版 <a href="lenote/">狸笔记主页</a> 也采用双栏版式</td>
+  </tr>
+  <tr><td><a name="02.12">02.12</a></td>
+    <td class="left">MathJax 改装为离线版（无法应用于评论区依然没解决…），主页使用动态背景（CPU 高占用依然没解决…）</td>
   </tr>
   <tr class="com"><td><a name="02.??">02.??</a></td>
     <td class="left">计划二月份之内把代数和力学这两个坑填了</td>
