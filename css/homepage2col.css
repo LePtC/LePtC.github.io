@@ -4,7 +4,7 @@
 
 body {
   background: none;
-  background-color: #223B67;
+  background-color: #1d2b45;
 }
 
 span.glass{
@@ -18,6 +18,20 @@ span.glass{
   padding-top: 3px;
   margin-top: 15px;
 }
+
+
+img.sky{
+  height: 100%;
+  width: auto;
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
 
 .header h2{
   font-size: 1.2em;
@@ -47,10 +61,11 @@ p.icon{
 
 #leftguide {
   color: #DDD;
-  padding: 10pt 0pt 10pt 3pt;
+  font-size: 0.9em;
+  padding: 10pt 0pt 10pt 15pt;
 }
 #leftguide ul{
-  padding: 10pt;
+  padding: 3pt;
 }
 #leftguide a {
   color: #DDD;
@@ -77,10 +92,10 @@ img.moele{
 #nav {
   position: fixed;
   top: 0px;
-  left: 10px;
+  left: 5px;
   padding: 0;
   margin: 0;
-  border: 0;
+  border-right: 1px solid #AAA;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 9999;
@@ -90,7 +105,7 @@ img.moele{
 
 @media screen and (min-device-width: 580px){
   #nav {
-    width: 230px;
+    width: 220px;
     height: 100%;
   }
   #section {

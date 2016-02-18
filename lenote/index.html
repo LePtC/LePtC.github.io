@@ -5,12 +5,41 @@ title: LePtC
 ---
 
 <link rel="stylesheet" type="text/css" href="/css/homepage2col.css">
+<script src="/js/paper.js"></script>
 
+<canvas id="canvas-test" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:-4"></canvas>
+<script type="text/paperscript" canvas="canvas-test">
 
-<!-- <link rel="stylesheet" type="text/css" href="/css/homepage.css">
-<div>
-<a id="logo-img" title="狸笔记"><img src="/img/lenote15B.png" class="sky" style="z-index:-4"></a>
-</div> -->
+var count = 10;
+var path = new Array();
+
+for (var i = 0; i < count; i++) {
+  path[i] = new Path();
+  path[i].add(new Point(150*(Math.random()+0.5), 0));
+  path[i].add(new Point(150*(Math.random()+0.5), 100*(Math.random()+0.5)));
+  path[i].add(new Point(100, 50));
+  path[i].closed = true;
+
+  path[i].fillColor = 'rgba(0, 0, 0, 0.05)';
+  path[i].blendMode = 'multiply';
+
+  var randomTranslate = view.size * new Point(Math.random()-0.5, Math.random()-0.5) * 2;
+  path[i].translate(randomTranslate);
+  path[i].rotate(180*Math.random());
+  path[i].scale(15 * (i+11) / count);
+  //path[i].selected = true
+}
+
+// called 60 times a second
+// function onFrame(event) {
+//   for (var i = 0; i < count; i++) {
+//   //path[i].fillColor.hue += .1;
+//     path[i].rotate(.1);
+//   }
+// }
+
+</script>
+
 
 
 <div id="nav">
@@ -200,15 +229,15 @@ title: LePtC
 <ul>
   <li><a href="Phys/M/" name="M">M</a>：还没填
     <ul>
-      <li>高中力学，牛顿力学，经典力学，动力学，静力学</li>
+      <li>高中力学，矢量力学，牛顿力学，经典力学，动力学，静力学</li>
     </ul></li>
   <li><a href="Phys/M/" name="M-a">M-a</a>：还没填
     <ul>
-      <li>分析力学，理论力学，轨道力学，辛力学</li>
+      <li>分析力学，拉格朗日力学，理论力学，轨道力学，辛力学</li>
     </ul></li>
   <li><a href="Phys/M/" name="M-f">M-f</a>：还没填
     <ul>
-      <li>弹性力学，流体力学，声学</li>
+      <li>连续介质力学，弹性力学，流体力学，声学</li>
     </ul></li>
 </ul>
 </div>
@@ -230,7 +259,7 @@ title: LePtC
     </ul></li>
   <li><a href="Phys/T/" name="T-s">T-s</a>：还没填
     <ul>
-      <li>统计力学</li>
+      <li>统计力学，统计物理</li>
     </ul></li>
   <li><a href="Phys/T/" name="T-Q">T-Q</a>：还没填
     <ul>
@@ -358,11 +387,11 @@ title: LePtC
 <ul>
   <li><a href="Phys/H/" name="N">N</a>：还没填
     <ul>
-      <li>核物理</li>
+      <li>原子核物理，核电子学</li>
     </ul></li>
   <li><a href="Phys/H/" name="H">H</a>：还没填
     <ul>
-      <li>粒子物理，高能物理</li>
+      <li>粒子物理，高能物理，标准模型</li>
     </ul></li>
 </ul>
 </div>
@@ -374,17 +403,17 @@ title: LePtC
 
 <div class="content">
 <ul>
-  <li><a href="Phys/G/" name="G-s">G-s</a>：还没填
+  <li><a href="Phys/G/" name="G-s">G-s</a>：2015.10.11
     <ul>
       <li>狭义相对论，经典场论，相对论量子力学</li>
     </ul></li>
   <li><a href="Phys/G/" name="G-g">G-g</a>：还没填
     <ul>
-      <li>广义相对论，宇宙学</li>
+      <li>广义相对论，黑洞物理</li>
     </ul></li>
   <li><a href="Phys/G/" name="G">G</a>：还没填
     <ul>
-      <li>天体物理，恒星物理</li>
+      <li>天体物理，恒星物理，宇宙学</li>
     </ul></li>
 </ul>
 </div>
