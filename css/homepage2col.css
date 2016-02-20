@@ -96,6 +96,7 @@ img.moele{
   padding: 0;
   margin: 0;
   border-right: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 9999;
@@ -105,12 +106,12 @@ img.moele{
 
 @media screen and (min-device-width: 580px){
   #nav {
-    width: 220px;
+    width: 200px;
     height: 100%;
   }
   #section {
     max-width: 880px;
-    padding: 5px 10px 5px 250px;
+    padding: 5px 10px 5px 220px;
   }
   /*body h1, */#footer {
     text-align: center;
@@ -122,12 +123,12 @@ img.moele{
 @media screen and (max-device-width: 580px){
   #nav {
     width: 100%;
-    height: 100px;
+    height: 140px;
     background-color: #223B67;
   }
   #section {
     min-width: 300px;
-    padding: 110px 10px 5px 10px;
+    padding: 130px 10px 5px 10px;
   }
   #footer {
     text-align: center;
