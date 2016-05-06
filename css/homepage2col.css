@@ -35,13 +35,14 @@ img.sky{
 
 .header h2{
   font-size: 1.2em;
+  color: #8195BB;
 }
 .header h2 a:hover{
   color: #DDD;
   text-decoration: none;
 }
 h3 {
-  color: #DDD;
+  color: #8195BB;
 }
 
 /*.icon a img {

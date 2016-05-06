@@ -16,6 +16,7 @@
   border-left: 2px solid #CCC;
 }
 
+
 .timeline td a {
   /*color: #DDD;*/
   padding: 1px 3px 1px 3px;
@@ -25,3 +26,26 @@
 .timeline tr.com {
   color: rgba(221, 221, 221, 0.4);
 }
+
+
+
+
+.timetable {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.timetable td {
+  border: 0;
+  padding: 2px;
+  text-align: center;
+  vertical-align: top;
+}
+.timetable td.right {
+  border-right: 2px solid #CCC;
+}
+.timetable td.bottom {
+  border-bottom: 2px solid #CCC;
+}
+
+
