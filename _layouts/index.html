@@ -2,15 +2,11 @@
 layout: default
 ---
 
-<div id="topwarning" ondblclick="myHide(this)">
-网站目前处于内部施工阶段，慎入施工现场<!-- <span style="color: rgba(217,114,11,0.1);">（← 你想随便看看也行… 双击可关闭提示语）</invi> -->
-</div>
+<link rel="stylesheet" type="text/css" href="/css/homepage15B.css">
 
-{% include top.html %}
+<h1 align="center">
+  <div class="skinimg"><a title="回到萌狸主页" href="/index.html"><img src="/css/moele.png" alt="萌狸" class="moele"></a></div>
+  {{ page.author }}
+</h1>
 
-
-<div id="body">
-
-  {{ content }}
-
-</div>
+{{ content }}
