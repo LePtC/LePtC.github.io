@@ -1,4 +1,2 @@
 markdown: rdiscount
-# highlighter: false
-highlighter: pygments
 encoding: "utf-8"
