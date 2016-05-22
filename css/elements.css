@@ -8,8 +8,8 @@ h1 {
   font-weight: bold;
 }
 h2 {
-  /*color: #112851;*/
-  color: #EEE;
+  color: #112851;
+  /* color: #EEE; */
 }
 .cheader h2 {
   text-align: center;
