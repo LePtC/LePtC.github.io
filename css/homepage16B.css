@@ -1,0 +1,125 @@
+/* homepage16B.css for LePtC [2016.0727] */
+/* 代码来自：LePtC 原创 */
+/* Shared under the MIT license */
+
+
+body {
+  background-color: #1E1E1E;
+}
+.body{
+  color: #CCC;
+  background: rgba(30, 30, 30, .9);
+}
+
+a:link {
+  color: #589cd6;
+  text-decoration:none;
+}
+a:visited {
+  color: #51718B;
+  text-decoration:none;
+}
+a:hover, a:active {
+  color: #589cd6;
+  text-decoration:underline;
+}
+
+
+
+img.blackle {
+  height: 80vh;
+  max-height: 1000px;
+  display: block;
+  position: fixed;
+  margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+  z-index:-4;
+}
+
+
+.fold, .fold-cont {
+  border: none;
+  padding: 0;
+}
+
+.fold-head {
+  text-align: center;
+  background: #AAA;
+  color: #111;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+}
+
+
+
+tfoot {
+  display: table-header-group;
+}
+
+/*td.highlight {
+  background-color: #333 !important;
+}*/
+
+input[placeholder="Search 日期"],
+input[placeholder="Search 站点"],
+input[placeholder="Search 标签"] {
+  max-width: 70px;
+}
+input[placeholder="Search 赞"] {
+  max-width: 15px;
+}
+input[type=text] {
+  font-size: 1em;
+  padding: 2px;
+  color: #DDD;
+  background: url(search.png) no-repeat right;
+  background-color: #222;
+  border: 2px solid #333;
+  border-radius: 0;
+}
+input[type=text]:focus {
+  background: none;
+  background-color: #333;
+  border-color: #e4a438;
+}
+
+
+
+#nav {
+  border: none;
+}
+
+#nav ul {
+  list-style-type: none;
+}
+
+
+@media screen and (min-device-width: 580px){
+  #nav {
+    width: 100px;
+    height: 100%;
+  }
+  #section {
+    max-width: 980px;
+    padding: 5px 10px 5px 120px;
+  }
+/*  #footer {
+    text-align: center;
+    padding-left: 200px;
+  }*/
+}
+
+
+@media screen and (max-device-width: 580px){
+  #nav {
+    width: 100%;
+    height: 40px;
+    background-color: #1E1E1E;
+  }
+  #section {
+    min-width: 0;
+    padding: 30px 10px 5px 10px;
+  }
+}
+

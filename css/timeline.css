@@ -2,18 +2,18 @@
 /* Shared under the MIT license */
 
 .timeline {
-  border: 0;
-  border-collapse: separate;
-  border-spacing: 4px 10px;
+  border: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 4px 10px !important;
 }
 .timeline td {
-  border: 0px;
+  border: 0px !important;
   /*color: #FFF;*/
-  padding: 5px 1px 5px 3px;
+  padding: 5px 1px 5px 3px !important;
   vertical-align: top;
 }
 .timeline td.left {
-  border-left: 2px solid #CCC;
+  border-left: 2px solid #CCC !important;
 }
 
 

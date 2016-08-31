@@ -1,7 +1,7 @@
 _drafts/
 _site/
-lenote/书单/
 .DS_Store
+.jekyll-metadata
 *.swp
 TODO*
 *.zip
@@ -13,6 +13,3 @@ TODO*
 *.xlsx
 *.fla
 *.psd
-loc.yml
-_configloc.yml
-_config0.yml
