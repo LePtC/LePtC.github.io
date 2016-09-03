@@ -1,3 +1,9 @@
+---
+
+---
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -224,9 +230,10 @@ $(document).ready(function() {
 
 <div class="content">
 
+<p><h3>LePtC 社交网络活动数据库</h3>（不含已停用站点）　<h3>最后更新：</h3> {{ site.time | date: "%Y.%m.%d" }}</p>
 
 <div>
-切换显示: <a class="toggle-vis" data-column="0">日期</a> - <a class="toggle-vis" data-column="1">标题</a> - <a class="toggle-vis" data-column="2">站点</a> - <a class="toggle-vis" data-column="3">标签</a> - <a class="toggle-vis" data-column="4">赞</a>
+切换显示列: <a class="toggle-vis" data-column="0">日期</a> - <a class="toggle-vis" data-column="1">标题</a> - <a class="toggle-vis" data-column="2">站点</a> - <a class="toggle-vis" data-column="3">标签</a> - <a class="toggle-vis" data-column="4">赞</a>
 </div>
 
 <div class="dataTables_wrapper" id="example_wrapper">
@@ -256,7 +263,7 @@ $(document).ready(function() {
 <tr><td>2016.09.01</td>
   <td>【原创音乐】P1 的加长交响乐版</td>
 <td><a href="http://www.bilibili.com/video/av6117048">哔</a></td>
-<td>编曲</td><td></td></tr>
+<td>编曲</td><td>4</td></tr>
 
 <tr><td>2016.08.28</td>
   <td>偶发灵感写的旋律 3 段</td>
@@ -302,7 +309,7 @@ $(document).ready(function() {
 <td><a href="http://www.bilibili.com/video/av5154880/#reply112771625">哔</a>
     <a href="https://www.zhihu.com/question/48042706/answer/108921720">知</a>
     <a href="http://www.guokr.com/article/441536/#reply3009389">壳</a></td>
-<td>科幻</td><td><!-- 39+803+116 -->958</td></tr>
+<td>科幻</td><td><!-- 39+808+116 -->963</td></tr>
 
 <tr><td>2016.06.29</td>
   <td>【狸站用户福利】<a href="popsci/p160620/">果壳评论音轨：在下坂本（物理部分）</a></td>
@@ -334,6 +341,11 @@ $(document).ready(function() {
   <td>【Mathematica】当那些熟悉的音乐降调之后会怎样</td>
 <td><a href="http://www.bilibili.com/video/av4918707/">哔</a></td>
 <td>麦酱,编曲</td><td>11</td></tr>
+
+<tr><td>2016.06.05</td>
+  <td>新浪微博启用（作为 GitHub 后备推送点）</td>
+<td><a href="http://weibo.com/u/1045122993">微</a></td>
+<td>说说</td><td></td></tr>
 
 <tr><td>2016.06.05</td>
   <td>预计将休更两周，之后冒篇光学的狸笔记后又休更两周，下次有作品得等七月份了</td>
@@ -512,8 +524,9 @@ $(document).ready(function() {
 
 <tr><td>2015.10.21</td>
   <td><a href="popsci/s2p7/">酷炫动图：如何“看”到声音？</a></td>
-<td><a href="http://www.guokr.com/article/440873/">壳</a></td>
-<td>科学人,物理</td><td></td></tr>
+<td><a href="http://www.guokr.com/article/440873/">壳</a>
+    <a href="http://weibo.com/p/1001603905819656735717">微</a></td>
+<td>科学人,物理</td><td><!-- 15+115 -->130</td></tr>
 
 <tr><td>2015.10.11</td>
   <td>【狸笔记】 狭义相对论 一周目完</td>
@@ -528,12 +541,12 @@ $(document).ready(function() {
 <tr><td>2015.09.18</td>
   <td>怎样学好物理学专业？</td>
 <td><a href="http://www.zhihu.com/question/35703887/answer/64096204">知</a></td>
-<td>物理</td><td></td></tr>
+<td>物理,笔记</td><td>262</td></tr>
 
 <tr><td>2015.09.16</td>
   <td>一个冷故事… </td>
 <td><a href="http://www.guokr.com/post/700465/">壳</a></td>
-<td>笑点</td><td></td></tr>
+<td>笑点</td><td>30</td></tr>
 
 <tr><td>2015.09.11</td>
   <td>狸笔记主页 加入封面</td>
@@ -583,7 +596,7 @@ $(document).ready(function() {
 <tr><td>2015.07.31</td>
   <td><a href="popsci/s2p6/">酷炫动图：物理篇 2</a></td>
 <td><a href="http://www.guokr.com/article/440557/">壳</a></td>
-<td>科学人,物理</td><td></td></tr>
+<td>科学人,物理</td><td>15</td></tr>
 
 <tr><td>2015.07.28</td>
   <td>CSS 升级，最窄支持宽度 360px</td>
@@ -658,7 +671,7 @@ $(document).ready(function() {
 <tr><td>2015.06.04</td>
   <td>漫画 <a href="popsci/s2p5/">战术手势-物理篇</a></td>
 <td><a href="http://www.guokr.com/post/684563/">壳</a></td>
-<td>绘画,笑点</td><td></td></tr>
+<td>绘画,笑点</td><td>49</td></tr>
 
 <tr><td>2015.06.01</td>
   <td><a href="wiki/matica/">麦酱</a> 人设插图完成</td>
@@ -683,7 +696,7 @@ $(document).ready(function() {
 <tr><td>2015.05.14</td>
   <td>看不懂系列 <a href="popsci/s2p3/">九宫格阵营-光学篇</a> 发布 </td>
 <td><a href="http://www.guokr.com/post/680853/">壳</a></td>
-<td>绘画,笑点</td><td></td></tr>
+<td>绘画,笑点</td><td>30</td></tr>
 
 <tr><td>2015.05.12</td>
   <td>由于图片过多，将狸笔记文件搬运至单独 repo</td>
@@ -698,12 +711,12 @@ $(document).ready(function() {
 <tr><td>2015.04.27</td>
   <td>看不懂系列 <a href="popsci/s2p2/">薛定谔的猫问题</a> 大坑已填</td>
 <td><a href="http://www.guokr.com/answer/551852/">壳</a></td>
-<td>物理</td><td></td></tr>
+<td>物理</td><td>41</td></tr>
 
 <tr><td>2015.04.23</td>
   <td>不科学系列 <a href="notsci/s2n1/">s2n1</a> 完稿发布</td>
 <td><a href="http://www.guokr.com/article/440131/">壳</a></td>
-<td>科学人,绘画,what-if</td><td></td></tr>
+<td>科学人,绘画,what-if</td><td>6</td></tr>
 
 <tr><td>2015.04.15</td>
   <td>第一张表情图「吓得我颜色都掉惹」发布</td>
@@ -753,7 +766,7 @@ $(document).ready(function() {
 <tr><td>2015.03.17</td>
   <td>应邀写果壳文章 【酷炫动图】物理篇 并作为 <a href="popsci/s2p1/">s2p1</a>在狸站发布 </td>
 <td><a href="http://www.guokr.com/article/440051/">壳</a></td>
-<td>科学人,物理</td><td></td></tr>
+<td>科学人,物理</td><td>20</td></tr>
 
 <tr><td>2015.03.16</td>
   <td>狸站框架更新</td>
@@ -809,6 +822,89 @@ $(document).ready(function() {
   <td>开始在本地制作狸站</td>
 <td></td>
 <td>狸站,开发</td><td></td></tr>
+
+<tr><td>2014.12.27</td>
+  <td>测试 MathJax 可行</td>
+<td></td>
+<td>狸站,开发</td><td></td></tr>
+
+<tr><td>2014.11.30</td>
+  <td>回复退壳问题</td>
+<td><a href="http://www.guokr.com/blog/795806/">壳</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2014.11.09</td>
+  <td>基于果壳问答的第一季作品完结</td>
+<td><a href="http://www.guokr.com/answer/758493/">壳</a></td>
+<td>物理</td><td></td></tr>
+
+<tr><td>2014.09.08</td>
+  <td>开始自制网页模版</td>
+<td></td>
+<td>狸站,开发</td><td></td></tr>
+
+<tr><td>2014.08.18</td>
+  <td>狸笔记 LaTeX 模版首次上传</td>
+<td><a href="https://github.com/LePtC/LeNote">狸笔</a></td>
+<td>笔记,开发</td><td></td></tr>
+
+<tr><td>2014.03.22</td>
+  <td>狸站第一个网页 2048 physics 制成发布</td>
+<td><a href="http://leptc.github.io/2048physics/">狸</a>
+    <a href="http://www.guokr.com/answer/676542">壳</a></td>
+<td>游戏,开发</td><td>101</td></tr>
+
+<tr><td>2014.02.11</td>
+  <td>加入 Physics StackExchange</td>
+<td><a href="http://physics.stackexchange.com/users/41092/leptc">SE</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2014.01.11</td>
+  <td>加入 Github</td>
+<td><a href="http://github.com/LePtC">G</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2013.10.28</td>
+  <td>加入哔哩哔哩</td>
+<td><a href="http://space.bilibili.com/2654670">哔</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2013.07.17</td>
+  <td>加入果壳问答</td>
+<td><a href="http://www.guokr.com/i/1585771774/">壳</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2013.06.25</td>
+  <td>加入知乎</td>
+<td><a href="http://www.zhihu.com/people/leptc">知</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2012.04.07</td>
+  <td>加入百度贴吧（已停用）</td>
+<td></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2011.03.25</td>
+  <td>加入 deviantArt</td>
+<td><a href="http://leptc.deviantart.com/">dA</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2010.06.25</td>
+  <td>加入人人网（已停用）</td>
+<td><a href="http://weibo.com/u/1045122993">微</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2010.06.14</td>
+  <td>加入新浪微博（未使用）</td>
+<td><a href="http://weibo.com/u/1045122993">微</a></td>
+<td>说说</td><td></td></tr>
+
+<tr><td>2006.04.18</td>
+  <td>加入百度知道（已停用）</td>
+<td></td>
+<td>说说</td><td></td></tr>
+
+
 
 </tbody>
 </table>
