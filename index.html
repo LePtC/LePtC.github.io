@@ -1,7 +1,7 @@
----
+<!-- ---
 
 ---
-
+ -->
 
 
 <!DOCTYPE html>
@@ -15,6 +15,7 @@
   <meta content="萌狸主页 - LePtC" name="description">
   <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
   <link rel="stylesheet" type="text/css" href="css/global.css">
+  <script src="js/mousetoggle.js"></script>
 
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/DataTables.js"></script>
@@ -134,15 +135,19 @@ $(document).ready(function() {
 <div id="nav">
 
 <h1 align="center">
-  <div class="skinimg"><a title="回到萌狸主页" href="/index.html"><img src="css/moele.png" alt="萌狸" class="moele"></a></div>
+  <div class="skinimg"><a title="联系作者" href="author.html"><img src="css/moele.png" alt="萌狸" class="moele"></a></div>
 </h1>
 
 <ul>
-<li><a href="#置顶">置顶</a></li>
-<li><a href="#检索">检索</a></li>
-<li><a href="#栏目">栏目</a></li>
-<li><a href="#评论">评论</a></li>
+<li><a onclick="toggle('togglecolumn')">隐藏列</a></li>
+<li><a onclick="toggle('toggleindex')">按类别</a></li>
+<li><a onclick="toggle('showcomment')">评论</a></li>
 </ul>
+
+<!-- <p>（新版狸站主页正在施工中…… 新首页将具备自定义搜索排序功能，等我把所有历史作品录入数据库后，用户就能直接在首页上过滤出任意想看的作品汇总。）</p> -->
+
+<!-- <p><h3>LePtC 社交网络活动数据库</h3>（不含已停用站点）　</p> -->
+<p><h3>最后更新：</h3> {{ site.time | date: "%Y.%m.%d" }}</p>
 
 </div>
 
@@ -156,14 +161,13 @@ $(document).ready(function() {
 
 <div class="content">
 
-<p>（新版狸站主页正在施工中…… 新首页将具备自定义搜索排序功能，等我把所有历史作品录入数据库后，用户就能直接在首页上过滤出任意想看的作品汇总。）</p>
 
 </div>
 </div>
 
 
-<!--
-<div class="body">
+
+<div class="body" id="toggleindex">
 
 <div class="content">
 
@@ -214,7 +218,7 @@ $(document).ready(function() {
 
 
 </div>
-</div> -->
+</div>
 
 
 
@@ -222,9 +226,9 @@ $(document).ready(function() {
 
 <div class="content">
 
-<p><h3>LePtC 社交网络活动数据库</h3>（不含已停用站点）　<h3>最后更新：</h3> {{ site.time | date: "%Y.%m.%d" }}</p>
 
-<div>
+
+<div id="togglecolumn">
 切换显示列: <a class="toggle-vis" data-column="0">日期</a> - <a class="toggle-vis" data-column="1">标题</a> - <a class="toggle-vis" data-column="2">站点</a> - <a class="toggle-vis" data-column="3">标签</a> - <a class="toggle-vis" data-column="4">赞</a>
 </div>
 
@@ -240,7 +244,7 @@ $(document).ready(function() {
     <th>赞</th>
   </tr>
 </thead>
-<tfoot>
+<tfoot id="footsearch">
   <tr>
     <th>日期</th>
     <th>标题</th>
@@ -252,7 +256,7 @@ $(document).ready(function() {
 
 <tbody>
 
-<tr><td>2016.09.08</td>
+<tr><td><sup>置顶</sup>2016.09.08</td>
   <td>LePtC 的超长期填坑计划</td>
 <td><a href="http://weibo.com/ttarticle/p/show?id=2309404017388910719321">微</a></td>
 <td>说说</td><td></td></tr>
@@ -560,8 +564,8 @@ $(document).ready(function() {
 <td><a href="history/index15B.html">狸</a></td>
 <td>绘画,狸站</td><td></td></tr>
 
-<tr><td>2015.09.08</td>
-  <td>提问与反馈</td>
+<tr><td><sup>置顶</sup>2015.09.08</td>
+  <td>post 提问与反馈</td>
 <td><a href="posts/ask.html">狸</a></td>
 <td>狸站</td><td></td></tr>
 
@@ -680,8 +684,8 @@ $(document).ready(function() {
 <td></td>
 <td>绘画</td><td></td></tr>
 
-<tr><td>2015.05.24</td>
-  <td>发布 post 问卷调查，长期有效</td>
+<tr><td><sup>置顶</sup>2015.05.24</td>
+  <td>post 问卷调查，长期有效</td>
 <td><a href="posts/questionnaire.html">狸</a></td>
 <td>狸站,说说</td><td></td></tr>
 
@@ -930,13 +934,13 @@ $('table th:nth-child(2), table td:nth-child(2)').addClass('left');
 
 
 
-<div class="active">
+<!-- <div class="active">
 <ul>
   <li><a href="posts/ask.html">提问与反馈</a> (2015.09)</li>
   <li><a href="posts/questionnaire.html">问卷调查</a> (2015.05)</li>
   <li><a href="author.html">联系作者</a> (2015.03)</li>
 </ul>
-</div>
+</div> -->
 
 
 </div>
@@ -946,7 +950,7 @@ $('table th:nth-child(2), table td:nth-child(2)').addClass('left');
 
 
 
-<div class="body">
+<div class="body" id="showcomment">
 
 <div class="content">
 <!-- 多说最新评论 start -->

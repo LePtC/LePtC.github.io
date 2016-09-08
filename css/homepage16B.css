@@ -84,9 +84,13 @@ input[type=text]:focus {
   border-color: #e4a438;
 }
 
-
+sup {
+  color: #F05B1C;
+  background: rgba(25,25,25,0.5);
+}
 
 #nav {
+  color:#AAA;
   border: none;
 }
 
@@ -94,6 +98,9 @@ input[type=text]:focus {
   list-style-type: none;
 }
 
+#togglecolumn, #toggleindex, #showcomment {
+  display: none;
+}
 
 @media screen and (min-device-width: 580px){
   #nav {
