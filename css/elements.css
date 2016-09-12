@@ -98,7 +98,7 @@ input[type=text] {
   font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Tahoma,STHeiti,Arial,sans-serif;
   padding: 2px;
   color: #222;
-  background: url(search.png) no-repeat right;
+  /*background: url(search.png) no-repeat right;*/
   background-color: rgba(17,40,81,0.7);
   border: 2px solid rgba(68,68,68,0.4);
   border-radius: 5px;

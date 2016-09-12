@@ -54,7 +54,7 @@ $(document).ready(function() {
   // Setup - add a text input to each footer cell
   $('#example tfoot th').each( function () {
     var title = $(this).text();
-    $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    $(this).html( '<input type="text" id="'+title+'" />' );
   } );
   // DataTable
   var table = $('#example').DataTable();
@@ -147,7 +147,8 @@ $(document).ready(function() {
 <!-- <p>（新版狸站主页正在施工中…… 新首页将具备自定义搜索排序功能，等我把所有历史作品录入数据库后，用户就能直接在首页上过滤出任意想看的作品汇总。）</p> -->
 
 <!-- <p><h3>LePtC 社交网络活动数据库</h3>（不含已停用站点）　</p> -->
-<p><h3>最后更新：</h3> {{ site.time | date: "%Y.%m.%d" }}</p>
+<p>最后更新：</p>
+<p>{{ site.time | date: "%Y.%m.%d" }}</p>
 
 </div>
 
@@ -287,7 +288,7 @@ $(document).ready(function() {
   <td>有关量子通讯的答疑与更新</td>
 <td><a href="http://www.guokr.com/article/441669/#reply3016659">壳</a>
     <a href="http://www.guokr.com/answer/758345">壳</a></td>
-<td>物理</td><td>54</td></tr>
+<td>问答,物理</td><td>54</td></tr>
 
 <tr><td>2016.08.02</td>
   <td>【不务正业】逗黑日常</td>
@@ -341,7 +342,7 @@ $(document).ready(function() {
 <tr><td>2016.06.12</td>
   <td>怎样跟外星人解释左和右的概念？</td>
 <td><a href="https://www.zhihu.com/question/21433839/answer/105617168">知</a></td>
-<td>物理</td><td>60</td></tr>
+<td>问答,物理</td><td>60</td></tr>
 
 <tr><td>2016.06.09</td>
   <td>【Mathematica】当那些熟悉的音乐降调之后会怎样</td>
@@ -404,7 +405,7 @@ $(document).ready(function() {
   <td>【 What-if 】聚月光能否点火？</td>
 <td><a href="http://www.guokr.com/post/728006/">壳</a>
     <a href="https://www.zhihu.com/question/40403436/answer/94948184">知</a></td>
-<td>物理</td><td><!-- 141+29 -->170</td></tr>
+<td>问答,物理</td><td><!-- 141+29 -->170</td></tr>
 
 <tr><td>2016.04.08</td>
   <td>线代上一版本有几张三维矢量图把 pdf 弄得又大又卡，本版已修复</td>
@@ -692,7 +693,7 @@ $(document).ready(function() {
 <tr><td>2015.05.19</td>
   <td>看不懂系列 关于物理学的几点思考 发布</td>
 <td><a href="popsci/s2p4/">狸</a></td>
-<td>物理</td><td></td></tr>
+<td>物理,说说</td><td></td></tr>
 
 <tr><td>2015.05.16</td>
   <td>为避免剧透，隐去百科词条「科幻作品」组的链接</td>
@@ -717,7 +718,7 @@ $(document).ready(function() {
 <tr><td>2015.04.27</td>
   <td>看不懂系列 <a href="popsci/s2p2/">薛定谔的猫问题</a> 大坑已填</td>
 <td><a href="http://www.guokr.com/answer/551852/">壳</a></td>
-<td>物理</td><td>41</td></tr>
+<td>问答,物理</td><td>41</td></tr>
 
 <tr><td>2015.04.23</td>
   <td>【脑洞大开】如何搬运小行星？</td>

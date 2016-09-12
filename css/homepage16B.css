@@ -61,24 +61,27 @@ tfoot {
   background-color: #333 !important;
 }*/
 
-input[placeholder="Search 日期"],
-input[placeholder="Search 站点"],
-input[placeholder="Search 标签"] {
+
+input[id="日期"],
+input[id="站点"],
+input[id="标签"] {
   max-width: 70px;
 }
-input[placeholder="Search 赞"] {
-  max-width: 15px;
+input[id="赞"] {
+  max-width: 18px;
 }
-input[type=text] {
+input[type=text], input[type="search"] {
   font-size: 1em;
   padding: 2px;
   color: #DDD;
-  background: url(search.png) no-repeat right;
   background-color: #222;
   border: 2px solid #333;
   border-radius: 0;
 }
-input[type=text]:focus {
+input[type="search"] {
+  background: url(search.png) no-repeat right;
+}
+input[type=text]:focus, input[type="search"]:focus {
   background: none;
   background-color: #333;
   border-color: #e4a438;
@@ -108,7 +111,7 @@ sup {
     height: 100%;
   }
   #section {
-    max-width: 980px;
+    max-width: 1080px;
     padding: 5px 10px 5px 120px;
   }
 /*  #footer {
