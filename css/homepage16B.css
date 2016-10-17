@@ -92,6 +92,13 @@ sup {
   background: rgba(25,25,25,0.5);
 }
 
+#section {
+  font-size: 0.8em;
+}
+table.dataTable {
+  font-size: 1.1em;
+}
+
 #nav {
   color:#AAA;
   border: none;

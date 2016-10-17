@@ -100,4 +100,7 @@ img.history {
 }
 
 
-
+img[src="img/xcry.png"] {
+  max-width: 18px;
+  vertical-align: middle;
+}
