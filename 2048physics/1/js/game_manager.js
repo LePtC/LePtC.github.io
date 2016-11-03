@@ -216,24 +216,59 @@ GameManager.prototype.move = function (direction) {
         }
         // 原子核 与 轻子 合成 原子
         else if (tile.value == ID_LEPTON || tile.value == ID_NUCLEI) {
-            if (next && (next.value + tile.value == ID_NUCLEI) && !next.mergedFrom) {
-                // We need to save tile since it will get removed
-                undo.tiles.push(tile.save(positions.next));
-                var merged = new Tile(positions.next, ID_ATOM);
-                merged.mergedFrom = [tile, next];
+            if (tile.value == ID_LEPTON) {
+                var _positions  = positions;
+                var _next       = next;
+                while (true) {
+                    if (_next) {
+                        if (_next.value == ID_NUCLEI && !_next.mergedFrom)  {
+                            // We need to save tile since it will get removed
+                            undo.tiles.push(tile.save(_positions.next));
+                            var merged = new Tile(_positions.next, ID_ATOM);
+                            merged.mergedFrom = [tile, _next];
 
-                self.grid.insertTile(merged);
-                self.grid.removeTile(tile);
+                            self.grid.insertTile(merged);
+                            self.grid.removeTile(tile);
 
-                // Converge the two tiles' positions
-                tile.updatePosition(positions.next);
+                            // Converge the two tiles' positions
+                            tile.updatePosition(_positions.next);
 
-                // Update the score
-                self.score += merged.value;
+                            // Update the score
+                            self.score += merged.value;
+                        } else {
+                            console.log("Lepton tunnelling", _next);
+                            _positions  = self.findFarthestPosition(_next, vector);
+                            _next       = self.grid.cellContent(_positions.next);
+                            continue;
+                        }
+                    } else {
+                        console.log("Lepton hit wall");
+                        // Save backup information
+                        undo.tiles.push(tile.save(positions.farthest));
+                        self.moveTile(tile, positions.farthest);
+                    }
+                    break;
+                }
             } else {
-                // Save backup information
-                undo.tiles.push(tile.save(positions.farthest));
-                self.moveTile(tile, positions.farthest);
+                if (next && next.value == ID_LEPTON && !next.mergedFrom) {
+                    // We need to save tile since it will get removed
+                    undo.tiles.push(tile.save(positions.next));
+                    var merged = new Tile(positions.next, ID_ATOM);
+                    merged.mergedFrom = [tile, next];
+
+                    self.grid.insertTile(merged);
+                    self.grid.removeTile(tile);
+
+                    // Converge the two tiles' positions
+                    tile.updatePosition(positions.next);
+
+                    // Update the score
+                    self.score += merged.value;
+                } else {
+                    // Save backup information
+                    undo.tiles.push(tile.save(positions.farthest));
+                    self.moveTile(tile, positions.farthest);
+                }
             }
         }
         // Only one merger per row traversal?
@@ -313,19 +348,24 @@ GameManager.prototype.buildTraversals = function (vector) {
 };
 
 GameManager.prototype.findFarthestPosition = function (cell, vector) {
-  var previous;
+    var previous;
+    var result;
+    
+    function getResult() {
+        return {
+            farthest: previous,
+            next: cell // Used to check if a merge is required
+        };
+    }
 
-  // Progress towards the vector direction until an obstacle is found
-  do {
-    previous = cell;
-    cell     = { x: previous.x + vector.x, y: previous.y + vector.y };
-  } while (this.grid.withinBounds(cell) &&
-           this.grid.cellAvailable(cell));
+    // Progress towards the vector direction until an obstacle is found
+    do {
+        previous = cell;
+        cell     = { x: previous.x + vector.x, y: previous.y + vector.y };
+    } while (this.grid.withinBounds(cell) &&
+                this.grid.cellAvailable(cell));
 
-  return {
-    farthest: previous,
-    next: cell // Used to check if a merge is required
-  };
+    return result = getResult();
 };
 
 GameManager.prototype.movesAvailable = function () {

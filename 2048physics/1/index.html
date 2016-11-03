@@ -40,8 +40,7 @@
             </div>
         </div>
 
-        <p>
-            按 <strong>空格</strong> 键可开始新游戏！　按 <strong>Z</strong> 键可 <a  style="text-decoration:underline" onclick="handle_undo()">撤销</a> 任意步！
+        <p>按 <strong>方向键</strong> 移动，按 <strong>空格</strong> 键重新开始，按 <strong>Z</strong> 键 <a  style="text-decoration:underline" onclick="handle_undo()">撤销</a>
         </p>
 
         <div class="game-container">
@@ -87,14 +86,12 @@
         </div>
 
         <p class="game-explanation">
-            <strong class="important">玩法：</strong>使用<strong>方向键</strong>移动方块，相同级别的方块可以合成下一级方块
-            <hr />
             2048 Physics 难版合成规则：
             <ol>
                 <li>从真空中浮现出夸克或轻子</li>
                 <li>夸克×3＝强子</li>
                 <li>强子×2＝原子核</li>
-                <li>原子核＋轻子＝原子</li>
+                <li>原子核＋轻子<red>＊</red>＝原子</li>
                 <li>原子×2＝分子（以下都是两两合成）</li>
                 <li>细胞</li>
                 <li>生物</li>
@@ -106,6 +103,7 @@
                 <li>宇宙</li>
                 <li>超膜</li>
             </ol>
+            <red>＊</red>为了降低难度，轻子设定为可以<red>隧穿</red>其它方块
         </p>
         <hr />
         <p>
