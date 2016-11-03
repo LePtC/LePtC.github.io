@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048 Physics 难版 - 萌狸</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="stylesheet" href="style/main.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/css/global.css">
+
+  <meta property="og:title" content="physics game"/>
+  <meta property="og:site_name" content="physics game"/>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?741805e21dbbc9ff4f62a2c05a4a9a23";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <script src="/js/fold.js"></script>
+</head>
+
+<body>
+    <div id="body">
+        <div class="container">
+            <div class="heading">
+                <h1 class="title" style="color:#112851;font-size:1.5em;">2048 Physics 难版</h1>
+                <div class="scores-container">
+                <div class="score-container">0</div>
+                <div class="best-container">0</div>
+            </div>
+        </div>
+
+        <p>
+            按 <strong>空格</strong> 键可开始新游戏！　按 <strong>Z</strong> 键可 <a  style="text-decoration:underline" onclick="handle_undo()">撤销</a> 任意步！
+        </p>
+
+        <div class="game-container">
+          <div class="game-message">
+            <p></p>
+            <div class="lower">
+            <a class="keep-playing-button">继续玩到超膜！</a>
+              <a class="retry-button">再试一次</a>
+              <div class="score-sharing"></div>
+            </div>
+          </div>
+
+          <!-- Arena -->
+          <div class="grid-container">
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+          </div>
+
+          <div class="tile-container">
+          </div>
+        </div>
+
+        <p class="game-explanation">
+            <strong class="important">玩法：</strong>使用<strong>方向键</strong>移动方块，相同级别的方块可以合成下一级方块
+            <hr />
+            2048 Physics 难版合成规则：
+            <ol>
+                <li>从真空中浮现出夸克或轻子</li>
+                <li>夸克×3＝强子</li>
+                <li>强子×2＝原子核</li>
+                <li>原子核＋轻子＝原子</li>
+                <li>原子×2＝分子（以下都是两两合成）</li>
+                <li>细胞</li>
+                <li>生物</li>
+                <li>生物圈</li>
+                <li>地月系</li>
+                <li>太阳系</li>
+                <li>银河系</li>
+                <li>本星系（群）</li>
+                <li>宇宙</li>
+                <li>超膜</li>
+            </ol>
+        </p>
+        <hr />
+        <p>
+            This is a fork from <br />
+            <a href="https://github.com/aenon/aenon.github.io">https://github.com/aenon/aenon.github.io</a>,<br />
+            which created by <a href="https://github.com/aenon" target="_blank">aenon</a>.
+            <br /><br />
+            Original game by <a href="http://gabrielecirulli.com/" target="_blank">Gabriele Cirulli</a>.
+            <br />
+            Based on <a href="https://itunes.apple.com/us/app/1024%21/id823499224" target="_blank">1024 by Veewo Studio</a>
+            <br />
+            and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer</a>.
+            <br /><br />
+            Undo-mod by <a href="http://quaxio.com/">Alok Menghrajani</a>, <a href="https://github.com/alokmenghrajani/2048">source</a>.
+        </p>
+
+        <hr />
+        <div>
+           <p>
+               <strong>友情链接</strong>
+               <a href="https://dimit.me/Fe26/">Fe[26]</a>
+           </p>
+       </div>
+
+       <hr />
+
+        <div id="copyright">
+            <p>
+                本游戏由天真可爱的<a href="https://github.com/LePtC/">@LePtC</a> 策划、设计，
+                <br />
+                以及由混沌邪恶的<a href="https://github.com/donizyo/">@donizyo</a> 实现~
+            </p>
+        </div>
+      </div>
+
+  <p>　</p>
+
+      <script src="js/animframe_polyfill.js"></script>
+      <script src="js/keyboard_input_manager.js"></script>
+      <script src="js/html_actuator.js"></script>
+      <script src="js/grid.js"></script>
+      <script src="js/tile.js"></script>
+      <script src="js/local_score_manager.js"></script>
+      <script src="js/game_manager.js"></script>
+      <script src="js/application.js"></script>
+      <script src="js/seedrandom.js"></script>
+      <script src="js/debug.js"></script>
+
+    </div>
+
+
+
+
+<div id="discuss">
+  <div class="fold">
+  <div class="fold-head" onclick="isHidden('discu')">
+    展开讨论
+  </div>
+  <div class="fold-cont" id="discu" style="display:none">
+    <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="2048-physics-1" data-title="2048 Physics 1" data-url="http://leptc.github.io/2048physics/1/"></div>
+    <!-- 多说评论框 end -->
+  </div>
+  </div>
+</div>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"leptc"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+    </body>
+</html>

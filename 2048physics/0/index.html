@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048 Physics 原版 - 萌狸</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/css/global.css">
+  <script src="/js/fold.js"></script>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <meta property="og:title" content="physics game"/>
+  <meta property="og:site_name" content="physics game"/>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?741805e21dbbc9ff4f62a2c05a4a9a23";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<body>
+
+
+
+<div id="body">
+
+  <div class="container">
+    <div class="heading">
+      <h1 class="title" style="color:#112851;font-size:1.5em;">2048 Physics 原版</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+	<p>按 'Z' 键可 <a style="text-decoration:underline" onclick="handle_undo()">撤销</a> 任意步！</p>
+
+	<!-- <form>
+		新产生的超弦振动模式为：
+		<input type="radio" name="string" value="quark" checked>夸克
+		<input type="radio" name="string" value="lepton" disabled>轻子
+	</form> -->
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+		<a class="keep-playing-button">继续玩到超膜！</a>
+          <a class="retry-button">再试一次</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+	  </div>
+    </div>
+
+	<p class="game-explanation">
+		<strong class="important">玩法：</strong>使用<strong>方向键</strong>移动方块，相同级别的方块可以合成下一级方块 <hr> 2048 物理专业版：超弦（夸克或轻子），强子，原子核，原子，分子，细胞，生物，生物圈，地月系，太阳系，银河系，本星系（群），（可观测）宇宙，超膜
+	</p>
+	<hr>
+	<p class="game-explanation">
+    目前游戏的规则和2048无异，以后还可以加入下列设定：
+	<br><ol>
+	<li>玩家可以选择新生成的超弦的振动模式为夸克还是轻子</li>
+	<li>三个夸克才能合成一个强子</li>
+	<li>原子核和轻子才能合成原子</li>
+	</ol>
+	#就差一个写代码的了# _(:3」∠)_
+	</p>
+	<hr>
+    <p>
+    <strong class="important">Note:</strong> This is a fork from <a href="https://github.com/aenon/aenon.github.io">https://github.com/aenon/aenon.github.io</a>, which created by <a href="https://github.com/aenon" target="_blank">aenon.</a>    </p>
+    <hr>
+	Original game by <a href="http://gabrielecirulli.com/" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024%21/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    <hr>
+	Undo-mod by <a href="http://quaxio.com/">Alok Menghrajani</a>, <a href="https://github.com/alokmenghrajani/2048">source</a>.
+    <hr>
+	<p>
+    </p>
+  </div>
+
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_score_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  <script src="js/seedrandom.js"></script>
+
+</div>
+
+<div id="discuss">
+  <div class="fold">
+  <div class="fold-head" onclick="isHidden('discu')">
+    展开讨论
+  </div>
+  <div class="fold-cont" id="discu" style="display:none">
+    <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="2048-physics" data-title="2048 Physics" data-url="http://leptc.github.io/2048physics/"></div>
+    <!-- 多说评论框 end -->
+  </div>
+  </div>
+</div>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"leptc"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+</body>
+</html>
