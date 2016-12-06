@@ -20,29 +20,6 @@
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/DataTables.js"></script>
 
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:"leptc"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-       || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-  <!-- 多说公共JS代码 end -->
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?741805e21dbbc9ff4f62a2c05a4a9a23";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
 <script type="text/javascript" class="init">
 
 $(document).ready(function() {
@@ -139,16 +116,11 @@ $(document).ready(function() {
 </h1>
 
 <ul>
+<li><button type="button" onclick="inject('日期','')">全部清除</button></li>
 <li><a onclick="toggle('togglecolumn')">隐藏列</a></li>
-<li><a onclick="toggle('toggleindex')">按类别</a></li>
-<li><a onclick="toggle('showcomment')">评论</a></li>
+<li><a href="comment.html">评论</a></li>
+<li><a href="history.html">考古</a></li>
 </ul>
-
-<!-- <p>（新版狸站主页正在施工中…… 新首页将具备自定义搜索排序功能，等我把所有历史作品录入数据库后，用户就能直接在首页上过滤出任意想看的作品汇总。）</p> -->
-
-<!-- <p><h3>LePtC 社交网络活动数据库</h3>（不含已停用站点）　</p> -->
-<p>最后更新：</p>
-<p>{{ site.time | date: "%Y.%m.%d" }}</p>
 
 </div>
 
@@ -159,75 +131,34 @@ $(document).ready(function() {
 <div id="section">
 
 <div class="body">
-
 <div class="content">
 
+<div>
+
+<p>站点过滤
+<button type="button" onclick="inject('标签','科学人')">科学人（7）</button> 
+<button type="button" onclick="inject('站点','壳问')">果壳问答（575）</button> 
+<button type="button" onclick="inject('站点','知专')">知乎专栏（）</button> 
+<button type="button" onclick="inject('站点','知')">知乎（17）</button> 
+<button type="button" onclick="inject('站点','哔')">哔哩哔哩（11）</button> 
+</p>
+
+<p>常用标题
+<button type="button" onclick="inject('标题','【狸笔记】')">狸笔记（14）</button> 
+<button type="button" onclick="inject('标题','【如何狸解】')">如何狸解（3）</button> 
+<button type="button" onclick="inject('标题','【还能不能好好地看科幻了】')">还能不能好好地看科幻了（）</button> 
+</p>
+
+<p>常用标签
+<button type="button" onclick="inject('标签','科幻')">科幻（3）</button> 
+<button type="button" onclick="inject('标签','what-if')">what-if（52）</button> 
+<button type="button" onclick="inject('标签','笑点')">笑点低（8）</button> 
+<button type="button" onclick="inject('标签','麦酱')">Mathematica（4）</button> 
+<button type="button" onclick="inject('标签','绘画')">绘画（23）</button> 
+<button type="button" onclick="inject('标签','编曲')">编曲（5）</button> 
+</p>
 
 </div>
-</div>
-
-
-
-<div class="body" id="toggleindex">
-
-<div class="content">
-
-<table class="timetable" align="center">
-  <tr>
-    <td></td>
-    <td class="bottom"></td>
-    <td class="bottom">枯燥</td>
-    <td class="bottom"></td>
-    <td class="bottom">趣味</td>
-  </tr>
-  <tr>
-    <td class="right">日</td>
-    <td></td>
-    <td></td>
-    <td><a href="funpic/">萌笑话</a> (4)</td>
-    <td><a href="project/">游戏</a> (3)</td>
-  </tr>
-  <tr>
-    <td class="right">常</td>
-    <td></td>
-    <td></td>
-    <td><a href="funpic/">物理漫画</a> (9)</td>
-    <td style="color:rgba(221, 221, 221, 0.4)">科幻 (0)</td>
-  </tr>
-  <tr>
-    <td class="right"></td>
-    <td></td>
-    <td></td>
-    <td><a href="archiv/funque.html">问答帖</a> (17)</td>
-    <td><a href="notsci/">what-if</a> (53)</td>
-  </tr>
-  <tr>
-    <td class="right">干</td>
-    <td></td>
-    <td><a href="popsci/">看不懂</a> (305)</td>
-    <td><a href="http://www.guokr.com/i/1585771774/articles/">科学人</a> (7)</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td class="right">货</td>
-    <td></td>
-    <td><a href="lenote/">狸笔记</a> (17)</td>
-    <td><a href="posts/lexplain.html">如何狸解</a> (2)</td>
-    <td></td>
-  </tr>
-</table>
-
-
-</div>
-</div>
-
-
-
-<div class="body">
-
-<div class="content">
-
-
 
 <div id="togglecolumn">
 切换显示列: <a class="toggle-vis" data-column="0">日期</a> - <a class="toggle-vis" data-column="1">标题</a> - <a class="toggle-vis" data-column="2">站点</a> - <a class="toggle-vis" data-column="3">标签</a> - <a class="toggle-vis" data-column="4">赞</a>
@@ -255,10 +186,25 @@ $(document).ready(function() {
   </tr>
 </tfoot>
 
-<tbody>
+<tbody style="color:#CCC">
+
+<tr><td>2016.12.??</td>
+  <td>闷声开个大坑【还能不能好好地看科幻了】</td>
+<td></td>
+<td>知专</td><td></td></tr>
+
+<tr><td>2016.12.??</td>
+  <td>短篇科幻《图灵测试员》（整个十一月份几乎就是在写这一个作品……）</td>
+<td></td>
+<td>科幻</td><td></td></tr>
+
+<tr><td>2016.12.06</td>
+  <td>实现 javascript 关键词注入和 url 传关键词功能（已知 bug：无法注入全局搜索），数据库收录知乎回答</td>
+<td></td>
+<td>狸站,开发</td><td></td></tr>
 
 <tr><td>2016.11.09</td>
-  <td>从 win10 重装的阴影中走出（果断彻底禁用掉 win10 的升级服务…）好处是又重走了一遍狸笔记的安装过程，此次更新较大，详见新版说明书，请装过旧版狸笔记的童鞋将 documentclass 由 leptc 修改为 lenote</td>
+  <td>从 win10 重装的阴影中走出（果断彻底禁用掉 win10 的升级服务…）唯一的好处是又重走了一遍狸笔记的安装过程，此次更新较大，详见新版说明书，请装过旧版狸笔记的童鞋将 documentclass 由 leptc 修改为 lenote</td>
 <td><a href="http://github.com/LePtC/LeNote">G</a></td>
 <td>笔记,开发</td><td></td></tr>
 
@@ -347,7 +293,7 @@ $(document).ready(function() {
 <td><a href="http://www.bilibili.com/video/av5154880/#reply112771625">哔</a>
     <a href="https://www.zhihu.com/question/48042706/answer/108921720">知</a>
     <a href="http://www.guokr.com/article/441536/#reply3009389">壳</a></td>
-<td>科幻</td><td><!-- 39+849+116 -->1004</td></tr>
+<td>科幻</td><td><!-- 39+853+116 -->1008</td></tr>
 
 <tr><td>2016.06.29</td>
   <td>【狸站用户福利】<a href="popsci/p160620/">果壳评论音轨：在下坂本（物理部分）</a></td>
@@ -373,7 +319,7 @@ $(document).ready(function() {
 <tr><td>2016.06.12</td>
   <td>怎样跟外星人解释左和右的概念？</td>
 <td><a href="https://www.zhihu.com/question/21433839/answer/105617168">知</a></td>
-<td>物理</td><td>61</td></tr>
+<td>物理</td><td>62</td></tr>
 
 <tr><td>2016.06.09</td>
   <td>【Mathematica】当那些熟悉的音乐降调之后会怎样</td>
@@ -516,7 +462,7 @@ $(document).ready(function() {
 <td>绘画,狸站</td><td></td></tr>
 
 <tr><td>2015.12.27</td>
-  <td>狸解洛伦兹变换（二）</td>
+  <td>【如何狸解】洛伦兹变换（二）</td>
 <td><a href="popsci/p151227-lexplain-lorentz-transform-2/">狸</a></td>
 <td>物理</td><td></td></tr>
 
@@ -526,12 +472,12 @@ $(document).ready(function() {
 <td>说说</td><td></td></tr>
 
 <tr><td>2015.12.12</td>
-  <td>狸解洛伦兹变换（一）</td>
+  <td>【如何狸解】洛伦兹变换（一）</td>
 <td><a href="popsci/p151212-lexplain-lorentz-transform-1/">狸</a></td>
 <td>物理</td><td></td></tr>
 
 <tr><td>2015.12.12</td>
-  <td>新系列开坑：「狸解」系列作品</td>
+  <td>新系列开坑：【如何狸解】系列作品</td>
 <td><a href="posts/lexplain.html">狸</a></td>
 <td>物理</td><td></td></tr>
 
@@ -551,7 +497,7 @@ $(document).ready(function() {
 <td>说说</td><td></td></tr>
 
 <tr><td>2015.10.30</td>
-  <td>科幻词条 <a href="wiki/marshosphere/">棉花糖层</a></td>
+  <td>科幻词条 <a href="wiki/marshosphere/">棉花糖层</a> （注：由于涉及剧透，百科词条已于 2016 全部下线）</td>
 <td></td>
 <td>科幻</td><td></td></tr>
 
@@ -617,7 +563,7 @@ $(document).ready(function() {
 <td>狸站</td><td></td></tr>
 
 <tr><td>2015.08.18</td>
-  <td>第一个科幻词条 <a href="wiki/lesolar/">狸太阳</a></td>
+  <td>第一个科幻词条 <a href="wiki/lesolar/">狸太阳</a> （注：由于涉及剧透，百科词条已于 2016 全部下线）</td>
 <td></td>
 <td>科幻</td><td></td></tr>
 
@@ -770,7 +716,7 @@ $(document).ready(function() {
 <tr><td>2015.04.02</td>
   <td>「<a href="wiki/index.html#科幻作品">科幻作品</a>」组加入百科词条</td>
 <td></td>
-<td>科幻</td><td></td></tr>
+<td>狸站</td><td></td></tr>
 
 <tr><td>2015.03.31</td>
   <td>独立的狸笔记版块上线</td>
@@ -853,10 +799,10 @@ $(document).ready(function() {
 <td></td>
 <td>绘画</td><td></td></tr>
 
-<tr><td>2015.01.11</td>
+<!-- <tr><td>2015.01.11</td>
   <td>开始构思萌狸科幻</td>
 <td></td>
-<td>科幻</td><td></td></tr>
+<td>科幻</td><td></td></tr> -->
 
 <tr><td>2015.01.06</td>
   <td>开始在本地制作狸站</td>
@@ -950,6 +896,61 @@ $(document).ready(function() {
 
 
 
+<tr><td>2016.05.23</td>
+  <td>物理专业的你，本科论文写什么？</td>
+<td><a href="https://www.zhihu.com/question/46663318/answer/102259427">知</a></td>
+<td>说说</td><td>19</td></tr>
+
+<tr><td>2015.12.13</td>
+  <td>牛顿第二定律是最重要的力学定律吗？</td>
+<td><a href="https://www.zhihu.com/question/38465814/answer/76565817">知</a></td>
+<td>物理</td><td>8</td></tr>
+
+<tr><td>2015.06.13</td>
+  <td>时空和质量是怎样的逻辑关系？</td>
+<td><a href="https://www.zhihu.com/question/26590209/answer/51217303">知</a></td>
+<td>物理</td><td>4</td></tr>
+
+<tr><td>2015.06.09</td>
+  <td>自旋为1/2的粒子是什么形状的，三维真的有转两圈才能和自己重合的形状？</td>
+<td><a href="https://www.zhihu.com/question/26677689/answer/50619590">知</a></td>
+<td>物理</td><td>7</td></tr>
+
+<tr><td>2015.01.14</td>
+  <td>无偏振的电磁波的电场强度与时间函数应该是怎样的？</td>
+<td><a href="https://www.zhihu.com/question/27584182/answer/37557173">知</a></td>
+<td>物理</td><td>3</td></tr>
+
+<tr><td>2014.12.04</td>
+  <td>如果我是个光子，我看到的光是真空标准光速还是静止?</td>
+<td><a href="https://www.zhihu.com/question/26765978/answer/34069148">知</a></td>
+<td>物理</td><td>18</td></tr>
+
+<tr><td>2014.11.21</td>
+  <td>如果说动能对应的质量是动质量与静质量的差，那么势能对应什么的质量？</td>
+<td><a href="https://www.zhihu.com/question/26672459/answer/33761201">知</a></td>
+<td>物理</td><td>3</td></tr>
+
+<tr><td>2014.10.04</td>
+  <td>在地球上怎么判断地球是球体？</td>
+<td><a href="https://www.zhihu.com/question/24826575/answer/31374709">知</a></td>
+<td>物理</td><td>7</td></tr>
+
+<tr><td>2014.04.16</td>
+  <td>连续激光束在内侧都是完美反射的长方体盒子中遍历所有点所用时间？</td>
+<td><a href="https://www.zhihu.com/question/23426458/answer/24549354">知</a></td>
+<td></td><td>8</td></tr>
+
+<tr><td>2013.11.26</td>
+  <td>为什么飞机不逆地球自转方向飞行，以便快点到达地球的另外半球？</td>
+<td><a href="https://www.zhihu.com/question/21566923/answer/20341204">知</a></td>
+<td></td><td>16</td></tr>
+
+
+
+
+
+
 
 
 <tr><td>  2013.10.17  </td><td> 如果把白矮星切下一立方厘米放在地球上，会“解压缩”吗？ </td><td><a href="  http://www.guokr.com/answer/578806/ ">壳问</a></td><td> what-if </td><td> 332 </td></tr>
@@ -989,8 +990,8 @@ $(document).ready(function() {
 <tr><td>  2013.11.29  </td><td> 我突然在想，如果造一面大镜子反射太阳会怎么样？ </td><td><a href="  http://www.guokr.com/answer/606506/ ">壳问</a></td><td> what-if </td><td> 83  </td></tr>
 <tr><td>  2014.06.02  </td><td> 电脑是怎样从最简单的计算器发展起来的？ </td><td><a href="  http://www.guokr.com/answer/705306/ ">壳问</a></td><td>   </td><td> 82  </td></tr>
 <tr><td>  2014.05.11  </td><td> 能不能用强电流通过猪肉，使其变熟？ </td><td><a href="  http://www.guokr.com/answer/697424/ ">壳问</a></td><td> what-if </td><td> 80  </td></tr>
-<tr><td>  2014.06.29  </td><td> "有没有比哈勃的命名更多的名人？
-" </td><td><a href="  http://www.guokr.com/answer/716124/ ">壳问</a></td><td>   </td><td> 78  </td></tr>
+<tr><td>  2014.06.29  </td><td> 有没有比哈勃的命名更多的名人？
+ </td><td><a href="  http://www.guokr.com/answer/716124/ ">壳问</a></td><td>   </td><td> 78  </td></tr>
 <tr><td>  2014.06.01  </td><td> 为什么在炎炎夏日下，在平直的公路上行驶，会看到前方路面好像积水一样，似乎能看到前方车成对称镜像？  </td><td><a href="  http://www.guokr.com/answer/705170/ ">壳问</a></td><td>   </td><td> 78  </td></tr>
 <tr><td>  2014.02.24  </td><td> 电子可以相对原子核静止不动嘛？ </td><td><a href="  http://www.guokr.com/answer/661791/ ">壳问</a></td><td>   </td><td> 77  </td></tr>
 <tr><td>  2013.09.05  </td><td> 假设有一个魔法能让电荷消失，那么会发生什么？  </td><td><a href="  http://www.guokr.com/answer/555702/ ">壳问</a></td><td> what-if </td><td> 77  </td></tr>
@@ -1005,12 +1006,12 @@ $(document).ready(function() {
 <tr><td>  2014.07.02  </td><td> 在你的专业，哪些课必须逃，哪些课不能逃？  </td><td><a href="  http://www.guokr.com/answer/717302/ ">壳问</a></td><td>   </td><td> 70  </td></tr>
 <tr><td>  2014.03.12  </td><td> “瘦成一道闪电！”——闪电究竟有多粗？ </td><td><a href="  http://www.guokr.com/answer/670875/ ">壳问</a></td><td>   </td><td> 69  </td></tr>
 <tr><td>  2013.11.15  </td><td> 如果太阳系内部都均匀分布着气体，密度及成分和地球表面大气一样，会发生什么？ </td><td><a href="  http://www.guokr.com/answer/595752/ ">壳问</a></td><td> what-if </td><td> 69  </td></tr>
-<tr><td>  2014.03.18  </td><td> "超弦理论里提到的""粒子是弦的不同的振动模式"",我想问这里提到的不同的振动模式,具体有哪些模式?
-" </td><td><a href="  http://www.guokr.com/answer/674150/ ">壳问</a></td><td>   </td><td> 68  </td></tr>
+<tr><td>  2014.03.18  </td><td> 超弦理论里提到的""粒子是弦的不同的振动模式"",我想问这里提到的不同的振动模式,具体有哪些模式?
+ </td><td><a href="  http://www.guokr.com/answer/674150/ ">壳问</a></td><td>   </td><td> 68  </td></tr>
 <tr><td>  2014.07.18  </td><td> “人即神明 ”漫画中的这个公式是什么意思？ </td><td><a href="  http://www.guokr.com/answer/723629/ ">壳问</a></td><td>   </td><td> 67  </td></tr>
 <tr><td>  2014.03.12  </td><td> 光子是如何传递电磁力的？  </td><td><a href="  http://www.guokr.com/answer/671428/ ">壳问</a></td><td>   </td><td> 66  </td></tr>
-<tr><td>  2014.06.04  </td><td> "爱因斯坦的质能公式根本就是忽悠人的，会不会有人同意我的观点？
-" </td><td><a href="  http://www.guokr.com/answer/706221/ ">壳问</a></td><td>   </td><td> 65  </td></tr>
+<tr><td>  2014.06.04  </td><td> 爱因斯坦的质能公式根本就是忽悠人的，会不会有人同意我的观点？
+ </td><td><a href="  http://www.guokr.com/answer/706221/ ">壳问</a></td><td>   </td><td> 65  </td></tr>
 <tr><td>  2014.07.31  </td><td> 像用上下可以把正方形扔出二维，怎么把正方体扔出三维？  </td><td><a href="  http://www.guokr.com/answer/729114/ ">壳问</a></td><td> what-if </td><td> 64  </td></tr>
 <tr><td>  2014.07.29  </td><td> 四维空间中是不是桌子要有四只腿才能立住？  </td><td><a href="  http://www.guokr.com/answer/728086/ ">壳问</a></td><td>   </td><td> 64  </td></tr>
 <tr><td>  2014.05.18  </td><td> Gpu可以和Cpu进行共享吗？ </td><td><a href="  http://www.guokr.com/answer/699985/ ">壳问</a></td><td>   </td><td> 64  </td></tr>
@@ -1158,13 +1159,13 @@ $(document).ready(function() {
 <tr><td>  2014.09.02  </td><td> 在只知道角度的情况下，如何通过四则运算求出正弦值？ </td><td><a href="  http://www.guokr.com/answer/741220/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
 <tr><td>  2014.06.25  </td><td> 当物理学越向基本发展是不是应该越简单？ </td><td><a href="  http://www.guokr.com/answer/714185/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
 <tr><td>  2014.03.21  </td><td> 普通的救生船上都有哪些装备？  </td><td><a href="  http://www.guokr.com/answer/676274/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
-<tr><td>  2014.02.25  </td><td> "熵减过程可能自发进行吗？
-" </td><td><a href="  http://www.guokr.com/answer/661848/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
+<tr><td>  2014.02.25  </td><td> 熵减过程可能自发进行吗？
+ </td><td><a href="  http://www.guokr.com/answer/661848/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
 <tr><td>  2014.02.23  </td><td> 为什么两束光相遇光子不会因为碰撞而散射？  </td><td><a href="  http://www.guokr.com/answer/660925/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
 <tr><td>  2014.02.22  </td><td> 假如【可控实用的核聚变技术】和【高温超导体材料】被某财团寡头以私企身份抢先研制成功并申请专利，可能出现能源倾销吗？ </td><td><a href="  http://www.guokr.com/answer/660667/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
 <tr><td>  2014.02.20  </td><td> LaTeX 排版中有什么小细节需要注意？  </td><td><a href="  http://www.guokr.com/answer/659365/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
 <tr><td>  2014.02.13  </td><td> 关于光子的质能方程问题 </td><td><a href="  http://www.guokr.com/answer/655754/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
-<tr><td>  2014.02.12  </td><td> "将 6.02*10^23个网球，放入底面为北京市大小的无限高圆柱体，问球能垒多高？
+<tr><td>  2014.02.12  </td><td> 将 6.02*10^23个网球，放入底面为北京市大小的无限高圆柱体，问球能垒多高？
 平铺，不是从一点向下扔"  </td><td><a href="  http://www.guokr.com/answer/654564/ ">壳问</a></td><td> what-if </td><td> 16  </td></tr>
 <tr><td>  2013.12.26  </td><td> 你的回答得到第一个赞时，是怎样的感受？ </td><td><a href="  http://www.guokr.com/answer/627261/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
 <tr><td>  2013.09.26  </td><td> 在你的有生之年，听过最具启发性的问题是什么？  </td><td><a href="  http://www.guokr.com/answer/565405/ ">壳问</a></td><td>   </td><td> 16  </td></tr>
@@ -1213,7 +1214,7 @@ $(document).ready(function() {
 <tr><td>  2013.08.26  </td><td> 肥皂泡破裂的时候为什么是逐渐碎掉？为什么会碎成这么细小的小水滴呢？ </td><td><a href="  http://www.guokr.com/answer/550240/ ">壳问</a></td><td>   </td><td> 13  </td></tr>
 <tr><td>  2013.08.20  </td><td> 一年为什么不是360天？如果把略扁的地球削成正圆球体，地球的转速不变，那一年会是360天整吗？ </td><td><a href="  http://www.guokr.com/answer/547029/ ">壳问</a></td><td>   </td><td> 13  </td></tr>
 <tr><td>  2013.08.08  </td><td> 为什么带不同电荷的质子和电子不会黏在一起，而质子们却会？万有引力不是比静电力小吗？ </td><td><a href="  http://www.guokr.com/answer/538872/ ">壳问</a></td><td>   </td><td> 13  </td></tr>
-<tr><td>  2013.07.25  </td><td> "为什么“相邻正整数的平方和为平方数”出现的规律符合等比数列（比值为3+根号2）？例如：
+<tr><td>  2013.07.25  </td><td> 为什么“相邻正整数的平方和为平方数”出现的规律符合等比数列（比值为3+根号2）？例如：
 3，4，5
 20，21，29
 问题有误，应该是（比值为3+2乘以根号2），谢谢LePtC简化问题并回答。"  </td><td><a href="  http://www.guokr.com/answer/530187/ ">壳问</a></td><td>   </td><td> 13  </td></tr>
@@ -1221,7 +1222,7 @@ $(document).ready(function() {
 <tr><td>  2014.05.25  </td><td> 一束电子束打到中子星上会发生什么？ </td><td><a href="  http://www.guokr.com/answer/702824/ ">壳问</a></td><td> what-if </td><td> 12  </td></tr>
 <tr><td>  2014.05.25  </td><td> 临界质量是一个范围还是一个定值？  </td><td><a href="  http://www.guokr.com/answer/702702/ ">壳问</a></td><td>   </td><td> 12  </td></tr>
 <tr><td>  2014.05.17  </td><td> 理论物理在我们这代人取得实质性突破可能性有多大？  </td><td><a href="  http://www.guokr.com/answer/699731/ ">壳问</a></td><td>   </td><td> 12  </td></tr>
-<tr><td>  2014.05.17  </td><td> "古人是先测出地日距离还是地月距离？
+<tr><td>  2014.05.17  </td><td> 古人是先测出地日距离还是地月距离？
 是怎么测量的？"  </td><td><a href="  http://www.guokr.com/answer/699608/ ">壳问</a></td><td>   </td><td> 12  </td></tr>
 <tr><td>  2014.05.11  </td><td> 如果观察一个很遥远的粒子，那么它的波函数是不是需要很长的时间才能坍缩？ </td><td><a href="  http://www.guokr.com/answer/697412/ ">壳问</a></td><td>   </td><td> 12  </td></tr>
 <tr><td>  2014.02.07  </td><td> 求大神指导，理论物理入门  </td><td><a href="  http://www.guokr.com/answer/651750/ ">壳问</a></td><td>   </td><td> 12  </td></tr>
@@ -1262,8 +1263,8 @@ $(document).ready(function() {
 <tr><td>  2014.10.07  </td><td> 美国科学家研发隐身斗篷：透镜隐藏大型物体——谁能介绍一下这个的原理？  </td><td><a href="  http://www.guokr.com/answer/750313/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2014.10.06  </td><td> 为什么有那么多普朗克单位？而且都不是太大就是太小？ </td><td><a href="  http://www.guokr.com/answer/750207/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2014.08.29  </td><td> 这是灯依次亮起什么原理呢？ </td><td><a href="  http://www.guokr.com/answer/740030/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
-<tr><td>  2014.08.23  </td><td> "力的定义是什么？
-实质是什么？" </td><td><a href="  http://www.guokr.com/answer/737864/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
+<tr><td>  2014.08.23  </td><td> 力的定义是什么？
+实质是什么？ </td><td><a href="  http://www.guokr.com/answer/737864/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2014.08.19  </td><td> 如果一个新安装的系统中没有任何浏览器，能通过什么途径安装浏览器？  </td><td><a href="  http://www.guokr.com/answer/736337/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2014.08.16  </td><td> 在考虑大气压的情况下，一个完全浸没在水中的不规则物体受到的浮力仍为ρ水gV排么？  </td><td><a href="  http://www.guokr.com/answer/735479/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2014.07.01  </td><td> 现代物理学中已经被实验证实，较为公认的理论现在发展到哪一步了？ </td><td><a href="  http://www.guokr.com/answer/717009/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
@@ -1284,14 +1285,14 @@ $(document).ready(function() {
 <tr><td>  2013.08.30  </td><td> 为什么电子产品不做成同样的充电接口，这样难道不会方便很多吗？  </td><td><a href="  http://www.guokr.com/answer/552804/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2013.08.28  </td><td> 永动机，求秒破。  </td><td><a href="  http://www.guokr.com/answer/551939/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2013.08.14  </td><td> 把水龙头开得很小让它滴水，这时候水表会转吗？  </td><td><a href="  http://www.guokr.com/answer/543214/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
-<tr><td>  2013.08.09  </td><td> "打乒乓，切黄瓜！"是真的吗，现实情况中乒乓球要达到多大速度才能切黄瓜？  </td><td><a href="  http://www.guokr.com/answer/539774/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
+<tr><td>  2013.08.09  </td><td> 打乒乓，切黄瓜！"是真的吗，现实情况中乒乓球要达到多大速度才能切黄瓜？  </td><td><a href="  http://www.guokr.com/answer/539774/ ">壳问</a></td><td>   </td><td> 10  </td></tr>
 <tr><td>  2014.09.14  </td><td> 两种互为补色的光混合后的白光再通过三棱镜后还会被分解为七色光么？为什么？  </td><td><a href="  http://www.guokr.com/answer/744364/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2014.09.03  </td><td> 为什么原子中的电子与原子核是分离的？  </td><td><a href="  http://www.guokr.com/answer/741239/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2014.08.04  </td><td> 是什么让你放弃了Word，选择了LaTeX？  </td><td><a href="  http://www.guokr.com/answer/730322/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2014.07.22  </td><td> 将条形磁铁不断从中间切割会发生什么？  </td><td><a href="  http://www.guokr.com/answer/724930/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2014.07.22  </td><td> 怎么用函数描述弹簧体系中位移和时间的关系？ </td><td><a href="  http://www.guokr.com/answer/724922/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
-<tr><td>  2014.01.18  </td><td> "为什么数学在物理学里能发挥这么大的作用？
-" </td><td><a href="  http://www.guokr.com/answer/641789/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
+<tr><td>  2014.01.18  </td><td> 为什么数学在物理学里能发挥这么大的作用？
+ </td><td><a href="  http://www.guokr.com/answer/641789/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2013.12.31  </td><td> 如果你从外星人那里得到了远远超过地球上的计算速度的超级计算机，你会用它来算什么？（PS目前现在地球上最快的超级计算机是中国的天河二号，2013年11月18公布的TOP500） </td><td><a href="  http://www.guokr.com/answer/630656/ ">壳问</a></td><td> what-if </td><td> 9 </td></tr>
 <tr><td>  2013.12.24  </td><td> 如何改变理科生对文科生的看法？或者有效回击理科生对文科生的抨击？  </td><td><a href="  http://www.guokr.com/answer/625573/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2013.11.15  </td><td> 为什么果壳上有那么多关于白矮星/中子星/黑洞的问题？  </td><td><a href="  http://www.guokr.com/answer/596320/ ">壳问</a></td><td> 说说  </td><td> 9 </td></tr>
@@ -1304,9 +1305,9 @@ $(document).ready(function() {
 <tr><td>  2013.07.29  </td><td> 有一个视频是灯泡放在微波炉中会亮？但是灯泡亮度和颜色为什么在变？  </td><td><a href="  http://www.guokr.com/answer/532323/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2013.07.23  </td><td> 关于热一和热二的两个问题  </td><td><a href="  http://www.guokr.com/answer/528659/ ">壳问</a></td><td>   </td><td> 9 </td></tr>
 <tr><td>  2014.10.07  </td><td> 孙悟空变成蚊子时体积变小了 </td><td><a href="  http://www.guokr.com/answer/750312/ ">壳问</a></td><td> 笑点  </td><td> 8 </td></tr>
-<tr><td>  2014.10.02  </td><td> "求一些十分没关系的英语单词
+<tr><td>  2014.10.02  </td><td> 求一些十分没关系的英语单词
 比如 pupil 既有小学生 学徒 又有瞳孔的意思
-越奇怪越好....." </td><td><a href="  http://www.guokr.com/answer/749345/ ">壳问</a></td><td>   </td><td> 8 </td></tr>
+越奇怪越好..... </td><td><a href="  http://www.guokr.com/answer/749345/ ">壳问</a></td><td>   </td><td> 8 </td></tr>
 <tr><td>  2014.09.14  </td><td> 请问在人以接近光速运动，时间变慢，这个假设中，两个相对的参照物，任一个都可以是静止或运动的，为什么会是固定一方的时间会变慢？而不是相对飞船在高速运动的地球的时间变慢？ </td><td><a href="  http://www.guokr.com/answer/744363/ ">壳问</a></td><td>   </td><td> 8 </td></tr>
 <tr><td>  2014.08.18  </td><td> qwerty键盘这种故意麻烦和阻碍用户的设计，正式定义是什么？ </td><td><a href="  http://www.guokr.com/answer/735791/ ">壳问</a></td><td>   </td><td> 8 </td></tr>
 <tr><td>  2014.08.12  </td><td> 这两句描述气体和温度的关系的话矛盾么？ </td><td><a href="  http://www.guokr.com/answer/733885/ ">壳问</a></td><td>   </td><td> 8 </td></tr>
@@ -1419,8 +1420,8 @@ $(document).ready(function() {
 <tr><td>  2013.09.30  </td><td> 化学变化速度和分子热运动速度有关吗？  </td><td><a href="  http://www.guokr.com/answer/567380/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
 <tr><td>  2013.09.23  </td><td> 假设某一颗恒星与地球之间有一个黑洞，那么在地球上还能观测到这颗恒星吗？ </td><td><a href="  http://www.guokr.com/answer/563787/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
 <tr><td>  2013.09.15  </td><td> 一道高中物理题的疑问，有关圆周运动向心力，求解答  </td><td><a href="  http://www.guokr.com/answer/560115/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
-<tr><td>  2013.09.08  </td><td> "神出现的根本原因是现实的残酷么？
-" </td><td><a href="  http://www.guokr.com/answer/556932/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
+<tr><td>  2013.09.08  </td><td> 神出现的根本原因是现实的残酷么？
+ </td><td><a href="  http://www.guokr.com/answer/556932/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
 <tr><td>  2013.08.30  </td><td> 为什么不可以换另一个单位，使科学公式中的数值较复杂的常量变成1呢？ </td><td><a href="  http://www.guokr.com/answer/552717/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
 <tr><td>  2013.08.19  </td><td> 为什么黑车看起来比较亮？而且所谓的金属光泽究竟指的是什么光呢？ </td><td><a href="  http://www.guokr.com/answer/546242/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
 <tr><td>  2013.08.10  </td><td> 社交软件上瘾怎么破？  </td><td><a href="  http://www.guokr.com/answer/540341/ ">壳问</a></td><td>   </td><td> 5 </td></tr>
@@ -1447,8 +1448,8 @@ $(document).ready(function() {
 <tr><td>  2013.12.23  </td><td> 生活中你养过什么宠物吗？  </td><td><a href="  http://www.guokr.com/answer/625332/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
 <tr><td>  2013.12.19  </td><td> 生物的进化是否具有“最终的结果”？ </td><td><a href="  http://www.guokr.com/answer/623116/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
 <tr><td>  2013.10.10  </td><td> 超导体有完全抗磁性为什么还会产生感应电流？ </td><td><a href="  http://www.guokr.com/answer/573284/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
-<tr><td>  2013.09.16  </td><td> "你心里的粉红色，是什么样的？
-" </td><td><a href="  http://www.guokr.com/answer/560676/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
+<tr><td>  2013.09.16  </td><td> 你心里的粉红色，是什么样的？
+ </td><td><a href="  http://www.guokr.com/answer/560676/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
 <tr><td>  2013.09.01  </td><td> 各位程序员们有没有迷茫的时刻？ </td><td><a href="  http://www.guokr.com/answer/553850/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
 <tr><td>  2013.08.15  </td><td> 物体（粒子）速度为光速，则其质量是多少？  </td><td><a href="  http://www.guokr.com/answer/543308/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
 <tr><td>  2013.08.08  </td><td> 辐射是如何对人体造成伤害的？  </td><td><a href="  http://www.guokr.com/answer/539059/ ">壳问</a></td><td>   </td><td> 4 </td></tr>
@@ -1475,11 +1476,11 @@ $(document).ready(function() {
 <tr><td>  2013.12.09  </td><td> 医生为什么要让患者算一百减七？ </td><td><a href="  http://www.guokr.com/answer/614994/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
 <tr><td>  2013.11.25  </td><td> 路灯为什么一定要是黄色的，而不能是其他颜色的？ </td><td><a href="  http://www.guokr.com/answer/603891/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
 <tr><td>  2013.11.15  </td><td> 如果一个人在地球中心，受力会是怎样的？ </td><td><a href="  http://www.guokr.com/answer/596185/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
-<tr><td>  2013.09.19  </td><td> "为什么晶体有各向异性？晶体不是高度对称的吗？
-" </td><td><a href="  http://www.guokr.com/answer/562017/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
+<tr><td>  2013.09.19  </td><td> 为什么晶体有各向异性？晶体不是高度对称的吗？
+ </td><td><a href="  http://www.guokr.com/answer/562017/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
 <tr><td>  2013.09.18  </td><td> 相对论到目前为止被证实了吗？  </td><td><a href="  http://www.guokr.com/answer/561643/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
-<tr><td>  2013.09.15  </td><td> "透明的东西（固体）放在有颜色的水里能看到吗？
-" </td><td><a href="  http://www.guokr.com/answer/560146/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
+<tr><td>  2013.09.15  </td><td> 透明的东西（固体）放在有颜色的水里能看到吗？
+ </td><td><a href="  http://www.guokr.com/answer/560146/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
 <tr><td>  2013.08.25  </td><td> 理想状态下的叠叠乐是不是可以叠到无限高。  </td><td><a href="  http://www.guokr.com/answer/549685/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
 <tr><td>  2013.08.14  </td><td> 取一块中子星上的物质离开中子星后，这块物质还会保持其在中子星上时的物理状态和化学状态么？  </td><td><a href="  http://www.guokr.com/answer/542844/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
 <tr><td>  2013.07.22  </td><td> 手机锁屏的九个点,最长可以连多长? </td><td><a href="  http://www.guokr.com/answer/527797/ ">壳问</a></td><td>   </td><td> 3 </td></tr>
@@ -1492,8 +1493,8 @@ $(document).ready(function() {
 <tr><td>  2014.09.01  </td><td> 好多国家都有五角星的标志，五角星起源于什么呢？ </td><td><a href="  http://www.guokr.com/answer/740649/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.09.01  </td><td> 如何理解四维时空距不变，如何理解c^2 t^2-x^2-y^2-z^2=c'^2 t'^2-x'^2-y'^2-z'^2这一公式的？  </td><td><a href="  http://www.guokr.com/answer/740643/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.08.27  </td><td> 在天涯看到的另类相对论悖论，怎么解释？ </td><td><a href="  http://www.guokr.com/answer/739284/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
-<tr><td>  2014.08.18  </td><td> "光是一种电磁波，为什么不导电？
-" </td><td><a href="  http://www.guokr.com/answer/735800/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
+<tr><td>  2014.08.18  </td><td> 光是一种电磁波，为什么不导电？
+ </td><td><a href="  http://www.guokr.com/answer/735800/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.07.29  </td><td> 做科研/做科学家，最让你产生挫折感的是什么？  </td><td><a href="  http://www.guokr.com/answer/728093/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.07.28  </td><td> 关于量子物理有什么通俗易懂的好书？ </td><td><a href="  http://www.guokr.com/answer/727644/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.07.16  </td><td> 大学毕业后还要不断学习，是不是觉得很累？  </td><td><a href="  http://www.guokr.com/answer/722952/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
@@ -1507,7 +1508,7 @@ $(document).ready(function() {
 <tr><td>  2014.03.11  </td><td> 为什么量子力学里面的 postulate 叫做 postulate 而不是叫做 hypothesis? </td><td><a href="  http://www.guokr.com/answer/670674/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.03.06  </td><td> 吃饭太快真的会变笨么  </td><td><a href="  http://www.guokr.com/answer/667384/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.02.09  </td><td> 发射卫星让免费wifi覆盖全球，可行性如何？  </td><td><a href="  http://www.guokr.com/answer/652956/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
-<tr><td>  2014.02.07  </td><td> "物质、能量、时间这种东西真的存在吗？
+<tr><td>  2014.02.07  </td><td> 物质、能量、时间这种东西真的存在吗？
 能量貌似只是力的某种属性，物质看起来更像是力引发的现象，力貌似是空间位移的趋势，时间是空间位移的量度，结果到头来空间里只有空间吗？"  </td><td><a href="  http://www.guokr.com/answer/651754/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.01.26  </td><td> 三个人以上的交流为何难以深入？ </td><td><a href="  http://www.guokr.com/answer/646509/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
 <tr><td>  2014.01.07  </td><td> 地球自转速度变慢说明地球不仅在旋转，而且在旋转的同时体积在膨胀？  </td><td><a href="  http://www.guokr.com/answer/634582/ ">壳问</a></td><td>   </td><td> 2 </td></tr>
@@ -1553,8 +1554,6 @@ $(document).ready(function() {
 
 
 
-
-
 </tbody>
 </table>
 
@@ -1564,13 +1563,14 @@ $('table th:nth-child(2), table td:nth-child(2)').addClass('left');
 </script>
 
 
+
+
+<!-- 
 <p style="text-align:right">
   <a href="history.html" class="fold-head">考古</a>
 </p>
 
-
-
-<!-- <div class="active">
+<div class="active">
 <ul>
   <li><a href="posts/ask.html">提问与反馈</a> (2015.09)</li>
   <li><a href="posts/questionnaire.html">问卷调查</a> (2015.05)</li>
@@ -1579,6 +1579,14 @@ $('table th:nth-child(2), table td:nth-child(2)').addClass('left');
 </div> -->
 
 
+<!-- <p><h3>LePtC 社交网络活动数据库</h3>（不含已停用站点）　</p> -->
+<!-- <p>LePtC 作品索引站 RC1.1</p>
+<p>收录范围：所有公开作品（包括线上和纸媒，不收录转载和提问）</p> -->
+<p>最后更新：{{ site.time | date: "%Y.%m.%d" }}</p>
+
+
+
+
 </div>
 </div>
 
@@ -1586,33 +1594,21 @@ $('table th:nth-child(2), table td:nth-child(2)').addClass('left');
 
 
 
-<div class="body" id="showcomment">
-
-<div class="content">
-<!-- 多说最新评论 start -->
-  <div class="ds-recent-comments" data-num-items="3" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="50"></div>
-<!-- 多说最新评论 end -->
-
-<p style="text-align:right">
-  <a href="comment.html">查看更多</a>
-</p>
-
-<!--
-<p>截止 2016.08.24 所有有多说帐号的访客</p>
-<ul class="ds-recent-visitors" data-num-items="35"></ul>
- -->
-
-
 </div>
-
 </div>
 
 </div>
 
 
 
-<!-- {% include footer.html %} -->
+<!-- 
+{% include footer.html %} 
+-->
 
 </body>
+
+
+<script src="js/urlkeyword.js"></script>
+
 
 </html>

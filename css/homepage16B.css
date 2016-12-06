@@ -9,6 +9,7 @@ body {
 .body{
   color: #CCC;
   background: rgba(30, 30, 30, .9);
+  padding-top: 0;
 }
 
 a:link {
@@ -61,6 +62,10 @@ tfoot {
   background-color: #333 !important;
 }*/
 
+button{
+  font-size:1em;
+  margin-top: 5px;
+}
 
 input[id="日期"],
 input[id="站点"],
@@ -78,7 +83,7 @@ input[type=text], input[type="search"] {
   border: 2px solid #333;
   border-radius: 0;
 }
-input[type="search"] {
+input[id="全局"] {
   background: url(search.png) no-repeat right;
 }
 input[type=text]:focus, input[type="search"]:focus {
@@ -119,7 +124,7 @@ table.dataTable {
   }
   #section {
     max-width: 1080px;
-    padding: 5px 10px 5px 120px;
+    padding: 0px 10px 5px 120px;
   }
 /*  #footer {
     text-align: center;
