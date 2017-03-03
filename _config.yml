@@ -4,3 +4,4 @@ highlighter: false
 # highlighter: pygments
 # 2048physics,'README.md',
 exclude: ['*.zip','*.txt','*.mht','*.cmd','*.bat','*.fla','*.psd','*.nb','*.mht']
+

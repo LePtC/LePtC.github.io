@@ -1,0 +1,136 @@
+---
+layout: popsci
+categories: movpic5
+title: 这就是膜的力量
+---
+
+<div class="content">
+
+  膜在生活中可是见得太多了，大家对膜都非常熟悉，但是膜背后的那一套理论啊，可就不知道高到哪里去了。要学习这个膜，我是支持的，大家一起提高姿势水平，这样是最好的。
+
+</div>
+
+{% include header.html param="什么是表面张力" %}
+
+<div class="content">
+
+  <p><a title="内聚力和压强"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/m1.png" alt="内聚力和压强" class="series"></a></p>
+
+  <p>现在我们选一个处于液体内部的水分子，对，就你，最萌的那个：</p>
+  <p><a title="内部水分子"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/m2.png" alt="内部水分子" class="series"></a></p>
+  <p>因为无论往哪个方向看，看到的都是相同密度的水分子，所以吸引力和压强对于它来说都是平衡的。</p>
+
+  <p>现在让我们把上半部分的水换成空气：</p>
+  <p><a title="表面水分子"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/m3.png" alt="表面水分子" class="series"></a></p>
+  <p>假设上下两部分的压强相同（压强不同的话将在第二节介绍），由于空气对水分子的吸引力小于水分子之间的吸引力，所以位于表面的水分子会受到指向液体内部的力，一部分水分子被拉进液体内部，表面层的水分子开始变稀疏，直到吸引力减弱到和空气接近时趋于平衡。表面层水分子的间距大于 $r_0$ ，因此吸引力占上风：</p>
+
+  <p><a title="表面水分子"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/m4.png" alt="表面水分子" class="series"></a></p>
+
+  <p>表面张力就是液体表面层水分子之间的吸引力（不是垂直于表面把水分子往里拉的那个力）。这个力使液体表面像一个绷紧的橡皮膜，表面张力系数 $\sigma$ 的第一种定义就是：作用在液面单位长度上的张力的大小，单位 $N/m$</p>
+
+  <p><a title="液膜"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/液膜.gif" alt="液膜" class="series"></a></p>
+
+  <p>垂直于液面的拉力使表面的水分子具有了势能，称为表面自由能（不引起混淆时可简称为表面能）。当你克服表面张力扩大液体的表面积时，实际上是做功提升一部分原本位于内部的水分子来到表面（相应的，缩小表面积可对外做功），这样就有了表面张力系数 $\sigma$ 的第二种定义：单位面积的表面能，单位 $J/m^2$ 。</p>
+
+  <p>两种定义是等价的，以下我们既可以通过分析表面张力得出结论，也可以通过液体希望自己表面能最小得出相同结论。</p>
+
+</div>
+
+
+{% include header.html param="好好的膜怎么就弯了呢" %}
+
+<div class="content">
+
+  <p>如果界面两侧有气压差，膜就会弯曲以平衡气压差，气压高的一侧会使膜向气压低的一侧凸出，这就是吹气球的原理。蛤？你说吹气球的原理谁不知道？那请你解释一下为什么小气球和大气球相连的时候是小气球把气吹到大气球里：</p>
+  <p><a title="气球吹气球"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/气球.gif" alt="气球吹气球" class="series"></a></p>
+
+  <p>用表面能解释比较容易：在表面张力系数不变的情况下，合并成一个大球的表面积比两个小球的总表面积小。从力的角度来解释需要推导弯曲界面两侧的压强差（拉普拉斯公式），本文给出一个初中生也能看懂的推导方式：</p>
+  <p><a title="弯曲液面"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/r.png" alt="弯曲液面" class="series"></a></p>
+
+  <p>假设膜在x的方向弯曲（y 方向不弯），曲率半径为 r，作用在一个微小的长度 dy 上的表面张力 F=σdy ，sinθ≈dx/r ，指向球内的合力为 Fsinθ=σdxdy/r （没有乘2是因为每条边的力被相邻两个面元共用），这一力由压强差平衡，除以面积 dxdy 得压强差为 σ/r 。对于球面x和y方向都弯，故球内压强比球外大 2σ/r （对于肥皂泡因为有两层界面还要再乘2）</p>
+
+  <p>（这种证法只用到微元，并没有用到微积分，甚至不需要学过三角函数，用三角形相似也可以）</p>
+  <p>初中生：要是我还是看不懂怎么办</p>
+  <p>萌狸：大意就是这个膜弯得越厉害，合力向下的分量就越大，说明压强差越大，能理解这个趋势就行，还理解不了的话你可能读了假初中 ╮(￣▽￣)╭</p>
+
+  <p>这个公式告诉我们，半径越小的泡反而意味着更大的内压强，所以半径为零的时候需要无穷大的压强差，这个结论看似没什么用（因为实际的膜肯定有一定厚度），但是如果是从纯净的水中凭空产生一个气泡（或者从纯净的蒸气中凝结一个水滴），这一性质的确会阻碍气泡（或水滴）的产生，这就是超纯净的水可以高于沸点也不沸腾的原因。但只要存在哪怕一点点的小杂质，就会打破无穷大压强差的需求而立刻产生气泡，气泡室便是基于此原理来探测微小粒子的。（相应的，过冷蒸气低于凝结点也不凝结，基于此原理制成了云室 <red>链接之前有一期讲云室的动图</red> ）
+
+</div>
+
+
+{% include header.html param="搞个大泡泡" %}
+
+<div class="content">
+
+  <p>我想吹个大泡泡，可是为什么一拉长就容易断呢？</p>
+  <p><a title="泡泡"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/泡泡.gif" alt="泡泡" class="series"></a></p>
+
+  <p>我们在柱状界面上加一个波长为 λ 的扰动，横截面上的曲率变化 rx 会促进柱的分裂，但纵截面上 ry 的曲率变化会阻碍分裂，后者的效应随着 λ 变长而减弱。</p>
+  <p><a title="不稳定"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/instable.png" alt="不稳定" class="series""></a></p>
+
+  <p>定量的结论是，波长大于柱径的扰动会不断放大导致柱面断裂，这一现象称为普拉托－瑞利不稳定性（Plateau–Rayleigh instability），有很多人研究这个现象（不过不是为了吹泡泡，而是为了设计喷墨打印机）。</p>
+
+  <p><a title="水龙头"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/水龙头.jpg" alt="水龙头" class="series" style="width:150px"></a></p>
+  <p class="pictitle">从水龙头流出的水柱（拍摄者：LePtC）</p>
+
+  <p><red>（此处有一张漫画，可以等最后再放，不耽误编辑）</red></p>
+
+</div>
+
+
+{% include header.html param="什么是亲水，疏水，接触角" %}
+
+<div class="content">
+
+  <p>玻璃对水分子非常有吸引力（虽然玻璃的主要成分是二氧化硅，但它的表面通常会因为价态不饱和而结合很多羟基）。如果水滴碰到的界面是玻璃，就会出现跟空气相反的情况，接触面的水分子比平衡时更挤，表面张力是扩张的，表面能是负的，整坨水滴会希望自己跟玻璃的接触面积越大越好（同时跟空气接触面积越小越好），这样就会形成特定的接触角 θ ，θ 越小意味着玻璃的亲水性（σ液固）越强：</p>
+
+  <p><a title="玻璃"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/m5.png" alt="玻璃" class="series"></a></p>
+
+  <p>亲水性就是处女座的噩梦，水甩不干净，倒水的时候贴壁洒出来等等：</p>
+  <p><a title="茶壶效应"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/茶壶效应.jpg" alt="茶壶效应" class="series"></a></p>
+  <p class="pictitle">茶壶效应（图片来自 <a href="http://www.guokr.com/post/760306/">论文</a> ）</p>
+
+  <p>这时就需要疏水性来拯救世界了，水分子除了对空气分子不感兴趣外，对非极性的烃、油、脂类都不是很感兴趣，此外将表面变粗糙也可增大表观接触角（Cassie's law）。雨具，自洁玻璃，以及 <a href="http://www.guokr.com/question/596295/">阻止随地小便</a> 都用到了疏水材料，由于 <a href="http://www.guokr.com/article/441344/">酷炫动图（二十七）</a> 专门讲过疏水材料，本期就不再重复。</p>
+
+  <p><a title="硬币"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/硬币.gif" alt="硬币" class="series"></a></p>
+
+</div>
+
+
+
+{% include header.html param="零重力饮水杯" %}
+
+<div class="content">
+
+  <p>如果水滴遇到的亲水材料不是平面而是细管或狭缝的话，就会发生毛细现象。讲到这里我们已经有三种方法来解释这个现象了：① 水想增加自己跟玻璃管内壁的接触面积，直到表面能的消耗不足以补偿重力势能 ② 切向的表面张力把液体向上拉 ③ 凹液面会降低压强，从而外部气压把液体压上来。三种方法都能推导出相同的结论。关于毛细现象最常问的永动机问题在这篇 <a href="http://songshuhui.net/archives/133">松鼠会文章</a> 中已有讲解，本文不再重复。</p>
+
+  <p><red>（此处还差一张图）</red></p>
+
+  <p>由公式可见，失重环境下液体会无限上升，直到占满整个玻璃管为止。实际上不一定非要是封闭的吸管，做一个狭缝也可以让液体无限上升：</p>
+
+  <p><a title="零重力饮水杯"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/零重力饮水杯.gif" alt="零重力饮水杯" class="series" style="width:300px"></a></p>
+  <p class="pictitle">（来源：---，完整视频及解说<a href="http://www.bilibili.com/video/av8579108/">搬运在此</a>）</p>
+
+  <p>如图，当角 φ < 90° - 接触角 θ 时，形成的液面是凹的，可降低缝内的压强，所以外部气压会把液体压进缝中。</p>
+  <p><a title="杯角"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/cup0.png" alt="杯角" class="series" style="width:300px"></a></p>
+
+  <p>感谢吃货 <a href="http://www.guokr.com/i/0776277891/">@donizyo</a> 的提议，这个现象可以在地球上观察到，袋装小吃的袋口总是有很多油就是这个现象（像我这种从来不乱买零食的好孩子当然就不知道这种事了…）。经实验，塑料袋虽然对水不怎么亲，但对油的亲和力很强：</p>
+  <p><a title="接触角"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/接触角.jpg" alt="接触角" class="series"></a></p>
+  <p class="pictitle">（拍摄者：LePtC）</p>
+
+  <p>实验用的是集邮迷你塑料袋，水注入袋子后鼓成一个馒头形，完全没有上升的意愿。</p>
+  <p><a title="水袋"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/水袋.gif" alt="水袋" class="series" style="width:250px"></a></p>
+  <p class="pictitle">（拍摄者：LePtC）</p>
+
+  <p>换成油之后惊了，这货跑得比谁都快，即使把袋口撑得很开，也依然有油一路爬升到袋口：</p>
+  <p><a title="油袋"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/油袋.jpg" alt="油袋" class="series" style="width:250px"></a></p>
+  <p><a title="油袋"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/油袋.gif" alt="油袋" class="series" style="width:250px"></a></p>
+  <p class="pictitle">（拍摄者：LePtC）</p>
+
+  <p>初代零重力茶杯发明于 2008 年（NASA 这么晚才发明出这玩意一定是因为外国没有辣条……） 如今最新款的杯子长这样：</p>
+  <p><a title="零重力饮水杯最新款"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/cupn.jpg" alt="零重力饮水杯最新款" class="series" style="width:300px"></a></p>
+  <p><a title="零重力饮水杯最新款"><img src="https://raw.githubusercontent.com/LePtC/LeArtFile/master/popsci/p1702/零重力饮水杯最新款.gif" alt="零重力饮水杯最新款" class="series" style="width:300px"></a></p>
+  <p>这款杯子是用 3D 打印制造的，售价 1500 美刀一个……<a href="http://www.collectspace.com/news/news-050815a-space-coffee-cup-kickstarter.html">[1]</a><red>[这里编辑帮确认一下]</red> 用玻璃造的话售价是 35 美刀一个 （嗯，我选择继续嘬吸管……）</p>
+
+</div>
+
