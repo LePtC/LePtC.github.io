@@ -55,14 +55,13 @@ a:hover, a:active {
 
 table {
   border-collapse:collapse;
-  border: 1px solid #112851;
 }
 th, td {
-  border: 1px solid #112851;
+  /*border: 1px solid #112851;*/
   padding: 5px;
 }
 th {
-  background: rgba(17,40,81,0.7);
+  background: #2e4c64;
   color: #FFF;
   /*font-style: normal;*/
 }

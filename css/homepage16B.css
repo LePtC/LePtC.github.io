@@ -4,11 +4,11 @@
 
 
 body {
-  background-color: #1E1E1E;
+  background-color: #263b4d;
 }
 .body{
   color: #CCC;
-  background: rgba(30, 30, 30, .9);
+  background: rgba(30, 30, 30, .1);
   padding-top: 0;
 }
 
@@ -36,6 +36,8 @@ img.blackle {
   left: 0;
   right: 0;
   z-index:-4;
+  opacity: 0.1;
+  filter: alpha(opacity=10); /* For IE8 and earlier */
 }
 
 
@@ -52,6 +54,7 @@ img.blackle {
   border-radius: 4px;
 }
 
+table {line-height: 1.5em}
 
 
 tfoot {
@@ -66,6 +69,12 @@ button{
   font-size:1em;
   margin-top: 5px;
 }
+/*button {
+  background: rgba(255,255,255,0.2);
+  padding: 0;
+  appearance: none;
+}*/
+
 
 input[id="日期"],
 input[id="站点"],
@@ -79,8 +88,8 @@ input[type=text], input[type="search"] {
   font-size: 1em;
   padding: 2px;
   color: #DDD;
-  background-color: #222;
-  border: 2px solid #333;
+  background-color: #2e4c64;
+  border: 1px solid #AAA;
   border-radius: 0;
 }
 input[id="全局"] {
@@ -88,14 +97,15 @@ input[id="全局"] {
 }
 input[type=text]:focus, input[type="search"]:focus {
   background: none;
-  background-color: #333;
+  background-color: #203240;
   border-color: #e4a438;
 }
 
 sup {
   color: #F05B1C;
-  background: rgba(25,25,25,0.5);
+  /*background: rgba(25,25,25,0.5);*/
 }
+
 
 #section {
   font-size: 0.8em;
@@ -119,12 +129,13 @@ table.dataTable {
 
 @media screen and (min-device-width: 580px){
   #nav {
-    width: 100px;
+    width: 80px;
     height: 100%;
   }
+  ul {padding: 10px}
   #section {
     max-width: 1080px;
-    padding: 0px 10px 5px 120px;
+    padding: 0px 10px 5px 100px;
   }
 /*  #footer {
     text-align: center;
@@ -136,12 +147,13 @@ table.dataTable {
 @media screen and (max-device-width: 580px){
   #nav {
     width: 100%;
-    height: 40px;
-    background-color: #1E1E1E;
+    height: 70px;
+    background-color: #253848;
   }
+  h1, ul, li {display: inline-block}
   #section {
     min-width: 0;
-    padding: 30px 10px 5px 10px;
+    padding: 50px 10px 5px 10px;
   }
 }
 
