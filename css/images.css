@@ -100,7 +100,9 @@ img.history {
 }
 
 
-img[src="img/xcry.png"] {
-  max-width: 18px;
+img[src="img/xcry.png"],
+img[src="img/wotu.png"]
+{
+  max-width: 20px;
   vertical-align: middle;
 }
