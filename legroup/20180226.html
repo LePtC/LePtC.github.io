@@ -1,0 +1,382 @@
+﻿---
+layout: legroup
+categories: 20180226
+title: 判断两个线段是否相交的最简短的算法
+---
+
+<div class="body">
+<div class="content">
+<table>
+
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:49:48</DIV>
+      <DIV style="PADDING-LEFT: 20px"><IMG
+      src="QQ%20Message_files/mht1E84(1).tmp"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>？？</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:50:22</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>才发现有这东东</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #42b475; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">LePtC</DIV>13:51:06</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 14pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#008000>这个是音乐可视化项目里面需要解的一个题，你要是感兴趣可以做做&nbsp;</FONT><IMG
+      src="QQ%20Message_files/mht87C(1).tmp"></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:51:20</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>这是计算几何啊。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">栗子球</DIV>13:51:28</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>三点求面</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:51:47</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>平面？？</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #42b475; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">LePtC</DIV>13:52:23</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 14pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#008000>嗯，先讨论二维的情况</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:52:43</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>我是这样写的。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:54:44</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>@LePtC</FONT><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>&nbsp;</FONT><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>然后这个题目有其他人写了吗</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:54:54</DIV>
+      <DIV style="PADDING-LEFT: 20px"><IMG
+      src="QQ%20Message_files/mht1ECB(1).tmp"></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:54:55</DIV>
+      <DIV style="PADDING-LEFT: 20px"><IMG
+      src="QQ%20Message_files/mht1EDE(1).tmp"></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:54:56</DIV>
+      <DIV style="PADDING-LEFT: 20px"><IMG
+      src="QQ%20Message_files/mht1EF1(1).tmp"></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #42b475; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">LePtC</DIV>13:55:09</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 14pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#008000>目前还没有</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:55:55</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>我的程序不满足“简短”的要求</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:55:59</DIV>
+      <DIV style="PADDING-LEFT: 20px"><IMG
+      src="QQ%20Message_files/mht1F03(1).tmp"></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:56:38</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>就光定义就写了这么多。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>13:56:43</DIV>
+      <DIV style="PADDING-LEFT: 20px"><IMG
+      src="QQ%20Message_files/mht1F16(1).tmp"></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">yxlllc</DIV>14:07:43</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>AB叉AC与AB叉AD反号且DC叉AC与BC叉AC反号&nbsp;=&amp;get;&nbsp;相交</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">yxlllc</DIV>14:07:59</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>这个简单点</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:08:00</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>emm</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">yxlllc</DIV>14:10:04</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>AB叉AC与AB叉AD反号且DC叉AC与DC叉BC反号&nbsp;=&amp;get;&nbsp;相交</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:10:18</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>。。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">yxlllc</DIV>14:10:21</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>应该是这个</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #42b475; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">LePtC</DIV>14:10:54</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 14pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#008000>嗯，感觉围绕这道题的不同解法可以出一期硬科普视频呢…</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">wuyudi</DIV>14:11:08</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '宋体','MS Sans Serif',sans-serif"
+      color=#000000>刚才想到一种解法</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:11:21</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>一种向量做法</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:11:26</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>一种解析做法。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:11:32</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>还有啥。。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">wuyudi</DIV>14:11:44</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '宋体','MS Sans Serif',sans-serif"
+      color=#000000>由四个点得到两条直线方程，然后算交点</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">yxlllc</DIV>14:12:02</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>本质都是解不等式</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:12:03</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>嗯然后呢</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">yxlllc</DIV>14:12:28</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>你化简一下运算一大堆会得到与我刚才相同的结果</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:12:44</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>我的方法主要是在斜率判断</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">wuyudi</DIV>14:12:45</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '宋体','MS Sans Serif',sans-serif"
+      color=#000000>比如x1,y1……得到点a，b</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:12:52</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>上比较繁琐</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">wuyudi</DIV>14:13:16</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '宋体','MS Sans Serif',sans-serif"
+      color=#000000>然后看a是否在横坐标之间，b是否在纵坐标之间</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:13:25</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>跟我的方法一样。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:13:40</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>你看下我的代码。。Qwq</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:13:49</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>其实llc的更好</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:14:03</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>精度避免了除法运算</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">wuyudi</DIV>14:14:27</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '宋体','MS Sans Serif',sans-serif"
+      color=#000000>外积不教我也没办法</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:15:05</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>哦。。那个我习惯叫做叉积。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:15:15</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>乘出来是个有向面积来着。。</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">yxlllc</DIV>14:17:49</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>本质就是8元一次不等式组</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:18:08</DIV>
+      <DIV style="PADDING-LEFT: 20px"><FONT
+      style="FONT-SIZE: 10pt; FONT-FAMILY: '微软雅黑','MS Sans Serif',sans-serif"
+      color=#000000>给出一堆顶点的坐标，怎么按照顺时针/逆时针排序？</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV style="COLOR: #006efe; PADDING-LEFT: 10px">
+      <DIV
+      style="FLOAT: left; MARGIN-RIGHT: 6px">sky&nbsp;of&nbsp;war</DIV>14:18:57</DIV>
+      <DIV style="PADDING-LEFT: 20px"><IMG
+      src="QQ%20Message_files/mht1F29(1).tmp"></DIV></TD></TR>
+
+</table>
+</div>
+</div>
