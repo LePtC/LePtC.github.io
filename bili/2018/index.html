@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>哔哩哔哩 2018 年终榜 - LePtC</title>
+  <link rel="shortcut icon" href="css/favicon.ico">
+  <meta content="狸子,LePtC,leptc,bilibili,哔哩哔哩,UP主" name="keywords"></meta>
+  <meta content="哔哩哔哩 2018 年终榜 - LePtC" name="description">
+
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+  <link rel="stylesheet" type="text/css" href="/css/global.css">
+
+  <script src="/js/mousetoggle.js"></script>
+  <script src="/js/jquery-1.11.2.min.js"></script>
+  <script src="/js/DataTables.js"></script>
+
+<script type="text/javascript" class="init">
+
+$(document).ready(function() {
+
+  $('#example').DataTable( {
+    order: [[ 0, 'desc' ]]
+  } );
+
+  // Setup - add a text input to each footer cell
+  $('#example tfoot th').each( function () {
+    var title = $(this).text();
+    $(this).html( '<input type="text" id="'+title+'" />' );
+  } );
+  // DataTable
+  var table = $('#example').DataTable();
+
+  // Apply the search
+  table.columns().every( function () {
+    var that = this;
+    $( 'input', this.footer() ).on( 'keyup change', function () {
+      if ( that.search() !== this.value ) {
+        that
+          .search( this.value ) // 用;|多搜
+     // .search(this.value.replace(/;/g, &quot;|&quot;), true, false)
+          .draw();
+      }
+    } );
+  } );
+
+
+/*$('#example').DataTable( {
+  initComplete: function () {
+    this.api().columns().every( function () {
+      var column = this;
+      var select = $('<select><option value=""></option></select>')
+        .appendTo( $(column.footer()).empty() )
+        .on( 'change', function () {
+            var val = $.fn.dataTable.util.escapeRegex(
+              $(this).val()
+            );
+            column
+              .search( val ? '^'+val+'$' : '', true, false )
+              .draw();
+        } );
+
+      column.data().unique().sort().each( function ( d, j ) {
+          select.append( '<option value="'+d+'">'+d+'</option>' )
+      } );
+    } );
+  }
+} );*/
+
+
+// var table = $('#example').DataTable();
+
+  $('a.toggle-vis').on( 'click', function (e) {
+    e.preventDefault();
+    // Get the column API object
+    var column = table.column( $(this).attr('data-column') );
+    // Toggle the visibility
+    column.visible( ! column.visible() );
+  } );
+
+
+/*  $('#example tbody')
+    .on( 'mouseenter', 'td', function () {
+      var colIdx = table.cell(this).index().column;
+      $( table.cells().nodes() ).removeClass( 'highlight' );
+      $( table.column( colIdx ).nodes() ).addClass( 'highlight' );
+    } );*/
+
+
+} );
+</script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?741805e21dbbc9ff4f62a2c05a4a9a23";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+
+<body>
+
+
+<link rel="stylesheet" type="text/css" href="/css/homepage2col.css">
+<link rel="stylesheet" type="text/css" href="/css/timeline.css">
+<link rel="stylesheet" type="text/css" href="/css/homepage16B.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css">
+
+
+<img src="/img/blackle.png" class="blackle">
+
+
+<div id="nav">
+
+<h1 align="center">
+  <div class="skinimg"><a title="联系作者" href="author.html"><img src="/css/moele17.png" alt="萌狸" class="moele"></a></div>
+</h1>
+
+<ul>
+<li><button type="button" onclick="inject('日期','')">全部清除</button></li>
+<li><a onclick="toggle('togglecolumn')">隐藏列</a></li>
+</ul>
+
+</div>
+
+
+
+
+
+<div id="section">
+
+<div class="body">
+<div class="content">
+
+<div>
+
+<p>站点过滤
+<button type="button" onclick="inject('标签','科学人')">科学人（8）</button>
+<button type="button" onclick="inject('站点','壳问')">果壳问答（571）</button>
+<button type="button" onclick="inject('站点','知专')">知乎专栏（8）</button>
+<button type="button" onclick="inject('站点','知')">知乎（33）</button>
+<button type="button" onclick="inject('站点','哔')">哔哩（41）</button>
+<button type="button" onclick="inject('站点','狸群')">狸群（19）</button>
+</p>
+
+<p>常用标题
+<button type="button" onclick="inject('标题','【还能不能好好地看科幻了】')">还能不能好好地看科幻了（5）</button>
+<button type="button" onclick="inject('标题','酷炫动图')">酷炫动图（5）</button>
+<button type="button" onclick="inject('标题','【狸笔记】')">狸笔记（14）</button>
+<button type="button" onclick="inject('标题','【如何狸解】')">如何狸解（5）</button>
+<button type="button" onclick="inject('标题','【摸鱼字幕组】')">摸鱼字幕（4）</button>
+</p>
+
+<p>常用标签
+<button type="button" onclick="inject('标签','Flash')">Flash（18）</button>
+<button type="button" onclick="inject('标签','麦酱')">Mathematica（12）</button>
+<button type="button" onclick="inject('标签','what-if')">what-if（52）</button>
+<button type="button" onclick="inject('标签','笑点')">笑点低（9）</button>
+<button type="button" onclick="inject('标签','绘画')">绘画（24）</button>
+<button type="button" onclick="inject('标签','编曲')">编曲（10）</button>
+<button type="button" onclick="inject('标签','科幻')">科幻（4）</button>
+</p>
+
+</div>
+
+<div id="togglecolumn">
+切换显示列: <a class="toggle-vis" data-column="0">日期</a> - <a class="toggle-vis" data-column="1">标题</a> - <a class="toggle-vis" data-column="2">站点</a> - <a class="toggle-vis" data-column="3">标签</a> - <a class="toggle-vis" data-column="4">赞</a>
+</div>
+
+<div class="dataTables_wrapper" id="example_wrapper">
+
+<table id="example" class="timeline display dataTable" cellspacing="0" width="100%">
+
+<thead>
+  <tr>
+    <th>排名</th>
+    <th>粉丝量</th>
+    <th>视频数</th>
+    <th>总播放量</th>
+    <th>平均播放</th>
+    <th>UP主</th>
+    <th>关注</th>
+    <th>专栏阅读</th>
+  </tr>
+</thead>
+<tfoot id="footsearch">
+  <tr>
+    <th>排名</th>
+    <th>粉丝量</th>
+    <th>视频数</th>
+    <th>总播放量</th>
+    <th>平均播放</th>
+    <th>UP主</th>
+    <th>关注</th>
+    <th>专栏阅读</th>
+  </tr>
+</tfoot>
+
+<tbody style="color:#CCC">
+
+
+{% include bili2018all.html %}
+
+
+
+</tbody>
+</table>
+
+<script type="text/javascript" class="init">
+// selects both table header and table data cells from the second column of the table
+$('table th:nth-child(2), table td:nth-child(2)').addClass('left');
+</script>
+
+
+
+
+<!--
+<p style="text-align:right">
+  <a href="history.html" class="fold-head">考古</a>
+</p>
+
+<div class="active">
+<ul>
+  <li><a href="posts/ask.html">提问与反馈</a> (2015.09)</li>
+  <li><a href="posts/questionnaire.html">问卷调查</a> (2015.05)</li>
+  <li><a href="author.html">联系作者</a> (2015.03)</li>
+</ul>
+</div> -->
+
+
+<!-- <p><h3>LePtC 社交网络活动数据库</h3>（不含已停用站点）　</p> -->
+<!-- <p>LePtC 作品索引站 RC1.1</p>
+<p>收录范围：所有公开作品（包括线上和纸媒，不收录转载和提问）</p> -->
+<p>最后更新：{{ site.time | date: "%Y.%m.%d" }} 　 <a href="history.html">[考古]</a></p>
+
+
+
+
+</div>
+</div>
+
+
+</div>
+
+{% include footer.html %}
+
+</div>
+</div>
+
+
+
+</body>
+
+
+<script src="/js/urlkeyword.js"></script>
+
+
+</html>
