@@ -167,7 +167,8 @@ invi {
 }
 
 red {
-  color: maroon;
+  /*color: maroon;*/
+  color: #F00;
 }
 
 blue{
