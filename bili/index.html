@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>哔哩哔哩每月榜 - LePtC</title>
+  <link rel="shortcut icon" href="/css/favicon.ico">
+  <meta content="狸子,LePtC,leptc,bilibili,哔哩哔哩,UP主" name="keywords"></meta>
+  <meta content="哔哩哔哩每月榜 - LePtC" name="description">
+
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+  <link rel="stylesheet" type="text/css" href="/css/global.css">
+<base target="_blank">
+
+  <script src="/js/mousetoggle.js"></script>
+  <script src="/js/jquery-1.11.2.min.js"></script>
+  <script src="/js/DataTables.js"></script>
+
+
+<script type="text/javascript" class="init">
+
+$(document).ready(function() {
+
+  $('#example').DataTable( {
+    order: [[ 0, 'desc' ]]
+  } );
+
+  // Setup - add a text input to each footer cell
+  $('#example tfoot th').each( function () {
+    var title = $(this).text();
+    $(this).html( '<input type="text" id="'+title+'" />' );
+  } );
+  // DataTable
+  var table = $('#example').DataTable();
+
+  // Apply the search
+  table.columns().every( function () {
+    var that = this;
+    $( 'input', this.footer() ).on( 'keyup change', function () {
+      if ( that.search() !== this.value ) {
+        that
+          .search( this.value ) // 用;|多搜
+          .draw();
+      }
+    } );
+  } );
+
+
+  $('a.toggle-vis').on( 'click', function (e) {
+    e.preventDefault();
+    // Get the column API object
+    var column = table.column( $(this).attr('data-column') );
+    // Toggle the visibility
+    column.visible( ! column.visible() );
+  } );
+
+
+} );
+</script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?741805e21dbbc9ff4f62a2c05a4a9a23";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+
+<body>
+
+
+<link rel="stylesheet" type="text/css" href="/css/homepage2col.css">
+<link rel="stylesheet" type="text/css" href="/css/timeline.css">
+<link rel="stylesheet" type="text/css" href="/css/homepage16B.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css">
+
+
+
+
+<div class="body">
+
+<h1>哔哩哔哩UP主每月榜目录（by <a href="http://space.bilibili.com/2654670/">狸子LePtC</a>，非官方）</h1>
+
+<p>（自助查询网页有几兆大小，启动时会卡一会儿，之后可流畅搜索）</p>
+
+<div class="content">
+
+
+<button type="button" onclick="inject('日期','')">清空搜索</button>
+
+
+<div class="dataTables_wrapper" id="example_wrapper">
+
+<table id="example" class="timeline display dataTable" cellspacing="0" width="100%">
+
+<thead>
+  <tr>
+    <th class="upzhu">月份</th>
+    <th>自助查询</th>
+    <th>粉丝总榜</th>
+    <th>涨粉日榜</th>
+    <th>特辑</th>
+    <th>掉粉日榜</th>
+    <th>播放量日增榜</th>
+    <th>播放量总榜</th>
+    <th>专栏阅读榜</th>
+  </tr>
+</thead>
+<tfoot id="footsearch">
+  <tr>
+    <th class="upzhu">月份</th>
+    <th>自助查询</th>
+    <th>粉丝总榜</th>
+    <th>涨粉日榜</th>
+    <th>特辑</th>
+    <th>掉粉日榜</th>
+    <th>播放量日增榜</th>
+    <th>播放量总榜</th>
+    <th>专栏阅读榜</th>
+  </tr>
+</tfoot>
+
+<tbody style="color:#CCC">
+
+
+<tr>
+  <td>2018 年 08 月</td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av31412811">＃1</a></td>
+  <td><a href="http://www.bilibili.com/video/av31442445">＃1</a></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>2018 年 09 月</td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av32866187">＃2</a></td>
+  <td><a href="http://www.bilibili.com/video/av33832868">＃2</a></td>
+  <td><a href="http://www.bilibili.com/video/av33158710">华农特辑</a></td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av34294784">＃1</a></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>2018 年 10 月</td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av35061368">＃3</a></td>
+  <td><a href="http://www.bilibili.com/video/av36667842">＃3</a></td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av35296345">＃1</a></td>
+  <td><a href="http://www.bilibili.com/video/av36031761">＃2</a></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>2018 年 11 月</td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av37195479">＃4</a></td>
+  <td><a href="http://www.bilibili.com/video/av38292035">＃4</a></td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av37763873">＃2</a></td>
+  <td><a href="http://www.bilibili.com/video/av38741490">＃3</a></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>2018 年 12 月</td>
+  <td><a href="http://leptc.github.io/bili/2018/all.html">32493</a></td>
+  <td><a href="http://www.bilibili.com/video/av39869615">＃5</a></td>
+  <td><a href="http://www.bilibili.com/video/av41423752">＃5</a></td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av40570567">＃3</a></td>
+  <td><a href="http://www.bilibili.com/video/av42075267">＃4</a></td>
+  <td><a href="http://www.bilibili.com/video/av39422224">＃1</a></td>
+  <td><a href="http://www.bilibili.com/video/av39422224">＃1</a></td>
+</tr>
+
+<tr>
+  <td>2019 年 01 月</td>
+  <td><a href="http://leptc.github.io/bili/2019/01/all.html">32720</a></td>
+  <td><a href="http://www.bilibili.com/video/av42525203">＃6</a></td>
+  <td><a href="http://www.bilibili.com/video/av44576813">＃6</a></td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av43254042">＃4</a></td>
+  <td><a href="http://www.bilibili.com/video/av45044188">＃5</a></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>2019 年 02 月</td>
+  <td><a href="http://leptc.github.io/bili/2019/02/">34618</a></td>
+  <td><a href="http://www.bilibili.com/video/av45113398">＃7</a></td>
+  <td><a href="http://www.bilibili.com/video/av46543795">＃7</a></td>
+  <td></td>
+  <td><a href="http://www.bilibili.com/video/av47042235">＃5</a></td>
+  <td><a href="http://www.bilibili.com/video/av47731070">＃6</a></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>2019 年 03 月</td>
+  <td><a href="http://leptc.github.io/bili/2019/03/">36079</a></td>
+  <td><a href="http://www.bilibili.com/video/av48510496">＃8</a></td>
+  <td><a href="http://www.bilibili.com/video/av49703378">＃8</a></td>
+  <td></td>
+  <td><!-- <a href="">＃6</a> --></td>
+  <td><!-- <a href="">＃7</a> --></td>
+  <td></td>
+  <td></td>
+</tr>
+
+
+</tbody>
+</table>
+
+<script type="text/javascript" class="init">
+$('table th:nth-child(2), table td:nth-child(2)').addClass('left');
+</script>
+
+
+
+
+</div>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</body>
+
+
+<script src="/js/urlkeyword.js"></script>
+
+<script>
+    $(function() {
+        $('a[href]').attr('target', '_blank');
+    });
+</script>
+
+<style>
+#example thead tr *, #example tfoot tr *{
+  max-width: 30px
+}
+.upzhu,.upzhu *{min-width: 130px }
+</style>
+
+</html>
