@@ -13,13 +13,13 @@
 <base target="_blank">
   <script src="/js/mousetoggle.js"></script>
   <script src="/js/jquery-1.11.2.min.js"></script>
-  <script src="/js/dataaTables.js"></script>
+  <script src="/js/DataTables.js"></script>
 
 <script type="text/javascript" class="init">
 
 $(document).ready(function() {
 
-  $('#example').dataaTable( {
+  $('#example').DataTable( {
     order: [[ 1, 'desc' ]]
   } );
 
@@ -28,8 +28,8 @@ $(document).ready(function() {
     var title = $(this).text();
     $(this).html( '<input type="text" id="'+title+'" />' );
   } );
-  // dataaTable
-  var table = $('#example').dataaTable();
+  // DataTable
+  var table = $('#example').DataTable();
 
   // Apply the search
   table.columns().every( function () {
@@ -47,7 +47,7 @@ $(document).ready(function() {
   $('a.toggle-vis').on( 'click', function (e) {
     e.preventDefault();
     // Get the column API object
-    var column = table.column( $(this).attr('dataa-column') );
+    var column = table.column( $(this).attr('data-column') );
     // Toggle the visibility
     column.visible( ! column.visible() );
   } );
@@ -76,7 +76,7 @@ $(document).ready(function() {
 <link rel="stylesheet" type="text/css" href="/css/homepage2col.css">
 <link rel="stylesheet" type="text/css" href="/css/timeline.css">
 <link rel="stylesheet" type="text/css" href="/css/homepage16B.css">
-<link rel="stylesheet" type="text/css" href="/css/jquery.dataaTables.min.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery.DataTables.min.css">
 
 
 
@@ -93,9 +93,9 @@ $(document).ready(function() {
 <button type="button" onclick="inject('日期','')">清空搜索</button>
 
 
-<div class="dataaTables_wrapper" id="example_wrapper">
+<div class="DataTables_wrapper" id="example_wrapper">
 
-<table id="example" class="timeline display dataaTable" cellspacing="0" width="100%">
+<table id="example" class="timeline display DataTable" cellspacing="0" width="100%">
 
 <thead>
   <tr>
